@@ -12,9 +12,9 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { ShopComponent } from './shop/shop.component';
-import { PagesComponent } from './pages/pages.component';
-import { ElementsComponent } from './elements/elements.component';
+import { ShopComponent } from './modules/shop/shop.component';
+import { PagesComponent } from './modules/pages/pages.component';
+import { ElementsComponent } from './modules/elements/elements.component';
 
 import 'hammerjs';
 import 'mousetrap';
