@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { QuickViewComponent } from "../../modal/quick-view/quick-view.component";
 import { CartModalComponent } from "../../modal/cart-modal/cart-modal.component";
-import { Product } from "../../../classes/product";
+// import { Product } from "../../../classes/product";
+import { Product } from '../../../models/product.model';
 import { ProductService } from "../../../services/product.service";
 
 @Component({
@@ -26,28 +27,28 @@ export class ProductBoxTwoComponent implements OnInit {
   }
 
   // Get Product Color
-  Color(variants) {
-    const uniqColor = []
-    for (let i = 0; i < Object.keys(variants).length; i++) {
-      if (uniqColor.indexOf(variants[i].color) === -1 && variants[i].color) {
-        uniqColor.push(variants[i].color)
-      }
-    }
-    return uniqColor
-  }
+  // Color(variants) {
+  //   const uniqColor = []
+  //   for (let i = 0; i < Object.keys(variants).length; i++) {
+  //     if (uniqColor.indexOf(variants[i].color) === -1 && variants[i].color) {
+  //       uniqColor.push(variants[i].color)
+  //     }
+  //   }
+  //   return uniqColor
+  // }
 
   // Change Variants
-  ChangeVariants(color, product) {
-    product.variants.map((item) => {
-      if (item.color === color) {
-        product.images.map((img) => {
-          if (img.image_id === item.image_id) {
-            this.ImageSrc = img.src;
-          }
-        })
-      }
-    })
-  }
+  // ChangeVariants(color, product) {
+  //   product.variants.map((item) => {
+  //     if (item.color === color) {
+  //       product.images.map((img) => {
+  //         if (img.image_id === item.image_id) {
+  //           this.ImageSrc = img.src;
+  //         }
+  //       })
+  //     }
+  //   })
+  // }
 
   ChangeVariantsImage(src) {
     this.ImageSrc = src;

@@ -24,7 +24,11 @@
               "hammerjs",
               "rxjs/operators",
               "rxjs/Subject",
-              "rxjs/Subscription"
+              "rxjs/Subscription",
+              "rxjs/add/operator/map",
+              "rxjs/add/operator/catch",
+              "rxjs-compat/add/operator/map",
+              "rxjs-compat/add/operator/catch"
             ],
             "outputPath": "dist/multikart/browser",
             "index": "src/index.html",

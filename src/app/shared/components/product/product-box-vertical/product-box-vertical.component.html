@@ -1,4 +1,4 @@
-<div class="media">
+<!-- <div class="media">
     <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
         <img [defaultImage]="ImageSrc ? ImageSrc : 'assets/images/product/placeholder.jpg'" 
              [lazyLoad]="ImageSrc ? ImageSrc : product.images[0].src"  
@@ -20,4 +20,23 @@
             </li>
         </ul>
 	</div>
+</div> -->
+
+<div class="media">
+    <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
+        <img [defaultImage]="product.image.src ? product.image.src : 'assets/images/product/placeholder.jpg'" 
+             [lazyLoad]="product.image.src ? product.image.src : product.images[0].src"
+             class="img-fluid lazy-loading" alt="{{ product.image.alt }}">
+    </a>
+	<div class="media-body align-self-center">
+		<div class="rating">
+			<bar-rating [rate]="product.rating" [readOnly]="true"></bar-rating>
+		</div>
+        <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
+            <h6>{{ product.title | titlecase }}</h6>
+        </a>
+		<h4>{{ product?.price }}</h4>
+	</div>
 </div>
+
+

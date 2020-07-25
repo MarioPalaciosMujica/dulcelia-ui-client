@@ -13,7 +13,7 @@ export class ProductService extends BaseService {
   }
 
   findAllActives(){
-    return this.http.get(this.endpoint + 'findAllActives')
+    return this.http.get(this.endpoint + '/findAllActives')
       .map(response => response)
       .catch(this.handleError)
   }
@@ -25,13 +25,13 @@ export class ProductService extends BaseService {
   }
 
   findAllActivesNew(){
-    return this.http.get(this.endpoint + 'findAllActivesNew')
+    return this.http.get(this.endpoint + '/findAllActivesNew')
       .map(response => response)
       .catch(this.handleError)
   }
 
   findAllActivesOnSale(){
-    return this.http.get(this.endpoint + 'findAllActivesOnSale')
+    return this.http.get(this.endpoint + '/findAllActivesOnSale')
       .map(response => response)
       .catch(this.handleError)
   }
@@ -43,7 +43,7 @@ export class ProductService extends BaseService {
   }
 
   findAllActivesInStock(){
-    return this.http.get(this.endpoint + 'findAllActivesInStock')
+    return this.http.get(this.endpoint + '/findAllActivesInStock')
       .map(response => response)
       .catch(this.handleError)
   }

@@ -24,7 +24,7 @@ export class FlowerComponent implements OnInit, OnDestroy {
           const index = this.productCollections.indexOf(collection);
           if (index === -1) this.productCollections.push(collection);
         })
-      });
+      })
       // DEBUG
       console.log(this.products);
     });

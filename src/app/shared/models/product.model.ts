@@ -28,4 +28,5 @@ export interface Product {
     tags?: Tag[];
     quantity?: number;
     coupon?: Coupon;
+    variants?: any[];
 }

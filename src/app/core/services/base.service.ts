@@ -1,8 +1,8 @@
 import { AppError, NotFoundError, BadInputError } from './../../shared/models/error.model';
 // import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/catch';
 import { throwError } from 'rxjs';
+import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
 // @Injectable({
