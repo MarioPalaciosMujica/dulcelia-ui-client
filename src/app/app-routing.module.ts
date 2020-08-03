@@ -28,11 +28,11 @@ const routes: Routes = [
   { 
     path: 'elements', 
     component: ElementsComponent,
-    loadChildren: () => import('./modules/elements/elements.module').then(m => m.ElementsModule) },
-  {
-    path: '**', // Navigate to Home Page if not found any page
-    redirectTo: 'home/dulcelia',
-  },
+    loadChildren: () => import('./modules/elements/elements.module').then(m => m.ElementsModule) }
+  // ,{
+  //   path: '**', // Navigate to Home Page if not found any page
+  //   redirectTo: 'home/dulcelia',
+  // },
 ];
 
 @NgModule({

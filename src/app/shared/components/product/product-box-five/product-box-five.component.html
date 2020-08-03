@@ -49,10 +49,10 @@
         </li>
       </ul>
       <div class="add-btn">
-        <a href="javascript:void(0)" class="btn btn-outline" title="Add to cart" (click)="CartModal.openModal(product)"
+        <!-- <a href="javascript:void(0)" class="btn btn-outline" title="Add to cart" (click)="CartModal.openModal(product)"
             *ngIf="cartModal">
             <i class="ti-shopping-cart"></i> Add to cart
-        </a>
+        </a> -->
         <a href="javascript:void(0)" class="btn btn-outline" title="Add to cart" (click)="addToCart(product)"
             *ngIf="!cartModal">
             <i class="ti-shopping-cart"></i> Add to cart
@@ -62,7 +62,7 @@
   </div>
   
   
-  <app-quick-view #quickView [product]="product" [currency]="currency"></app-quick-view>
-  <app-cart-modal #cartModal [product]="product" [currency]="currency" *ngIf="cartModal"></app-cart-modal>
+  <!-- <app-quick-view #quickView [product]="product" [currency]="currency"></app-quick-view>
+  <app-cart-modal #cartModal [product]="product" [currency]="currency" *ngIf="cartModal"></app-cart-modal> -->
   
   

@@ -2,8 +2,11 @@ import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { QuickViewComponent } from "../../modal/quick-view/quick-view.component";
 import { CartModalComponent } from "../../modal/cart-modal/cart-modal.component";
 // import { Product } from "../../../classes/product";
+// import { ProductService } from "../../../services/product.service";
+import { ProductService } from './../../../../core/services/product.service';
 import { Product } from '../../../models/product.model';
-import { ProductService } from "../../../services/product.service";
+import { registerLocaleData } from '@angular/common';
+import es from '@angular/common/locales/es';
 
 @Component({
   selector: 'app-product-box-two',
@@ -13,7 +16,7 @@ import { ProductService } from "../../../services/product.service";
 export class ProductBoxTwoComponent implements OnInit {
 
   @Input() product: Product;
-  @Input() currency: any = this.productService.Currency; // Default Currency
+  @Input() currency: any = null; //this.productService.Currency; // Default Currency
   @Input() cartModal: boolean = false; // Default False
   
   @ViewChild("quickView") QuickView: QuickViewComponent;
@@ -24,6 +27,7 @@ export class ProductBoxTwoComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    registerLocaleData(es);
   }
 
   // Get Product Color

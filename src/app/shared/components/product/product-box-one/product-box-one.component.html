@@ -1,30 +1,38 @@
 <div *ngIf="!loader">
   <div class="img-wrapper">
     <div class="lable-block">
-      <span class="lable3" *ngIf="product.new">new</span>
-      <span class="lable4" *ngIf="product.sale">on sale</span>
+      <span class="lable3" *ngIf="product.isNew">new</span>
+      <span class="lable4" *ngIf="product.isSale">on sale</span>
     </div>
     <div class="front">
-      <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
+      <!-- <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
         <img 
           [defaultImage]="ImageSrc ? ImageSrc : 'assets/images/product/placeholder.jpg'" 
           [lazyLoad]="ImageSrc ? ImageSrc : product.images[0].src" 
           class="img-fluid lazy-loading" 
           alt="{{ product.images[0].alt }}" />
+      </a> -->
+      <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
+        <img 
+          [defaultImage]="product.image.src ? product.image.src : 'assets/images/product/placeholder.jpg'" 
+          [lazyLoad]="product.image ? product.image.src : product.image[0].src" 
+          class="img-fluid lazy-loading" 
+          alt="{{ product.image.alt }}" />
       </a>
     </div>
     <div class="back" *ngIf="onHowerChangeImage">
-      <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
-        <img [src]="ImageSrc ? ImageSrc : product.images[1].src" class="img-fluid lazy-loading" alt="{{ product.images[1].alt }}">
+      <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
+        <img [src]="product.image.src ? product.image.src : product.images[1].src" class="img-fluid lazy-loading" alt="{{ product.image.alt }}">
       </a>
     </div>
-    <ul class="product-thumb-list" *ngIf="thumbnail">
+    <!-- WHAT IS THIS : TODO -->
+    <!-- <ul class="product-thumb-list" *ngIf="thumbnail">
       <li class="grid_thumb_img" [class.active]="ImageSrc == image.src" *ngFor="let image of product.images">
         <a href="javascript:void(0)" (mouseover)="ChangeVariantsImage(image.src)">
           <img [lazyLoad]="image.src">
         </a>
       </li>
-    </ul>
+    </ul> -->
     <div class="cart-info cart-wrap">
       <a href="javascript:void(0)" title="Add to cart" (click)="CartModal.openModal(product)"
         *ngIf="cartModal">
@@ -47,24 +55,42 @@
   </div>
   <div class="product-detail">
     <div>
-      <bar-rating [rate]="5" [readOnly]="true"></bar-rating>
-      <a [routerLink]="['/shop/product/left/sidebar/', product?.title.replace(' ', '-')]">
-        <h6>{{ product?.title | titlecase }}</h6>
+      <bar-rating [rate]="product.rating" [readOnly]="true"></bar-rating>
+      <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
+        <h6>{{ product.title | titlecase }}</h6>
       </a>
-      <p>{{ product?.description }}</p>
-      <h4>
+      <p>{{ product.description }}</p>
+
+      <!-- <h4>
         {{ product?.price * currency?.price | discount:product | currency:currency?.currency:'symbol' }}
         <del *ngIf="product?.discount"><span class="money"> {{ product?.price * currency?.price | currency:currency?.currency:'symbol' }}</span></del>
-      </h4>
-      <ul class="color-variant" *ngIf="Color(product?.variants).length">
+      </h4> -->
+
+      <div *ngIf="product.isSale; then showDiscount else showNormalPrice"></div>
+      <ng-template #showDiscount>
+          <h4>
+              <del>${{ product.price | number:'':'es' }}</del>
+              &nbsp;
+              <span>{{ product.discountPercentage }}% off</span>
+          </h4>
+          <h3>${{ product.priceDiscount | number:'':'es' }}</h3>
+      </ng-template>
+      <ng-template #showNormalPrice>
+          <h3>${{ product.price | number:'':'es' }}</h3>
+      </ng-template>
+
+      <!-- <ul class="color-variant" *ngIf="Color(product?.variants).length">
         <li [class]="color" *ngFor="let color of Color(product?.variants)" [ngStyle]="{'background-color': color}"
           (click)="ChangeVariants(color, product)">
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </div>
 <app-skeleton-product-box *ngIf="loader"></app-skeleton-product-box>
-<app-quick-view #quickView [product]="product" [currency]="currency"></app-quick-view>
-<app-cart-modal #cartModal [product]="product" [currency]="currency" *ngIf="cartModal"></app-cart-modal>
 
+<!-- <app-quick-view #quickView [product]="product" [currency]="currency"></app-quick-view>
+<app-cart-modal #cartModal [product]="product" [currency]="currency" *ngIf="cartModal"></app-cart-modal> -->
+
+<app-quick-view #quickView [product]="product"></app-quick-view>
+<app-cart-modal #cartModal [product]="product" *ngIf="cartModal"></app-cart-modal>

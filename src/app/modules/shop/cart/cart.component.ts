@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ProductService } from "./../../../shared/services/product.service";
-import { Product } from "./../../../shared/classes/product";
+// import { ProductService } from "./../../../shared/services/product.service";
+// import { Product } from "./../../../shared/classes/product";
+import { ProductService } from './../../../core/services/product.service';
+import { Product } from './../../../shared/models/product.model';
+import { registerLocaleData } from '@angular/common';
+import es from '@angular/common/locales/es';
 
 @Component({
   selector: 'app-cart',
@@ -17,6 +21,7 @@ export class CartComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    registerLocaleData(es);
   }
 
   public get getTotal(): Observable<number> {

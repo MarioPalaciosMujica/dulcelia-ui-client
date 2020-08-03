@@ -23,7 +23,7 @@
 </div> -->
 
 <div class="media">
-    <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
+    <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
         <img [defaultImage]="product.image.src ? product.image.src : 'assets/images/product/placeholder.jpg'" 
              [lazyLoad]="product.image.src ? product.image.src : product.images[0].src"
              class="img-fluid lazy-loading" alt="{{ product.image.alt }}">
@@ -32,10 +32,24 @@
 		<div class="rating">
 			<bar-rating [rate]="product.rating" [readOnly]="true"></bar-rating>
 		</div>
-        <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
+        <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
             <h6>{{ product.title | titlecase }}</h6>
         </a>
-		<h4>{{ product?.price }}</h4>
+
+        <!-- <h4>{{ product.price }}</h4> -->
+        
+        <div *ngIf="product.isSale; then showDiscount else showNormalPrice"></div>
+        <ng-template #showDiscount>
+            <h4>
+                <del>${{ product.price | number:'':'es' }}</del>
+                <br>
+                <span class="money">${{ product.priceDiscount | number:'':'es' }}</span>
+            </h4>
+        </ng-template>
+        <ng-template #showNormalPrice>
+            <h4>${{ product.price | number:'':'es' }}</h4>
+        </ng-template>
+
 	</div>
 </div>
 

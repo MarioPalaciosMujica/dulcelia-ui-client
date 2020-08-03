@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 // import { Product } from "../../../classes/product";
 import { Product } from '../../../models/product.model';
+import { registerLocaleData } from '@angular/common';
+import es from '@angular/common/locales/es';
 
 @Component({
   selector: 'app-product-box-vertical',
@@ -17,6 +19,7 @@ export class ProductBoxVerticalComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    registerLocaleData(es);
   }
 
   // Get Product Color

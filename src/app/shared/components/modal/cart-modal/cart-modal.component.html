@@ -9,11 +9,11 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <div class="media">
-                            <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
-                                <img class="img-fluid pro-img" [src]="product.images[0].src" [alt]="product.images[0].alt">
+                            <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
+                                <img class="img-fluid pro-img" [src]="product.image.src" [alt]="product.image.alt">
                             </a>
                             <div class="media-body align-self-center text-center">
-                                <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
+                                <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
                                     <h6>
                                         <i class="fa fa-check"></i>Item
                                         <span>{{ product.title | titlecase }}</span>
@@ -36,25 +36,42 @@
                             <div class="col-12 product-upsell text-center">
                                 <h4>Customers who bought this item also.</h4>
                             </div>
-                            <div class="row" id="upsell_product">
+
+                            <div *ngIf="isDataLoaded" class="row" id="upsell_product">
                                 <ng-container *ngFor="let product of products | slice:0:4">
                                     <div class="product-box col-sm-3 col-6">
                                         <div class="img-wrapper">
                                             <div class="front">
-                                                <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
-                                                    <img [src]="product.images[0].src" class="img-fluid mb-1" alt="">
+                                                <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
+                                                    <img [src]="product.image.src" class="img-fluid mb-1" alt="">
                                                 </a>
                                             </div>
                                             <div class="product-detail">
                                                 <h6 class="mt-0">
-                                                    <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]"><span>{{ product.title | titlecase }}</span></a>
+                                                    <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]"><span>{{ product.title | titlecase }}</span></a>
                                                 </h6>
-                                                <h4><span>{{ product.price * currency?.price | discount:product | currency:currency?.currency:'symbol' }}</span></h4>
+                                                
+                                                <!-- <h4><span>{{ product.price * currency?.price | discount:product | currency:currency?.currency:'symbol' }}</span></h4> -->
+
+                                                <div *ngIf="product.isSale; then showDiscountPrice; else showNormalPrice"></div>
+                                                <ng-template #showDiscountPrice>
+                                                    <h4>
+                                                        ${{ product.priceDiscount | number:'':'es' }}
+                                                        <del><span>${{ product.price | number:'':'es' }}</span></del>
+                                                    </h4>
+                                                </ng-template>
+                                                <ng-template #showNormalPrice>
+                                                    <h4>
+                                                        ${{ product.price | number:'':'es' }}
+                                                    </h4>
+                                                </ng-template>
+
                                             </div>
                                         </div>
                                     </div>
                                 </ng-container>
                             </div>
+
                         </div>
                     </div>
                 </div>

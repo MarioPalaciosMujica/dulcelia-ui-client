@@ -23,11 +23,11 @@ import { Resolver } from './../../shared/services/resolver.service';
 
 const routes: Routes = [
   {
-    path: 'product/left/sidebar/:slug',
+    path: 'product/left/sidebar/:idProduct',
     component: ProductLeftSidebarComponent,
-    resolve: {
-      data: Resolver
-    }
+    // resolve: {
+    //   data: Resolver
+    // }
   },
   {
     path: 'product/right/sidebar/:slug',

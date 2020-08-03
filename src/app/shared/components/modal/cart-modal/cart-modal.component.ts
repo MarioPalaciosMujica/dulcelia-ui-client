@@ -2,8 +2,13 @@ import { Component, OnInit, OnDestroy, ViewChild, TemplateRef, Input, AfterViewI
   Injectable, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { ProductService } from "../../../services/product.service";
-import { Product } from "../../../classes/product";
+// import { ProductService } from "../../../services/product.service";
+// import { Product } from "../../../classes/product";
+import { ProductService } from './../../../../core/services/product.service';
+import { Product } from './../../../models/product.model';
+import { registerLocaleData } from '@angular/common';
+import es from '@angular/common/locales/es';
+
 
 @Component({
   selector: 'app-cart-modal',
@@ -21,20 +26,31 @@ export class CartModalComponent implements OnInit, AfterViewInit, OnDestroy {
   public modalOpen: boolean = false;
   public products: any[] = [];
 
+  public isDataLoaded: boolean;
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object,
     private modalService: NgbModal,
-    private productService: ProductService) {
+    private productService: ProductService) 
+  {
+    this.isDataLoaded = false;
   }
 
   ngOnInit(): void {
+    registerLocaleData(es);
   }
 
   ngAfterViewInit(): void {
   }
 
-  async openModal(product) {
-    await this.productService.getProducts.subscribe(response => this.products = response);
-    this.products = await this.products.filter(items => items.category == product.category && items.id != product.id);
+  async openModal(product: Product) {
+    //await this.productService.getProducts.subscribe(response => this.products = response);
+    //this.products = await this.products.filter(items => items.category == product.category && items.id != product.id);
+    
+    this.productService.findAllActivesByCategory(product.categories[0].idCategory).subscribe(data => {
+      this.products = data as Product[];
+      this.isDataLoaded = true;
+    });
+    
     const status = await this.productService.addToCart(product);
     if(status) {
       this.modalOpen = true;

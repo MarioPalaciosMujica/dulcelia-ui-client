@@ -51,19 +51,7 @@ export class DulceliaComponent implements OnInit, OnDestroy {
         });
     }
 
-    public groupProductsByCollections(): Collection[] {
-        for(let collection of this.collections){
-            for(let product of this.products){
-                if(product.collection.idCollection == collection.idCollection){
-                    collection.products.push(product);
-                }
-            }
-        }
-        return this.collections;
-    }
-
     public getCollectionProducts(collection: Collection): Product[]{
-        console.log();
         let productList: Product[] = [];
         for(let product of this.products){
             if(product.collection.idCollection == collection.idCollection){
@@ -80,31 +68,26 @@ export class DulceliaComponent implements OnInit, OnDestroy {
     public sliders = [{
       title: 'save upto 20%',
       subTitle: 'creative & decor',
-      image: 'assets/images/slider/13.jpg'
+      image: 'assets/dulcelia-demo/slider-flowers.jpg'
     }, {
       title: 'save upto 10%',
       subTitle: 'pre-made & custom',
-      image: 'assets/images/slider/14.jpg'
+      image: 'assets/dulcelia-demo/slider-bike.jpg'
     }];
     
     public blogs = [{
-        image: 'assets/images/blog/17.jpg',
+        image: 'assets/dulcelia-demo/blog-1.jpg',
         date: '25 January 2018',
         title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
         by: 'John Dio'
     }, {
-        image: 'assets/images/blog/18.jpg',
+        image: 'assets/dulcelia-demo/blog-2.jpg',
         date: '26 January 2018',
         title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
         by: 'John Dio'
     }, {
-        image: 'assets/images/blog/19.jpg',
+        image: 'assets/dulcelia-demo/blog-3.jpg',
         date: '27 January 2018',
-        title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
-        by: 'John Dio'
-    }, {
-        image: 'assets/images/blog/17.jpg',
-        date: '28 January 2018',
         title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
         by: 'John Dio'
     }];

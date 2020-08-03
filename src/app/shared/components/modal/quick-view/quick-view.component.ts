@@ -3,8 +3,12 @@ import { Component, OnInit, OnDestroy, ViewChild, TemplateRef, Input,
 import { isPlatformBrowser } from '@angular/common';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
-import { Product } from "../../../classes/product";
-import { ProductService } from '../../../../shared/services/product.service';
+// import { Product } from "../../../classes/product";
+// import { ProductService } from '../../../../shared/services/product.service';
+import { ProductService } from './../../../../core/services/product.service';
+import { Product } from './../../../models/product.model';
+import { registerLocaleData } from '@angular/common';
+import es from '@angular/common/locales/es';
 
 @Component({
   selector: 'app-quick-view',
@@ -27,6 +31,8 @@ export class QuickViewComponent implements OnInit, OnDestroy  {
     public productService: ProductService) { }
 
   ngOnInit(): void {
+    this.product.quantity = 1;
+    registerLocaleData(es);
   }
 
   openModal() {
@@ -56,48 +62,52 @@ export class QuickViewComponent implements OnInit, OnDestroy  {
   }
 
   // Get Product Color
-  Color(variants) {
-    const uniqColor = []
-    for (let i = 0; i < Object.keys(variants).length; i++) {
-      if (uniqColor.indexOf(variants[i].color) === -1 && variants[i].color) {
-        uniqColor.push(variants[i].color)
-      }
-    }
-    return uniqColor
-  }
+  // Color(variants) {
+  //   const uniqColor = []
+  //   for (let i = 0; i < Object.keys(variants).length; i++) {
+  //     if (uniqColor.indexOf(variants[i].color) === -1 && variants[i].color) {
+  //       uniqColor.push(variants[i].color)
+  //     }
+  //   }
+  //   return uniqColor
+  // }
 
   // Get Product Size
-  Size(variants) {
-    const uniqSize = []
-    for (let i = 0; i < Object.keys(variants).length; i++) {
-      if (uniqSize.indexOf(variants[i].size) === -1 && variants[i].size) {
-        uniqSize.push(variants[i].size)
-      }
-    }
-    return uniqSize
-  }
+  // Size(variants) {
+  //   const uniqSize = []
+  //   for (let i = 0; i < Object.keys(variants).length; i++) {
+  //     if (uniqSize.indexOf(variants[i].size) === -1 && variants[i].size) {
+  //       uniqSize.push(variants[i].size)
+  //     }
+  //   }
+  //   return uniqSize
+  // }
 
   // Change Variants
-  ChangeVariants(color, product) {
-    product.variants.map((item) => {
-      if (item.color === color) {
-        product.images.map((img) => {
-          if (img.image_id === item.image_id) {
-            this.ImageSrc = img.src
-          }
-        })
-      }
-    })
-  }
+  // ChangeVariants(color, product) {
+  //   product.variants.map((item) => {
+  //     if (item.color === color) {
+  //       product.images.map((img) => {
+  //         if (img.image_id === item.image_id) {
+  //           this.ImageSrc = img.src
+  //         }
+  //       })
+  //     }
+  //   })
+  // }
 
   // Increament
   increment() {
-    this.counter++ ;
+    //this.counter++ ;
+    this.product.quantity++;
   }
 
   // Decrement
   decrement() {
-    if (this.counter > 1) this.counter-- ;
+    // if (this.counter > 1) this.counter-- ;
+    if(this.product.quantity > 1){
+      this.product.quantity--;
+    }
   }
 
   // Add to cart

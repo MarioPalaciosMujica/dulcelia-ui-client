@@ -2,8 +2,12 @@ import { Component, OnInit, Injectable, PLATFORM_ID, Inject } from '@angular/cor
 import { isPlatformBrowser } from '@angular/common';
 import { Observable } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
-import { ProductService } from "../../services/product.service";
-import { Product } from "../../classes/product";
+// import { ProductService } from "../../services/product.service";
+// import { Product } from "../../classes/product";
+import { ProductService } from './../../../core/services/product.service';
+import { Product } from './../../models/product.model';
+import { registerLocaleData } from '@angular/common';
+import es from '@angular/common/locales/es';
 
 @Component({
   selector: 'app-settings',
@@ -47,12 +51,7 @@ export class SettingsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  changeLanguage(code){
-    if (isPlatformBrowser(this.platformId)) {
-      this.translate.use(code)
-    }
+    registerLocaleData(es);
   }
 
   get getTotal(): Observable<number> {
@@ -63,8 +62,14 @@ export class SettingsComponent implements OnInit {
     this.productService.removeCartItem(product);
   }
 
-  changeCurrency(currency: any) {
-    this.productService.Currency = currency
-  }
+  // changeLanguage(code){
+  //   if (isPlatformBrowser(this.platformId)) {
+  //     this.translate.use(code)
+  //   }
+  // }
+
+  // changeCurrency(currency: any) {
+  //   this.productService.Currency = currency
+  // }
 
 }

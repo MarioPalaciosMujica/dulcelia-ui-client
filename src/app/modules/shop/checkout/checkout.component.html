@@ -153,9 +153,16 @@
                                     <ul class="qty" *ngIf='products.length'>
                                         <li *ngFor="let product of products">
                                         	 {{ product.title }} × {{ product.quantity }}
-                                        	<span>
+                                        	<!-- <span>
                                                 {{ (product.price | discount:product) * productService?.Currency.price | currency:productService?.Currency.currency:'symbol' }}
-                                            </span>
+                                            </span> -->
+                                            <div *ngIf="product.isSale; then showDiscountPrice; else showNormalPrice"></div>
+                                            <ng-template #showDiscountPrice>
+                                                <span>${{ product.priceDiscount | number:'':'es' }}</span>
+                                            </ng-template>
+                                            <ng-template #showNormalPrice>
+                                                <span>${{ product.price | number:'':'es' }}</span>
+                                            </ng-template>
                                         </li>
                                     </ul>
                                     <ul class="qty" *ngIf='!products.length'>
@@ -163,7 +170,7 @@
                                     </ul>
                                     <ul class="sub-total">
                                         <li>
-                                        	Subtotal <span class="count">{{ getTotal | async | currency:productService?.Currency.currency:'symbol'}}</span>
+                                        	Subtotal <span class="count">${{ getTotal | async | number:'':'es'}}</span>
                                         </li>
                                         <li *ngIf='products.length'>
                                         	Shipping
@@ -180,7 +187,7 @@
                                         </li>
                                     </ul>
                                     <ul class="total">
-                                        <li>Total <span class="count">{{ getTotal | async | currency:productService?.Currency.currency:'symbol'}}</span></li>
+                                        <li>Total <span class="count">${{ getTotal | async | number:'':'es'}}</span></li>
                                     </ul>
                                 </div>
 

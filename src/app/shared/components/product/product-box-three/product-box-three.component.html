@@ -11,9 +11,9 @@
         <a href="javascript:void(0)" (click)="addToWishlist(product)" title="Add to Wishlist">
         	<i class="fa fa-heart" aria-hidden="true"></i>
         </a>
-        <button title="Add to cart" (click)="CartModal.openModal(product)" *ngIf="cartModal">
+        <!-- <button title="Add to cart" (click)="CartModal.openModal(product)" *ngIf="cartModal">
         	<i class="ti-shopping-cart"></i> Add to cart
-        </button>
+        </button> -->
         <button title="Add to cart" (click)="addToCart(product)" *ngIf="!cartModal">
         	<i class="ti-shopping-cart"></i> Add to cart
         </button>
@@ -38,5 +38,5 @@
     <h4>{{ product?.price * currency?.price | discount:product | currency:currency?.currency:'symbol' }}</h4>
 </div>
 
-<app-quick-view #quickView [product]="product" [currency]="currency"></app-quick-view>
-<app-cart-modal #cartModal [product]="product" [currency]="currency" *ngIf="cartModal"></app-cart-modal>
+<!-- <app-quick-view #quickView [product]="product" [currency]="currency"></app-quick-view>
+<app-cart-modal #cartModal [product]="product" [currency]="currency" *ngIf="cartModal"></app-cart-modal> -->

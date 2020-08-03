@@ -23,12 +23,12 @@
                 <tbody *ngFor="let product of products">
                     <tr>
                         <td>
-                            <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
-                                <img [src]="product.images[0].src" [alt]="product.images[0].alt">
+                            <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
+                                <img [src]="product.image.src" [alt]="product.image.alt">
                             </a>
                         </td>
                         <td>
-                            <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">{{ product.title | titlecase }}</a>
+                            <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">{{ product.title | titlecase }}</a>
                             <div class="mobile-cart-content row">
                                 <div class="col-xs-3">
                                     <div class="qty-box">
@@ -38,9 +38,17 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-3">
-                                    <h2 class="td-color">
+                                    <!-- <h2 class="td-color">
                                         {{ (product.price | discount:product) * productService?.Currency.price | currency:productService?.Currency.currency:'symbol' }}
-                                    </h2>
+                                    </h2> -->
+                                    <div *ngIf="product.isSale; then showDiscoutPrice; else showNormalPrice"></div>
+                                    <ng-template #showDiscoutPrice>
+                                        <h2>${{ product.priceDiscount | number:'':'es' }}</h2>
+                                    </ng-template>
+                                    <ng-template #showNormalPrice>
+                                        <h2>${{ product.price | number:'':'es' }}</h2>
+                                    </ng-template>
+
                                 </div>
                                 <div class="col-xs-3">
                                     <h2 class="td-color">
@@ -52,9 +60,16 @@
                             </div>
                         </td>
                         <td>
-                            <h2>
+                            <!-- <h2>
                                 {{ (product.price | discount:product) * productService?.Currency.price | currency:productService?.Currency.currency:'symbol' }}
-                            </h2>
+                            </h2> -->
+                            <div *ngIf="product.isSale; then showDiscoutPrice; else showNormalPrice"></div>
+                            <ng-template #showDiscoutPrice>
+                                <h2>${{ product.priceDiscount | number:'':'es' }}</h2>
+                            </ng-template>
+                            <ng-template #showNormalPrice>
+                                <h2>${{ product.price | number:'':'es' }}</h2>
+                            </ng-template>
                         </td>
                         <td>
                             <div class="qty-box">
@@ -79,9 +94,16 @@
                         </a>
                         </td>
                         <td>
-                            <h2 class="td-color">
+                            <!-- <h2 class="td-color">
                                 {{ ((product.price | discount:product) * product.quantity) * productService?.Currency.price | currency:productService?.Currency.currency:'symbol' }}
-                            </h2>
+                            </h2> -->
+                            <div *ngIf="product.isSale; then showDiscoutPrice; else showNormalPrice"></div>
+                            <ng-template #showDiscoutPrice>
+                                <h2>${{ product.priceDiscount * product.quantity | number:'':'es' }}</h2>
+                            </ng-template>
+                            <ng-template #showNormalPrice>
+                                <h2>${{ product.price * product.quantity | number:'':'es' }}</h2>
+                            </ng-template>
                         </td>
                     </tr>
                 </tbody>
@@ -91,7 +113,8 @@
                     <tr>
                         <td>total price :</td>
                         <td>
-                            <h2> {{ getTotal | async | currency:productService?.Currency.currency:'symbol'}}</h2>
+                            <!-- <h2> {{ getTotal | async | currency:productService?.Currency.currency:'symbol'}}</h2> -->
+                            <h2> {{ getTotal | async | number:'':'es' }}</h2>
                         </td>
                     </tr>
                 </tfoot>

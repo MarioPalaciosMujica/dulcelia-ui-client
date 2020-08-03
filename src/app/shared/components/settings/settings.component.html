@@ -1,12 +1,16 @@
 <div class="icon-nav">
   <ul>
+
+    <!-- Search Icon -->
     <li class="onhover-div mobile-search search-widgets" id="search-widgets">
       <div>
         <img src="assets/images/icon/search.png" class="img-fluid" alt="">
         <i class="ti-search"></i>
       </div>
     </li>
-    <li class="onhover-div mobile-setting">
+
+    <!-- Settings Icon -->
+    <!-- <li class="onhover-div mobile-setting">
       <div><img src="assets/images/icon/setting.png" class="img-fluid" alt="settong">
         <i class="ti-settings"></i></div>
       <div class="show-div setting">
@@ -23,7 +27,9 @@
           </li>
         </ul>
       </div>
-    </li>
+    </li> -->
+
+    <!-- Shopping Card Icon -->
     <li class="onhover-div mobile-cart">
       <div>
         <a [routerLink]="['/shop/cart']">
@@ -38,17 +44,20 @@
       <ul class="show-div shopping-cart" *ngIf='products.length'>
         <li *ngFor="let product of products">
           <div class="media">
-            <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
-              <img class="mr-3" [src]="product?.images[0].src" [alt]="product?.images[0].alt">
+            <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
+              <img class="mr-3" [src]="product?.image.src" [alt]="product?.image.alt">
             </a>
             <div class="media-body">
-              <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
+              <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
                 <h4>{{ product?.title }}</h4>
               </a>
               <h4>
                 <span>
                   {{ product?.quantity }} x 
-                  {{ product?.price * productService?.Currency.price | discount:product | currency:productService?.Currency.currency:'symbol' }}
+                  <!-- {{ product?.price * productService?.Currency.price | discount:product | currency:productService?.Currency.currency:'symbol' }} -->
+                  <div *ngIf="product.isSale; then showDiscountPrice; else showNormalPrice"></div>
+                  <ng-template #showDiscountPrice>${{ product.priceDiscount | number:'':'es' }}</ng-template>
+                  <ng-template #showNormalPrice>${{ product.price | number:'':'es' }}</ng-template>
                 </span>
               </h4>
             </div>
@@ -59,7 +68,8 @@
         </li>
         <li>
           <div class="total">
-            <h5>subtotal : <span>{{ getTotal | async | currency:productService?.Currency.currency:'symbol' }}</span></h5>
+            <!-- <h5>subtotal : <span>{{ getTotal | async | currency:productService?.Currency.currency:'symbol' }}</span></h5> -->
+            <h5>subtotal : <span>{{ getTotal | async | number:'':'es' }}</span></h5>
           </div>
         </li>
         <li>

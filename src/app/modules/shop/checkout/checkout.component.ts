@@ -1,11 +1,15 @@
+import { ProductService } from './../../../core/services/product.service';
+import { Product } from './../../../shared/models/product.model';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
 import { environment } from './../../../../environments/environment';
-import { Product } from "./../../../shared/classes/product";
-import { ProductService } from "./../../../shared/services/product.service";
+// import { Product } from "./../../../shared/classes/product";
+// import { ProductService } from "./../../../shared/services/product.service";
 import { OrderService } from "./../../../shared/services/order.service";
+import { registerLocaleData } from '@angular/common';
+import es from '@angular/common/locales/es';
 
 @Component({
   selector: 'app-checkout',
@@ -37,6 +41,7 @@ export class CheckoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    registerLocaleData(es);
     this.productService.cartItems.subscribe(response => this.products = response);
     this.getTotal.subscribe(amount => this.amount = amount);
     this.initConfig();
@@ -67,17 +72,17 @@ export class CheckoutComponent implements OnInit {
   // Paypal Payment Gateway
   private initConfig(): void {
     this.payPalConfig = {
-        currency: this.productService.Currency.currency,
+        currency: null, //this.productService.Currency.currency,
         clientId: environment.paypal_token,
         createOrderOnClient: (data) => < ICreateOrderRequest > {
           intent: 'CAPTURE',
           purchase_units: [{
               amount: {
-                currency_code: this.productService.Currency.currency,
+                currency_code: null, //this.productService.Currency.currency,
                 value: this.amount,
                 breakdown: {
                     item_total: {
-                        currency_code: this.productService.Currency.currency,
+                        currency_code: null, //this.productService.Currency.currency,
                         value: this.amount
                     }
                 }
