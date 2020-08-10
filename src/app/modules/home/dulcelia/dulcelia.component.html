@@ -1,9 +1,8 @@
-<app-header-three [themeLogo]="themeLogo"></app-header-three>
+<app-header-three [sticky]="false"></app-header-three>
 
 <!-- Home slider start-->
 <section class="p-0">
-    <app-slider [sliders]="sliders" [textClass]="'text-center'" [category]="'flower'" [buttonText]="'shop now'">
-    </app-slider>
+    <app-slider [sliders]="sliders" [textClass]="'text-center'" [category]="'flower'" [buttonText]="'button.shop_now' | translate"></app-slider>
 </section>
 <!-- Home slider End -->
 
@@ -12,20 +11,22 @@
     <div class="container">
         <div class="row partition2">
             <div class="col-md-4">
-                <a [routerLink]="['/shop/collection/left/sidebar']" [queryParams]="{ category: 'flower'}">
+                <!-- <a [routerLink]="['/shop/collection/left/sidebar']" [queryParams]="{ category: 'flower'}"> -->
+                <a [routerLink]="['/tienda/catalogo']" [queryParams]="{ category: 'flower'}">
                     <div class="collection-banner p-left text-center">
                         <img src="assets/dulcelia-demo/collection-1.jpg" class="img-fluid" alt="banner">
                     </div>
                 </a>
             </div>
             <div class="col-md-8">
-                <a [routerLink]="['/shop/collection/left/sidebar']" [queryParams]="{ category: 'flower'}">
+                <!-- <a [routerLink]="['/shop/collection/left/sidebar']" [queryParams]="{ category: 'flower'}"> -->
+                <a [routerLink]="['/tienda/catalogo']" [queryParams]="{ category: 'flower'}">
                     <div class="collection-banner p-right text-right">
                         <img src="assets/dulcelia-demo/collection-2.jpg" class="img-fluid" alt="banner">
                         <div class="contain-banner">
                             <div>
-                                <h4>save 30%</h4>
-                                <h2>hot deal</h2>
+                                <h4>{{ 'home.header_subtitle' | translate }}</h4>
+                                <h2>{{ 'home.header_title' | translate }}</h2>
                             </div>
                         </div>
                     </div>
@@ -41,7 +42,7 @@
     <div class="full-box">
         <div class="container">
             <div class="title4">
-                <h2 class="title-inner4">best selling products</h2>
+                <h2 class="title-inner4">{{ 'home.best_selling_products' | translate }}</h2>
                 <div class="line">
                     <span></span>
                 </div>
@@ -96,7 +97,7 @@
             <div class="row">
                 <div class="col">
                     <div class="title4">
-                        <h2 class="title-inner4">trending products</h2>
+                        <h2 class="title-inner4">{{ 'home.trending_products' | translate }}</h2>
                         <div class="line">
                             <span></span>
                         </div>
@@ -153,7 +154,7 @@
         <div class="row">
             <div class="col">
                 <div class="title4">
-                    <h2 class="title-inner4">trending items</h2>
+                    <h2 class="title-inner4">{{ 'home.trending_items' | translate }}</h2>
                     <div class="line">
                         <span></span>
                     </div>
@@ -181,8 +182,8 @@
         <div class="row">
             <div class="col">
                 <div class="title1 section-t-space">
-                    <h4>Recent Story</h4>
-                    <h2 class="title-inner1">from the blog</h2>
+                    <h4>{{ 'home.recent_stories' | translate }}</h4>
+                    <h2 class="title-inner1">{{ 'home.from_the_blog' | translate }}</h2>
                 </div>
             </div>
         </div>
@@ -220,4 +221,4 @@
 
 <!-- Cart Open To bottom Side-->
 <app-cart-variation [direction]="'bottom'"></app-cart-variation>
-<app-footer-one [themeLogo]="themeLogo"></app-footer-one>
+<app-footer-one></app-footer-one>

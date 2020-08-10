@@ -1,34 +1,39 @@
-<app-breadcrumb [title]="'Cart'" [breadcrumb]="'Cart'"></app-breadcrumb>
+<!-- <app-breadcrumb [title]="'Cart'" [breadcrumb]="'Cart'"></app-breadcrumb> -->
+<app-breadcrumb [title]="'breadcrumb.cart' | translate" [breadcrumb]="'breadcrumb.cart' | translate"></app-breadcrumb>
 <!-- section start -->
 <section class="cart-section section-b-space">
     <div class="container">
         <div class="col-sm-12 empty-cart-cls text-center" *ngIf="!products.length">
         <img src="assets/images/icon-empty-cart.png" class="img-fluid mb-4">
-        <h3><strong>Your Cart is Empty</strong></h3>
-        <h4>Add something to make me happy :)</h4>
+        <h3><strong>{{ 'cart.cart_empty_title' | translate }}</strong></h3>
+        <h4>{{ 'cart.cart_empty_msn' | translate }}</h4>
         </div>
         <div class="row" *ngIf="products.length">
         <div class="col-sm-12">
             <table class="table cart-table table-responsive-xs">
                 <thead>
                     <tr class="table-head">
-                        <th scope="col">image</th>
-                        <th scope="col">product name</th>
-                        <th scope="col">price</th>
-                        <th scope="col">quantity</th>
-                        <th scope="col">action</th>
-                        <th scope="col">total</th>
+                        <th scope="col">{{ 'cart.image' | translate }}</th>
+                        <th scope="col">{{ 'cart.product_name' | translate }}</th>
+                        <th scope="col">{{ 'cart.price' | translate }}</th>
+                        <th scope="col">{{ 'cart.quantity' | translate }}</th>
+                        <th scope="col">{{ 'cart.action' | translate }}</th>
+                        <th scope="col">{{ 'cart.total' | translate }}</th>
                     </tr>
                 </thead>
                 <tbody *ngFor="let product of products">
                     <tr>
+                        <!-- Image -->
                         <td>
-                            <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
-                                <img [src]="product.image.src" [alt]="product.image.alt">
+                            <!-- <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]"> -->
+                            <a [routerLink]="['/tienda/producto/', product.idProduct]">
+                                <img [src]="product.images[0].src" [alt]="product.images[0].alt">
                             </a>
                         </td>
+                        <!-- Product Name -->
                         <td>
-                            <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">{{ product.title | titlecase }}</a>
+                            <!-- <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">{{ product.title | titlecase }}</a> -->
+                            <a [routerLink]="['/tienda/producto/', product.idProduct]">{{ product.title | titlecase }}</a>
                             <div class="mobile-cart-content row">
                                 <div class="col-xs-3">
                                     <div class="qty-box">
@@ -41,11 +46,11 @@
                                     <!-- <h2 class="td-color">
                                         {{ (product.price | discount:product) * productService?.Currency.price | currency:productService?.Currency.currency:'symbol' }}
                                     </h2> -->
-                                    <div *ngIf="product.isSale; then showDiscoutPrice; else showNormalPrice"></div>
-                                    <ng-template #showDiscoutPrice>
+                                    <div *ngIf="product.isSale; then showDiscoutPriceSm; else showNormalPriceSm"></div>
+                                    <ng-template #showDiscoutPriceSm>
                                         <h2>${{ product.priceDiscount | number:'':'es' }}</h2>
                                     </ng-template>
-                                    <ng-template #showNormalPrice>
+                                    <ng-template #showNormalPriceSm>
                                         <h2>${{ product.price | number:'':'es' }}</h2>
                                     </ng-template>
 
@@ -59,6 +64,7 @@
                                 </div>
                             </div>
                         </td>
+                        <!-- Price -->
                         <td>
                             <!-- <h2>
                                 {{ (product.price | discount:product) * productService?.Currency.price | currency:productService?.Currency.currency:'symbol' }}
@@ -71,6 +77,7 @@
                                 <h2>${{ product.price | number:'':'es' }}</h2>
                             </ng-template>
                         </td>
+                        <!-- Quantity -->
                         <td>
                             <div class="qty-box">
                                 <div class="input-group">
@@ -88,47 +95,52 @@
                                 </div>
                             </div>
                         </td>
+                        <!-- Action -->
                         <td>
                             <a href="javascript:void(0)" (click)="removeItem(product)" class="icon">
                             <i class="ti-close"></i>
                         </a>
                         </td>
+                        <!-- Total Single Product -->
                         <td>
                             <!-- <h2 class="td-color">
                                 {{ ((product.price | discount:product) * product.quantity) * productService?.Currency.price | currency:productService?.Currency.currency:'symbol' }}
                             </h2> -->
-                            <div *ngIf="product.isSale; then showDiscoutPrice; else showNormalPrice"></div>
-                            <ng-template #showDiscoutPrice>
-                                <h2>${{ product.priceDiscount * product.quantity | number:'':'es' }}</h2>
+                            <div *ngIf="product.isSale; then showDiscoutTotalPrice; else showNormaTotallPrice"></div>
+                            <ng-template #showDiscoutTotalPrice>
+                                <h2>${{ (product.priceDiscount * product.quantity) | number:'':'es' }}</h2>
                             </ng-template>
-                            <ng-template #showNormalPrice>
-                                <h2>${{ product.price * product.quantity | number:'':'es' }}</h2>
+                            <ng-template #showNormaTotallPrice>
+                                <h2>${{ (product.price * product.quantity) | number:'':'es' }}</h2>
                             </ng-template>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <!-- Total -->
             <table class="table cart-table table-responsive-md">
                 <tfoot>
                     <tr>
-                        <td>total price :</td>
+                        <td>{{ 'cart.total_price' | translate }}</td>
                         <td>
                             <!-- <h2> {{ getTotal | async | currency:productService?.Currency.currency:'symbol'}}</h2> -->
-                            <h2> {{ getTotal | async | number:'':'es' }}</h2>
+                            <h2> ${{ getTotal | async | number:'':'es' }}</h2>
                         </td>
                     </tr>
                 </tfoot>
             </table>
         </div>
+    </div>
+    <div class="row cart-buttons" *ngIf='products.length'>
+        <div class="col-6">
+            <!-- <a [routerLink]="['/shop/collection/left/sidebar']" class="btn btn-solid">{{ 'button.continue_shopping' | translate }}</a> -->
+            <a [routerLink]="['/tienda/catalogo']" class="btn btn-solid">{{ 'button.continue_shopping' | translate }}</a>
         </div>
-        <div class="row cart-buttons" *ngIf='products.length'>
-            <div class="col-6">
-                <a [routerLink]="['/shop/collection/left/sidebar']" class="btn btn-solid">continue shopping</a>
-            </div>
-            <div class="col-6">
-                <a [routerLink]="['/shop/checkout']" class="btn btn-solid">check out</a>
-            </div>
+        <div class="col-6">
+            <!-- <a [routerLink]="['/shop/checkout']" class="btn btn-solid">{{ 'button.check_out' | translate }}</a> -->
+            <a [routerLink]="['/tienda/pago']" class="btn btn-solid">{{ 'button.check_out' | translate }}</a>
         </div>
+    </div>
     </div>
 </section>
 <!--section end-->

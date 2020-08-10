@@ -17,7 +17,9 @@ export class CartComponent implements OnInit {
   public products: Product[] = [];
 
   constructor(public productService: ProductService) {
-    this.productService.cartItems.subscribe(response => this.products = response);
+    this.productService.cartItems.subscribe(response => {
+      this.products = response;
+    });
   }
 
   ngOnInit(): void {

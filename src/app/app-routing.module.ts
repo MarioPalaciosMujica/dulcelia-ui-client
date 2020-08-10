@@ -8,31 +8,32 @@ import { ElementsComponent } from './modules/elements/elements.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home/dulcelia',
+    redirectTo: 'inicio/dulcelia', //'home/dulcelia',
     pathMatch: 'full'
   },
   {
-    path: 'home',
+    path: 'inicio', //'home',
     loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
   },
   {
-    path: 'shop',
+    path: 'tienda', //'shop',
     component: ShopComponent,
     loadChildren: () => import('./modules/shop/shop.module').then(m => m.ShopModule)
   },
   { 
-    path: 'pages',
+    path: 'pagina',
     component: PagesComponent,
     loadChildren: () => import('./modules/pages/pages.module').then(m => m.PagesModule) 
   },
-  { 
-    path: 'elements', 
-    component: ElementsComponent,
-    loadChildren: () => import('./modules/elements/elements.module').then(m => m.ElementsModule) }
-  // ,{
-  //   path: '**', // Navigate to Home Page if not found any page
-  //   redirectTo: 'home/dulcelia',
+  // { 
+  //   path: 'elements', 
+  //   component: ElementsComponent,
+  //   loadChildren: () => import('./modules/elements/elements.module').then(m => m.ElementsModule) 
   // },
+  {
+    path: '**', // Navigate to Home Page if not found any page
+    redirectTo: 'inicio/dulcelia', //'home/dulcelia',
+  },
 ];
 
 @NgModule({

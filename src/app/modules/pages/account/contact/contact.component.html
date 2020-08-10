@@ -1,4 +1,4 @@
-<app-breadcrumb [title]="'Contact'" [breadcrumb]="'Contact'"></app-breadcrumb>
+<app-breadcrumb [title]="'breadcrumb.contact' | translate" [breadcrumb]="'breadcrumb.contact' | translate"></app-breadcrumb>
 <!--section start-->
 <section class=" contact-page section-b-space">
     <div class="container">
@@ -12,7 +12,7 @@
                         <li>
                             <div class="contact-icon">
                                 <img src="assets/images/icon/phone.png" alt="Generic placeholder image">
-                                <h6>Contact Us</h6>
+                                <h6>{{ 'contact.contact_us' | translate }}</h6>
                             </div>
                             <div class="media-body">
                                 <p>+91 123 - 456 - 7890</p>
@@ -22,7 +22,7 @@
                         <li>
                             <div class="contact-icon">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <h6>Address</h6>
+                                <h6>{{ 'contact.address' | translate }}</h6>
                             </div>
                             <div class="media-body">
                                 <p>ABC Complex,Near xyz, New York</p>
@@ -32,14 +32,14 @@
                         <li>
                             <div class="contact-icon">
                                 <img src="assets/images/icon/email.png" alt="Generic placeholder image">
-                                <h6>Address</h6>
+                                <h6>{{ 'contact.email' | translate }}</h6>
                             </div>
                             <div class="media-body">
                                 <p>Support@Shopcart.com</p>
                                 <p>info@shopcart.com</p>
                             </div>
                         </li>
-                        <li>
+                        <!-- <li>
                             <div class="contact-icon">
                                 <i class="fa fa-fax" aria-hidden="true"></i>
                                 <h6>Fax</h6>
@@ -48,7 +48,7 @@
                                 <p>Support@Shopcart.com</p>
                                 <p>info@shopcart.com</p>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -58,27 +58,27 @@
                 <form class="theme-form">
                     <div class="form-row">
                         <div class="col-md-6">
-                            <label for="name">First Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter Your name" required="">
+                            <label for="name">{{ 'form.first_name' | translate }}</label>
+                            <input type="text" class="form-control" id="name" placeholder="{{ 'form.first_name_placeholder' | translate }}" required="">
                         </div>
                         <div class="col-md-6">
-                            <label for="email">Last Name</label>
-                            <input type="text" class="form-control" id="last-name" placeholder="Email" required="">
+                            <label for="email">{{ 'form.last_name' | translate }}</label>
+                            <input type="text" class="form-control" id="last-name" placeholder="{{ 'form.last_name_placeholder' | translate }}" required="">
                         </div>
                         <div class="col-md-6">
-                            <label for="review">Phone number</label>
-                            <input type="text" class="form-control" id="review" placeholder="Enter your number" required="">
+                            <label for="review">{{ 'form.phone' | translate }}</label>
+                            <input type="text" class="form-control" id="review" placeholder="{{ 'form.phone_placeholder' | translate }}" required="">
                         </div>
                         <div class="col-md-6">
-                            <label for="email">Email</label>
-                            <input type="text" class="form-control" id="email" placeholder="Email" required="">
+                            <label for="email">{{ 'form.email' | translate }}</label>
+                            <input type="text" class="form-control" id="email" placeholder="{{ 'form.email_placeholder' | translate }}" required="">
                         </div>
                         <div class="col-md-12">
-                            <label for="review">Write Your Message</label>
-                            <textarea class="form-control" placeholder="Write Your Message" id="exampleFormControlTextarea1" rows="6"></textarea>
+                            <label for="review">{{ 'form.write_your_message' | translate }}</label>
+                            <textarea class="form-control" placeholder="{{ 'form.write_your_message_placeholder' | translate }}" id="exampleFormControlTextarea1" rows="6"></textarea>
                         </div>
                         <div class="col-md-12">
-                            <button class="btn btn-solid" type="submit">Send Your Message</button>
+                            <button class="btn btn-solid" type="submit">{{ 'button.send_your_message' | translate }}</button>
                         </div>
                     </div>
                 </form>

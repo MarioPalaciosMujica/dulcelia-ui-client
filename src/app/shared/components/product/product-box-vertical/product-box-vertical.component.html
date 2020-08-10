@@ -23,16 +23,18 @@
 </div> -->
 
 <div class="media">
-    <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
-        <img [defaultImage]="product.image.src ? product.image.src : 'assets/images/product/placeholder.jpg'" 
-             [lazyLoad]="product.image.src ? product.image.src : product.images[0].src"
-             class="img-fluid lazy-loading" alt="{{ product.image.alt }}">
+    <!-- <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]"> -->
+    <a [routerLink]="['/tienda/producto/', product.idProduct]">
+        <img [defaultImage]="product.images[0].src ? product.images[0].src : 'assets/images/product/placeholder.jpg'" 
+             [lazyLoad]="product.images[0].src ? product.images[0].src : product.images[0].src"
+             class="img-fluid lazy-loading" alt="{{ product.images[0].alt }}">
     </a>
 	<div class="media-body align-self-center">
 		<div class="rating">
 			<bar-rating [rate]="product.rating" [readOnly]="true"></bar-rating>
-		</div>
-        <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
+        </div>
+        <!-- <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]"> -->
+        <a [routerLink]="['/tienda/producto/', product.idProduct]">
             <h6>{{ product.title | titlecase }}</h6>
         </a>
 

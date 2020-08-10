@@ -123,7 +123,8 @@ export class ProductService extends BaseService {
         ...product
       })
     }
-    this.toastrService.success('Product has been added in wishlist.');
+    // this.toastrService.success('Product has been added in wishlist.');
+    this.toastrService.success('El producto añadido a su lista de desados');
     localStorage.setItem("wishlistItems", JSON.stringify(state.wishlist));
     return true
   }
@@ -156,7 +157,8 @@ export class ProductService extends BaseService {
         ...product
       })
     }
-    this.toastrService.success('Product has been added in compare.');
+    // this.toastrService.success('Product has been added in compare.');
+    this.toastrService.success('El producto añadido a su lista de comparación');
     localStorage.setItem("compareItems", JSON.stringify(state.compare));
     return true
   }
@@ -201,6 +203,7 @@ export class ProductService extends BaseService {
 
     this.OpenCart = true; // If we use cart variation modal
     localStorage.setItem("cartItems", JSON.stringify(state.cart));
+    this.toastrService.success('El producto fue añadido a su carro');
     return true;
   }
 
@@ -224,7 +227,8 @@ export class ProductService extends BaseService {
     const qty = product.quantity + quantity
     const stock = product.stock
     if (stock != null && (stock < qty || stock == 0)) {
-      this.toastrService.error('You can not add more items than available. In stock '+ stock +' items.');
+      // this.toastrService.error('You can not add more items than available. In stock '+ stock +' items.');
+      this.toastrService.error('No puede añadir mas productos a los que estan Stock. Productos '+ stock +' en stock.');
       return false
     }
     return true

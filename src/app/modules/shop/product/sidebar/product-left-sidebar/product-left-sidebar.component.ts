@@ -105,7 +105,7 @@ export class ProductLeftSidebarComponent implements OnInit {
     //product.quantity = 1;
     const status = await this.productService.addToCart(product);
     if(status)
-      this.router.navigate(['/shop/cart']);
+      this.router.navigate(['/tienda/carro']);
   }
 
   // Buy Now
@@ -114,7 +114,7 @@ export class ProductLeftSidebarComponent implements OnInit {
     //product.quantity = 1;
     const status = await this.productService.addToCart(product);
     if(status)
-      this.router.navigate(['/shop/checkout']);
+      this.router.navigate(['/tienda/pago']);
   }
 
   // Add to Wishlist

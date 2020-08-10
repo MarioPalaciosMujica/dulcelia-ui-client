@@ -20,7 +20,7 @@ export interface Product {
     isActive?: boolean;
     created?: string;
     modified?: string;
-    image?: Image;
+    // image?: Image;
     brand?: Brand;
     collection?: Collection;
     images?: Image[];

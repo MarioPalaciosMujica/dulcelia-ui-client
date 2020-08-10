@@ -13,7 +13,7 @@ import { ProductSlider } from './../../../shared/data/slider';
 })
 export class DulceliaComponent implements OnInit, OnDestroy {
 
-    public themeLogo: string = 'assets/images/icon/logo-11.png'; // Change Logo
+    //public themeLogo: string = 'assets/images/icon/logo-11.png'; // Change Logo
 
     public products: Product[];
     public collections: Collection[];
@@ -28,7 +28,7 @@ export class DulceliaComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         // Change color for this layout
-        document.documentElement.style.setProperty('--theme-deafult', '#fa869b');
+        //document.documentElement.style.setProperty('--theme-deafult', '#fa869b');
 
         this.getAllProducts();
         this.getAllCollections();
@@ -36,7 +36,7 @@ export class DulceliaComponent implements OnInit, OnDestroy {
 
     ngOnDestroy(): void {
         // Remove Color
-        document.documentElement.style.removeProperty('--theme-deafult');
+        //document.documentElement.style.removeProperty('--theme-deafult');
     }
 
     private getAllProducts(){
@@ -66,12 +66,12 @@ export class DulceliaComponent implements OnInit, OnDestroy {
     public ProductSliderConfig: any = ProductSlider;
 
     public sliders = [{
-      title: 'save upto 20%',
-      subTitle: 'creative & decor',
+      title: 'Ahorra hasta un 20%',
+      subTitle: 'nuestro Catalogo',
       image: 'assets/dulcelia-demo/slider-flowers.jpg'
     }, {
-      title: 'save upto 10%',
-      subTitle: 'pre-made & custom',
+      title: 'Envíos',
+      subTitle: 'A todo santiago',
       image: 'assets/dulcelia-demo/slider-bike.jpg'
     }];
     

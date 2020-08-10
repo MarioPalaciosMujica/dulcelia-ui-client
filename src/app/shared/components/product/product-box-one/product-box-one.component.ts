@@ -1,9 +1,11 @@
+
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { QuickViewComponent } from "../../modal/quick-view/quick-view.component";
 import { CartModalComponent } from "../../modal/cart-modal/cart-modal.component";
+// import { ProductService } from "../../../services/product.service";
 // import { Product } from "../../../classes/product";
 import { Product } from './../../../models/product.model';
-import { ProductService } from "../../../services/product.service";
+import { ProductService } from './../../../../core/services/product.service';
 import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
 

@@ -10,14 +10,14 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { TranslateModule } from '@ngx-translate/core';
 
 // Header and Footer Components
-import { HeaderOneComponent } from './header/header-one/header-one.component';
+// import { HeaderOneComponent } from './header/header-one/header-one.component';
 import { FooterOneComponent } from './footer/footer-one/footer-one.component';
-import { HeaderTwoComponent } from './header/header-two/header-two.component';
-import { FooterTwoComponent } from './footer/footer-two/footer-two.component';
+// import { HeaderTwoComponent } from './header/header-two/header-two.component';
+// import { FooterTwoComponent } from './footer/footer-two/footer-two.component';
 import { HeaderThreeComponent } from './header/header-three/header-three.component';
-import { FooterThreeComponent } from './footer/footer-three/footer-three.component';
-import { HeaderFourComponent } from './header/header-four/header-four.component';
-import { FooterFourComponent } from './footer/footer-four/footer-four.component';
+// import { FooterThreeComponent } from './footer/footer-three/footer-three.component';
+// import { HeaderFourComponent } from './header/header-four/header-four.component';
+// import { FooterFourComponent } from './footer/footer-four/footer-four.component';
 
 // Components
 import { LeftMenuComponent } from './components/left-menu/left-menu.component';
@@ -27,9 +27,9 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { ProductBoxOneComponent } from './components/product/product-box-one/product-box-one.component';
 import { ProductBoxTwoComponent } from './components/product/product-box-two/product-box-two.component';
-import { ProductBoxThreeComponent } from './components/product/product-box-three/product-box-three.component';
-import { ProductBoxFourComponent } from './components/product/product-box-four/product-box-four.component';
-import { ProductBoxFiveComponent } from './components/product/product-box-five/product-box-five.component';
+// import { ProductBoxThreeComponent } from './components/product/product-box-three/product-box-three.component';
+// import { ProductBoxFourComponent } from './components/product/product-box-four/product-box-four.component';
+// import { ProductBoxFiveComponent } from './components/product/product-box-five/product-box-five.component';
 import { ProductBoxVerticalComponent } from './components/product/product-box-vertical/product-box-vertical.component';
 import { ProductBoxVerticalSliderComponent } from './components/product/product-box-vertical-slider/product-box-vertical-slider.component';
 
@@ -56,14 +56,14 @@ import { DiscountPipe } from './pipes/discount.pipe';
 
 @NgModule({
   declarations: [
-    HeaderOneComponent,
+    // HeaderOneComponent,
     FooterOneComponent,
-    HeaderTwoComponent,
-    FooterTwoComponent,
+    // HeaderTwoComponent,
+    // FooterTwoComponent,
     HeaderThreeComponent,
-    FooterThreeComponent,
-    HeaderFourComponent,
-    FooterFourComponent,
+    // FooterThreeComponent,
+    // HeaderFourComponent,
+    // FooterFourComponent,
     LeftMenuComponent,
     MenuComponent,
     SettingsComponent,
@@ -71,9 +71,9 @@ import { DiscountPipe } from './pipes/discount.pipe';
     CategoriesComponent,
     ProductBoxOneComponent,
     ProductBoxTwoComponent,
-    ProductBoxThreeComponent,
-    ProductBoxFourComponent,
-    ProductBoxFiveComponent,
+    // ProductBoxThreeComponent,
+    // ProductBoxFourComponent,
+    // ProductBoxFiveComponent,
     ProductBoxVerticalComponent,
     ProductBoxVerticalSliderComponent,
     NewsletterComponent,
@@ -112,21 +112,21 @@ import { DiscountPipe } from './pipes/discount.pipe';
     LazyLoadImageModule,
     NgxSkeletonLoaderModule,
     TranslateModule,
-    HeaderOneComponent,
+    // HeaderOneComponent,
     FooterOneComponent,
-    HeaderTwoComponent,
-    FooterTwoComponent,
+    // HeaderTwoComponent,
+    // FooterTwoComponent,
     HeaderThreeComponent,
-    FooterThreeComponent,
-    HeaderFourComponent,
-    FooterFourComponent,
+    // FooterThreeComponent,
+    // HeaderFourComponent,
+    // FooterFourComponent,
     BreadcrumbComponent,
     CategoriesComponent,
     ProductBoxOneComponent,
     ProductBoxTwoComponent,
-    ProductBoxThreeComponent,
-    ProductBoxFourComponent,
-    ProductBoxFiveComponent,
+    // ProductBoxThreeComponent,
+    // ProductBoxFourComponent,
+    // ProductBoxFiveComponent,
     ProductBoxVerticalComponent,
     ProductBoxVerticalSliderComponent,
     NewsletterComponent,

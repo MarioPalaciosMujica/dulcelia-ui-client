@@ -1,14 +1,18 @@
 <!-- Start Categories List -->
 <div class="collection-collapse-block border-0" [class.open]="collapse">
-    <h3 class="collapse-block-title" (click)="collapse = !collapse">Category</h3>
+    <h3 class="collapse-block-title" (click)="collapse = !collapse">{{ 'section.category' | translate }}</h3>
     <div class="collection-collapse-block-content">
         <div class="collection-brand-filter">
             <ul *ngIf="isDataLoaded" class="category-list">
+                <li>
+                    <a [routerLink]="['/tienda/catalogo']">{{ 'product.all' | translate }}</a>
+                </li>
                 <li *ngFor="let category of categories">
-                    <a [routerLink]="['/shop/collection/left/sidebar']"
-                       [queryParams]="{ category: category.name}">
+                    <!-- <a [routerLink]="['/tienda/catalogo']"
+                       [queryParams]="{ idCategory: category.idCategory}">
                         {{ category.name }}
-                    </a>
+                    </a> -->
+                    <a [routerLink]="['/tienda/catalogo/', category.idCategory]">{{ category.name }}</a>
                 </li>
             </ul>
         </div>

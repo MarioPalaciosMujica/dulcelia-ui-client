@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+
+// @import '/assets/scss/dulcelia-colors/orange-flower.scss';
+// @import '/assets/scss/dulcelia-colors/muted.scss';
+// @import '/assets/scss/dulcelia-colors/pretty-pink.scss';
+// @import '/assets/scss/dulcelia-colors/reliable.scss';
+// @import '/assets/scss/dulcelia-colors/starry-blue.scss';
+
+body, header {
+    background-color: #FFFFFF;
+    // background-color: #F7F1F0;
+}
+
+.top-header {
+    background-color: #9F496E;
+}
+.top-header .header-contact li,
+.top-header .header-dropdown li,
+.top-header .header-dropdown li a {
+    color: #F2EBE5;
+}
+
+// .breadcrumb-section {
+//     background-color: #F2EBE5;
+// }

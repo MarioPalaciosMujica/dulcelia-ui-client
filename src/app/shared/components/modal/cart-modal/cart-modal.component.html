@@ -9,21 +9,27 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <div class="media">
-                            <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
-                                <img class="img-fluid pro-img" [src]="product.image.src" [alt]="product.image.alt">
+                            <!-- <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]"> -->
+                            <a [routerLink]="['/tienda/producto/', product.idProduct]">
+                                <img class="img-fluid pro-img" [src]="product.images[0].src" [alt]="product.images[0].alt">
                             </a>
                             <div class="media-body align-self-center text-center">
-                                <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
+                                <!-- <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]"> -->
+                                <a [routerLink]="['/tienda/producto/', product.idProduct]">
                                     <h6>
-                                        <i class="fa fa-check"></i>Item
+                                        <i class="fa fa-check"></i>{{ 'product_modal.item' | translate }}
                                         <span>{{ product.title | titlecase }}</span>
-                                        <span> successfully added to your Cart</span>
+                                        <span> {{ 'product_modal.added' | translate }}</span>
                                     </h6>
                                 </a>
                                 <div class="buttons">
-                                    <a [routerLink]="['/shop/cart']" class="view-cart btn btn-solid">Your cart</a>
-                                    <a [routerLink]="['/shop/checkout']" class="checkout btn btn-solid">Check out</a>
-                                    <a [routerLink]="['/shop/collection/left/sidebar']" class="continue btn btn-solid">Continue shopping</a>
+                                    <!-- <a [routerLink]="['/shop/cart']" class="view-cart btn btn-solid">{{ 'product_modal.your_cart' | translate }}</a>
+                                    <a [routerLink]="['/shop/checkout']" class="checkout btn btn-solid">{{ 'product_modal.checkout' | translate }}</a>
+                                    <a [routerLink]="['/shop/collection/left/sidebar']" class="continue btn btn-solid">{{ 'product_modal.continue_shopping' | translate }}</a> -->
+
+                                    <a [routerLink]="['/tienda/carro']" class="view-cart btn btn-solid">{{ 'product_modal.your_cart' | translate }}</a>
+                                    <a [routerLink]="['/tienda/pago']" class="checkout btn btn-solid">{{ 'product_modal.checkout' | translate }}</a>
+                                    <a [routerLink]="['/tienda/catalogo']" class="continue btn btn-solid">{{ 'product_modal.continue_shopping' | translate }}</a>
                                 </div>
 
                                 <div class="upsell_payment">
@@ -34,7 +40,7 @@
 
                         <div class="product-section">
                             <div class="col-12 product-upsell text-center">
-                                <h4>Customers who bought this item also.</h4>
+                                <h4>{{ 'product_modal.common_purchases' | translate }}</h4>
                             </div>
 
                             <div *ngIf="isDataLoaded" class="row" id="upsell_product">
@@ -42,13 +48,17 @@
                                     <div class="product-box col-sm-3 col-6">
                                         <div class="img-wrapper">
                                             <div class="front">
-                                                <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
-                                                    <img [src]="product.image.src" class="img-fluid mb-1" alt="">
+                                                <!-- <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]"> -->
+                                                <a [routerLink]="['/tienda/producto/', product.idProduct]">
+                                                    <img [src]="product.images[0].src" class="img-fluid mb-1" alt="">
                                                 </a>
                                             </div>
                                             <div class="product-detail">
                                                 <h6 class="mt-0">
-                                                    <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]"><span>{{ product.title | titlecase }}</span></a>
+                                                    <!-- <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]"> -->
+                                                    <a [routerLink]="['/tienda/producto/', product.idProduct]">
+                                                        <span>{{ product.title | titlecase }}</span>
+                                                    </a>
                                                 </h6>
                                                 
                                                 <!-- <h4><span>{{ product.price * currency?.price | discount:product | currency:currency?.currency:'symbol' }}</span></h4> -->

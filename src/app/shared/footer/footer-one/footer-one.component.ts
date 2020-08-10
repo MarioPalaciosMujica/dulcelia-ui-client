@@ -1,3 +1,5 @@
+import { Category } from './../../models/category.model';
+import { CategoryService } from './../../../core/services/category.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -8,14 +10,29 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FooterOneComponent implements OnInit {
 
   @Input() class: string = 'footer-light' // Default class 
-  @Input() themeLogo: string = 'assets/images/icon/logo.png' // Default Logo
+  // @Input() themeLogo: string = 'assets/images/icon/logo.png' // Default Logo
+  @Input() themeLogo: string = 'assets/images/icon/logo_dulcelia_md.png';
   @Input() newsletter: boolean = true; // Default True
 
   public today: number = Date.now();
 
-  constructor() { }
+  public categories: Category[];
+
+  constructor(
+    private categoryService: CategoryService
+  ) 
+  { 
+    this.categories = [];
+    this.getAllCategories();
+  }
 
   ngOnInit(): void {
+  }
+
+  private getAllCategories(){
+    this.categoryService.findAll().subscribe(data => {
+      this.categories = data as Category[];
+    });
   }
 
 }

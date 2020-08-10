@@ -32,23 +32,26 @@
     <!-- Shopping Card Icon -->
     <li class="onhover-div mobile-cart">
       <div>
-        <a [routerLink]="['/shop/cart']">
+        <!-- <a [routerLink]="['/shop/cart']"> -->
+        <a [routerLink]="['/tienda/carro']">
           <img src="assets/images/icon/cart.png" class="img-fluid" alt="">
           <i class="ti-shopping-cart"></i>
         </a>
       </div>
       <span class="cart_qty_cls">{{ products.length }}</span>
       <ul class="show-div shopping-cart" *ngIf='!products.length'>
-        <h5>Your cart is currently empty.</h5>
+        <h5>{{ 'cart.cart_empty_title' | translate }}</h5>
       </ul>
       <ul class="show-div shopping-cart" *ngIf='products.length'>
         <li *ngFor="let product of products">
           <div class="media">
-            <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
-              <img class="mr-3" [src]="product?.image.src" [alt]="product?.image.alt">
+            <!-- <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]"> -->
+            <a [routerLink]="['/tienda/producto/', product.idProduct]">
+              <img class="mr-3" [src]="product?.images[0].src" [alt]="product?.images[0].alt">
             </a>
             <div class="media-body">
-              <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]">
+              <!-- <a [routerLink]="['/shop/product/left/sidebar/', product.idProduct]"> -->
+              <a [routerLink]="['/tienda/producto/', product.idProduct]">
                 <h4>{{ product?.title }}</h4>
               </a>
               <h4>
@@ -69,13 +72,16 @@
         <li>
           <div class="total">
             <!-- <h5>subtotal : <span>{{ getTotal | async | currency:productService?.Currency.currency:'symbol' }}</span></h5> -->
-            <h5>subtotal : <span>{{ getTotal | async | number:'':'es' }}</span></h5>
+            <h5>subtotal : <span>${{ getTotal | async | number:'':'es' }}</span></h5>
           </div>
         </li>
         <li>
           <div class="buttons">
-            <a [routerLink]="['/shop/cart']" class="view-cart">view cart</a>
-            <a [routerLink]="['/shop/checkout']" class="checkout">checkout</a>
+            <!-- <a [routerLink]="['/shop/cart']" class="view-cart">view cart</a>
+            <a [routerLink]="['/shop/checkout']" class="checkout">checkout</a> -->
+
+            <a [routerLink]="['/tienda/carro']" class="view-cart">{{ 'button.view_cart' | translate }}</a>
+            <a [routerLink]="['/tienda/pago']" class="checkout">{{ 'button.check_out' | translate }}</a>
           </div>
         </li>
       </ul>

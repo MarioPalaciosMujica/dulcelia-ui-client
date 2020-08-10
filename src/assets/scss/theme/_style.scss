@@ -1075,18 +1075,18 @@ header {
                 }
                 &:hover {
                     i {
-                        color: var(--theme-deafult);
+                        color: #FFFFFF; //var(--theme-deafult);
                         transition: all 0.5s ease;
                     }
                 }
             }
             &:hover {
                 i {
-                    color: var(--theme-deafult);
+                    color: #FFFFFF; //var(--theme-deafult);
                     transition: all 0.5s ease;
                 }
                 a {
-                    color: var(--theme-deafult);
+                    color: #FFFFFF; //var(--theme-deafult);
                     transition: all 0.5s ease;
                 }
             }
@@ -1106,7 +1106,7 @@ header {
                     }
                     &:hover {
                         a {
-                            color: var(--theme-deafult);
+                            color: #FFFFFF; //var(--theme-deafult);
                         }
                     }
                 }
@@ -1133,7 +1133,7 @@ header {
                     }
                     &:hover {
                         i {
-                            color: var(--theme-deafult);
+                            color: #FFFFFF; //var(--theme-deafult);
                         }
                     }
                 }
@@ -1171,7 +1171,7 @@ header {
                     }
                     &:hover {
                         i {
-                            color: var(--theme-deafult);
+                            color: #FFFFFF; //var(--theme-deafult);
                         }
                     }
                 }
@@ -1198,7 +1198,7 @@ header {
                     }
                     &:hover {
                         i {
-                            color: var(--theme-deafult);
+                            color: #FFFFFF; //var(--theme-deafult);
                         }
                     }
                 }
@@ -2509,10 +2509,10 @@ header {
                 border-radius: 100%;
                 background-color: var(--theme-deafult);
                 text-align: center;
-                font-size: 13px;
-                font-weight: 700;
+                font-size: 8px;
+                font-weight: 550;
                 position: absolute;
-                padding: 9px 4px;
+                padding: 12px 4px;
                 text-transform: uppercase;
                 color: $white;
                 top: 7px;

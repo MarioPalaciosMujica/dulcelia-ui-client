@@ -48,7 +48,7 @@ export class CollectionLeftSidebarComponent implements OnInit {
       this.isMainProductsLoaded = false;
       this.isNewProductsLoaded = false;
       this.isTagsLoaded = false;
-
+    
       //... Get Query params..
       // this.route.queryParams.subscribe(params => {
       //   this.brands = params.brand ? params.brand.split(",") : [];
@@ -79,7 +79,15 @@ export class CollectionLeftSidebarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getAllProducts();
+
+    this.route.paramMap.subscribe(paramMap => {
+      if(paramMap.has('idCategory')){
+        this.getAllProductByCategory(Number(paramMap.get('idCategory')));
+      }
+      else{
+        this.getAllProducts();
+      }
+    });
     this.getAllNewProducts();
     this.getAllTags();
   }
@@ -102,6 +110,13 @@ export class CollectionLeftSidebarComponent implements OnInit {
     this.tagService.findAll().subscribe(data => {
       this.tags = data as Tag[];
       this.isTagsLoaded = true;
+    });
+  }
+
+  private getAllProductByCategory(idCategory: number){
+    this.productService.findAllActivesByCategory(idCategory).subscribe(data => {
+      this.products = data as Product[];
+      this.isMainProductsLoaded = true;
     });
   }
 

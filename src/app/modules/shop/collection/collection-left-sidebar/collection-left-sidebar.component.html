@@ -1,4 +1,5 @@
-<app-breadcrumb [title]="'Collection'" [breadcrumb]="'Collection'"></app-breadcrumb>
+<!-- <app-breadcrumb [title]="'Collection'" [breadcrumb]="'Collection'"></app-breadcrumb> -->
+<app-breadcrumb [title]="'breadcrumb.collection' | translate" [breadcrumb]="'breadcrumb.collection' | translate"></app-breadcrumb>
 <!-- section start -->
 <section class="section-b-space">
     <div class="collection-wrapper">
@@ -11,7 +12,7 @@
                         <div class="collection-filter-block">
                             <div class="collection-mobile-back" (click)="toggleMobileSidebar()">
                                 <span class="filter-back">
-                                    <i class="fa fa-angle-left" aria-hidden="true"></i> back
+                                    <i class="fa fa-angle-left" aria-hidden="true"></i> {{ 'shop.back' | translate }}
                                 </span>
                             </div>
                             <!-- Category filter start -->
@@ -41,7 +42,8 @@
 
                         <!-- side-bar banner start here -->
                         <div class="collection-sidebar-banner">
-                            <a [routerLink]="['/shop/collection/left/sidebar']">
+                            <!-- <a [routerLink]="['/shop/collection/left/sidebar']"> -->
+                            <a [routerLink]="['/tienda/catalogo']">
                                 <img src="assets/images/collection-sidebar-banner.png" class="img-fluid" alt="banner">
                             </a>
                         </div>
@@ -54,18 +56,14 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="top-banner-wrapper">
-                                    <a [routerLink]="['/shop/collection/left/sidebar']">
+                                    <!-- <a [routerLink]="['/shop/collection/left/sidebar']"> -->
+                                    <a [routerLink]="['/tienda/catalogo']">
                                         <img src="assets/images/collection-banner.jpg" class="img-fluid " alt="">
                                     </a>
                                     <div class="top-banner-content small-section">
-                                        <h4>fashion</h4>
-                                        <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                        </h5>
-                                        <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                                            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                        </p>
+                                        <h4>{{ 'shop.header_title' | translate }}</h4>
+                                        <h5>{{ 'shop.header_subtitle' | translate }}</h5>
+                                        <p>{{ 'shop.header_text' | translate }}</p>
                                     </div>
                                 </div>
                                 <!-- <div class="row">
@@ -117,9 +115,10 @@
                                                 </div>
                                                 <div class="col-sm-12 text-center section-b-space mt-5 no-found" *ngIf="!products.length">
                                                     <img src="assets/images/empty-search.jpg" class="img-fluid mb-4">
-                                                    <h3>Sorry! Couldn't find the product you were looking For!!! </h3>
-                                                    <p>Please check if you have misspelt something or try searching with other words.</p>
-                                                    <a [routerLink]="['/shop/collection/left/sidebar']" class="btn btn-solid">continue shopping</a>
+                                                    <h3>{{ 'shop.no_products_found_msn_1' | translate }}</h3>
+                                                    <p>{{ 'shop.no_products_found_msn_2' | translate }}</p>
+                                                    <!-- <a [routerLink]="['/shop/collection/left/sidebar']" class="btn btn-solid">{{ 'button.continue_shopping' | translate }}</a> -->
+                                                    <a [routerLink]="['/tienda/catalogo']" class="btn btn-solid">{{ 'button.continue_shopping' | translate }}</a>
                                                 </div>
                                             </div>
                                         </div>
