@@ -1,3 +1,4 @@
+import { ProductMockService } from './../../../../../core/mocks/product-mock.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductDetailsMainSlider, ProductDetailsThumbSlider } from './../../../../../shared/data/slider';
@@ -37,14 +38,16 @@ export class ProductLeftSidebarComponent implements OnInit {
   constructor(
     private route: ActivatedRoute, 
     private router: Router,
-    public productService: ProductService) 
-    { 
-      //this.route.data.subscribe(response => this.product = response.data );
-      this.product = {};
-      this.isProductLoaded = false;
-      this.isRelatedProductsLoaded = false;
-      this.isNewProductLoaded = false;
-    }
+    public productService: ProductService,
+    private productMockService: ProductMockService
+  ) 
+  { 
+    //this.route.data.subscribe(response => this.product = response.data );
+    this.product = {};
+    this.isProductLoaded = false;
+    this.isRelatedProductsLoaded = false;
+    this.isNewProductLoaded = false;
+  }
 
   ngOnInit(): void {
     registerLocaleData(es);
@@ -53,11 +56,25 @@ export class ProductLeftSidebarComponent implements OnInit {
 
   private getProduct(){
     this.route.paramMap.subscribe(paramMap => {
-      this.productService.findById(Number(paramMap.get('idProduct'))).subscribe(data => {
-        this.product = data as Product;
-        this.product.quantity = 1;
-        this.isProductLoaded = true;
+      
+      // this.productService.findById(Number(paramMap.get('idProduct'))).subscribe(data => {
+      //   this.product = data as Product;
+      //   this.product.quantity = 1;
+      //   this.isProductLoaded = true;
+      // });
+
+      //MOCK
+      this.productMockService.findAllActives().subscribe(data => {
+        let allProducts: Product[] = data as Product[];
+        allProducts.forEach(prod => {
+          if(prod.idProduct == Number(paramMap.get('idProduct'))){
+            this.product = prod;
+            this.product.quantity = 1;
+            this.isProductLoaded = true;
+          }
+        });
       });
+
     });
   }
 

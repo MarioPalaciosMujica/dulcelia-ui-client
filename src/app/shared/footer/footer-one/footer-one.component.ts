@@ -1,3 +1,4 @@
+import { CategoryMockService } from './../../../core/mocks/category-mock.service';
 import { Category } from './../../models/category.model';
 import { CategoryService } from './../../../core/services/category.service';
 import { Component, OnInit, Input } from '@angular/core';
@@ -19,7 +20,8 @@ export class FooterOneComponent implements OnInit {
   public categories: Category[];
 
   constructor(
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
+    private categoryMockService: CategoryMockService
   ) 
   { 
     this.categories = [];
@@ -30,7 +32,12 @@ export class FooterOneComponent implements OnInit {
   }
 
   private getAllCategories(){
-    this.categoryService.findAll().subscribe(data => {
+    // this.categoryService.findAll().subscribe(data => {
+    //   this.categories = data as Category[];
+    // });
+
+    //MOCK
+    this.categoryMockService.findAll().subscribe(data => {
       this.categories = data as Category[];
     });
   }

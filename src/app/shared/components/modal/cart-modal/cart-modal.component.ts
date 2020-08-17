@@ -1,3 +1,4 @@
+import { ProductMockService } from './../../../../core/mocks/product-mock.service';
 import { Component, OnInit, OnDestroy, ViewChild, TemplateRef, Input, AfterViewInit,
   Injectable, PLATFORM_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
@@ -30,7 +31,9 @@ export class CartModalComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,
     private modalService: NgbModal,
-    private productService: ProductService) 
+    private productService: ProductService,
+    private productMockService: ProductMockService
+  ) 
   {
     this.isDataLoaded = false;
   }
@@ -46,8 +49,22 @@ export class CartModalComponent implements OnInit, AfterViewInit, OnDestroy {
     //await this.productService.getProducts.subscribe(response => this.products = response);
     //this.products = await this.products.filter(items => items.category == product.category && items.id != product.id);
     
-    this.productService.findAllActivesByCategory(product.categories[0].idCategory).subscribe(data => {
-      this.products = data as Product[];
+    // this.productService.findAllActivesByCategory(product.categories[0].idCategory).subscribe(data => {
+    //   this.products = data as Product[];
+    //   this.isDataLoaded = true;
+    // });
+
+    //MOCK
+    this.productMockService.findAllActives().subscribe(data => {
+      this.products = [];
+      let allProducts: Product[] = data as Product[];
+      allProducts.forEach(prod => {
+        prod.categories.forEach(cat => {
+          if(cat.idCategory == product.categories[0].idCategory && !this.products.includes(this.product)){
+            this.products.push(prod);
+          }
+        })
+      });
       this.isDataLoaded = true;
     });
     

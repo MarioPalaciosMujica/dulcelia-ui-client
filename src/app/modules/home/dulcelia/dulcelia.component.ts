@@ -1,3 +1,5 @@
+import { CollectionMockService } from './../../../core/mocks/collection-mock.service';
+import { ProductMockService } from './../../../core/mocks/product-mock.service';
 import { CollectionService } from '../../../core/services/collection.service';
 import { ProductService } from '../../../core/services/product.service';
 import { Collection } from '../../../shared/models/collection.model';
@@ -20,7 +22,9 @@ export class DulceliaComponent implements OnInit, OnDestroy {
 
     constructor(
         private productService: ProductService,
-        private collectionService: CollectionService
+        private collectionService: CollectionService,
+        private productMockService: ProductMockService,
+        private collectionMockService: CollectionMockService
     ){
         this.products = [];
         this.collections = [];
@@ -40,15 +44,26 @@ export class DulceliaComponent implements OnInit, OnDestroy {
     }
 
     private getAllProducts(){
-        this.productService.findAllActives().subscribe(data => {
+        // this.productService.findAllActives().subscribe(data => {
+        //     this.products = data as Product[];
+        // });
+        
+        //MOCK
+        this.productMockService.findAllActives().subscribe(data => {
             this.products = data as Product[];
         });
     }
 
     private getAllCollections(){
-        this.collectionService.findAll().subscribe(data => {
+        // this.collectionService.findAll().subscribe(data => {
+        //     this.collections = data as Collection[];
+        // });
+        
+        //MOCK
+        this.collectionMockService.findAll().subscribe(data => {
             this.collections = data as Collection[];
         });
+        
     }
 
     public getCollectionProducts(collection: Collection): Product[]{

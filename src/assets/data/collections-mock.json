@@ -1,0 +1,26 @@
+[
+    {
+        "idCollection": 1,
+        "name": "Destacados",
+        "created": 1597633765155,
+        "modified": null
+    },
+    {
+        "idCollection": 2,
+        "name": "Populares",
+        "created": 1597633765159,
+        "modified": null
+    },
+    {
+        "idCollection": 3,
+        "name": "Más Vendidos",
+        "created": 1597633765161,
+        "modified": null
+    },
+    {
+        "idCollection": 4,
+        "name": "Fechas Importantes",
+        "created": 1597633765163,
+        "modified": null
+    }
+]

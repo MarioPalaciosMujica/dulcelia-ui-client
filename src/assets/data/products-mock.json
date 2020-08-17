@@ -1,0 +1,1262 @@
+[
+    {
+        "idProduct": 1,
+        "barcode": null,
+        "title": "Torta de Hojarasca",
+        "description": "Torta de Hojarasca, manjar chocolate. Sin Gluten, Sin Lactosa con Stevia. Venta solo en local San Bernardo.",
+        "isNew": true,
+        "rating": 0,
+        "price": 8900.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765166,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 2,
+            "name": "Populares",
+            "created": 1597633765159,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 1,
+                "alt": "choco_manjar_01",
+                "src": "assets/dulcelia-demo/products/choco_manjar_01.jpg",
+                "created": 1597633765040,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 1,
+                "name": "Tortas Tradicionáles",
+                "created": 1597633763807,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": 1597633765029,
+                "modified": null
+            },
+            {
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": 1597633765034,
+                "modified": null
+            },
+            {
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": 1597633765027,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 2,
+        "barcode": null,
+        "title": "Torta Rosa",
+        "description": "Biscocho blanco, crema vegetal, mermelada de frambuesa, frambuesa natural, puede ser sin lactosa, con Stevia.",
+        "isNew": true,
+        "rating": 0,
+        "price": 19990.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765416,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 4,
+            "name": "Fechas Importantes",
+            "created": 1597633765163,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 30,
+                "alt": "rosa_01",
+                "src": "assets/dulcelia-demo/products/rosa_01.jpg",
+                "created": 1597633765111,
+                "modified": null
+            },
+            {
+                "idImage": 31,
+                "alt": "rosa_02",
+                "src": "assets/dulcelia-demo/products/rosa_02.jpg",
+                "created": 1597633765113,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 1,
+                "name": "Tortas Tradicionáles",
+                "created": 1597633763807,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": 1597633765034,
+                "modified": null
+            },
+            {
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": 1597633765027,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 3,
+        "barcode": null,
+        "title": "Selva Negra",
+        "description": "Biscocho Negro, crema vegetal, mermelada de frambuesa, frambuesa natural, guindas, cacao, chocolate. puede ser sin lactosa y  con Stevia.",
+        "isNew": true,
+        "rating": 0,
+        "price": 19990.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765423,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 2,
+            "name": "Populares",
+            "created": 1597633765159,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 34,
+                "alt": "selva_negra_03",
+                "src": "assets/dulcelia-demo/products/selva_negra_03.jpg",
+                "created": 1597633765120,
+                "modified": null
+            },
+            {
+                "idImage": 33,
+                "alt": "selva_negra_02",
+                "src": "assets/dulcelia-demo/products/selva_negra_02.jpg",
+                "created": 1597633765117,
+                "modified": null
+            },
+            {
+                "idImage": 32,
+                "alt": "selva_negra_01",
+                "src": "assets/dulcelia-demo/products/selva_negra_01.jpg",
+                "created": 1597633765115,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 1,
+                "name": "Tortas Tradicionáles",
+                "created": 1597633763807,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": 1597633765034,
+                "modified": null
+            },
+            {
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": 1597633765027,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 4,
+        "barcode": null,
+        "title": "Torta de Fruta",
+        "description": "Biscocho Blanco, crema vegetal, Piña, Mango o Fruta de la temporada. Sin lactosa, con o sin Stevia.",
+        "isNew": true,
+        "rating": 0,
+        "price": 19990.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765429,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 3,
+            "name": "Más Vendidos",
+            "created": 1597633765161,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 21,
+                "alt": "fruta_01",
+                "src": "assets/dulcelia-demo/products/fruta_01.jpg",
+                "created": 1597633765092,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 1,
+                "name": "Tortas Tradicionáles",
+                "created": 1597633763807,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": 1597633765034,
+                "modified": null
+            },
+            {
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": 1597633765027,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 5,
+        "barcode": null,
+        "title": "Torta de Mousse Frutilla",
+        "description": "Biscocho Blanco, crema vegetal, yogurt, Frutilla. Puede ser Sin lactosa, con o sin Stevia.",
+        "isNew": true,
+        "rating": 0,
+        "price": 19990.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765434,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 2,
+            "name": "Populares",
+            "created": 1597633765159,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 47,
+                "alt": "torta_mousse_04",
+                "src": "assets/dulcelia-demo/products/torta_mousse_04.jpg",
+                "created": 1597633765143,
+                "modified": null
+            },
+            {
+                "idImage": 27,
+                "alt": "mousse_02",
+                "src": "assets/dulcelia-demo/products/mousse_02.jpg",
+                "created": 1597633765105,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 1,
+                "name": "Tortas Tradicionáles",
+                "created": 1597633763807,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": 1597633765034,
+                "modified": null
+            },
+            {
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": 1597633765027,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 6,
+        "barcode": null,
+        "title": "Torta de Chocolate",
+        "description": "Biscocho negro, crema vegetal, cobertura de chocolate con o sin azúcar 70% cacao. Puede ser sin lactosa, con sucralosa.",
+        "isNew": true,
+        "rating": 0,
+        "price": 19990.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765440,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 3,
+            "name": "Más Vendidos",
+            "created": 1597633765161,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 2,
+                "alt": "chocolate_01",
+                "src": "assets/dulcelia-demo/products/chocolate_01.jpg",
+                "created": 1597633765045,
+                "modified": null
+            },
+            {
+                "idImage": 4,
+                "alt": "chocolate_03",
+                "src": "assets/dulcelia-demo/products/chocolate_03.jpg",
+                "created": 1597633765050,
+                "modified": null
+            },
+            {
+                "idImage": 3,
+                "alt": "chocolate_02",
+                "src": "assets/dulcelia-demo/products/chocolate_02.jpg",
+                "created": 1597633765047,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 1,
+                "name": "Tortas Tradicionáles",
+                "created": 1597633763807,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 6,
+                "name": "Con sucralosa",
+                "created": 1597633765037,
+                "modified": null
+            },
+            {
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": 1597633765027,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 7,
+        "barcode": null,
+        "title": "Torta de Manjar y Almendras",
+        "description": "Hojarasca, manjar con crema vegetal. Puede ser sin azúcar o sin leche.",
+        "isNew": true,
+        "rating": 0,
+        "price": 19990.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765446,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 4,
+            "name": "Fechas Importantes",
+            "created": 1597633765163,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 48,
+                "alt": "torta_mousse_05",
+                "src": "assets/dulcelia-demo/products/torta_mousse_05.jpg",
+                "created": 1597633765145,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 1,
+                "name": "Tortas Tradicionáles",
+                "created": 1597633763807,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": 1597633765027,
+                "modified": null
+            },
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 8,
+        "barcode": null,
+        "title": "Torta San Marcos",
+        "description": "Biscocho blanco, crema vegetal, crema de huevo, trufa de chocolate y almendras. Puede ser sin azúcar o sin leche.",
+        "isNew": true,
+        "rating": 0,
+        "price": 24500.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765450,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 1,
+            "name": "Destacados",
+            "created": 1597633765155,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 26,
+                "alt": "mousse_01",
+                "src": "assets/dulcelia-demo/products/mousse_01.jpg",
+                "created": 1597633765103,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 2,
+                "name": "Tortas de Vanguardia",
+                "created": 1597633764999,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": 1597633765032,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 9,
+        "barcode": null,
+        "title": "Torta Oriente",
+        "description": "Biscocho blanco, crema vegetal, mousse de pistacho y almendras. Puede ser sin azúcar o sin leche.",
+        "isNew": true,
+        "rating": 0,
+        "price": 24500.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765456,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 1,
+            "name": "Destacados",
+            "created": 1597633765155,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 49,
+                "alt": "torta_mousse_06",
+                "src": "assets/dulcelia-demo/products/torta_mousse_06.jpg",
+                "created": 1597633765147,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 2,
+                "name": "Tortas de Vanguardia",
+                "created": 1597633764999,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": 1597633765032,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 10,
+        "barcode": null,
+        "title": "Torta Sachertorte",
+        "description": "Biscocho negro, crema de chocolate, mermelada de frambueza y damasco, bañado en chocolate. Puede ser sin azúcar o sin leche.",
+        "isNew": true,
+        "rating": 0,
+        "price": 24500.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765461,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 1,
+            "name": "Destacados",
+            "created": 1597633765155,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 39,
+                "alt": "tartaleta_02",
+                "src": "assets/dulcelia-demo/products/tartaleta_02.jpg",
+                "created": 1597633765128,
+                "modified": null
+            },
+            {
+                "idImage": 40,
+                "alt": "tartaleta_03",
+                "src": "assets/dulcelia-demo/products/tartaleta_03.jpg",
+                "created": 1597633765130,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 2,
+                "name": "Tortas de Vanguardia",
+                "created": 1597633764999,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": 1597633765032,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 11,
+        "barcode": null,
+        "title": "Torta de Naranja",
+        "description": "Biscocho negro, crema de chocolate, mermelada de frambueza y damasco, bañado en chocolate. Puede ser sin azúcar o sin leche.",
+        "isNew": true,
+        "rating": 0,
+        "price": 24500.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765465,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 1,
+            "name": "Destacados",
+            "created": 1597633765155,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 28,
+                "alt": "naranja_01",
+                "src": "assets/dulcelia-demo/products/naranja_01.jpg",
+                "created": 1597633765107,
+                "modified": null
+            },
+            {
+                "idImage": 29,
+                "alt": "naranja_02",
+                "src": "assets/dulcelia-demo/products/naranja_02.jpg",
+                "created": 1597633765109,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 2,
+                "name": "Tortas de Vanguardia",
+                "created": 1597633764999,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": 1597633765032,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 12,
+        "barcode": null,
+        "title": "Torta Frutos del Bosque",
+        "description": "Biscocho negro, crema vegetal, crema de chocolate, mermelada de berries, berries naturales. Puede ser sin azúcar o sin leche.",
+        "isNew": true,
+        "rating": 0,
+        "price": 24500.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765470,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 1,
+            "name": "Destacados",
+            "created": 1597633765155,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 22,
+                "alt": "fruta_02",
+                "src": "assets/dulcelia-demo/products/fruta_02.jpg",
+                "created": 1597633765094,
+                "modified": null
+            },
+            {
+                "idImage": 23,
+                "alt": "fruta_03",
+                "src": "assets/dulcelia-demo/products/fruta_03.jpg",
+                "created": 1597633765096,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 2,
+                "name": "Tortas de Vanguardia",
+                "created": 1597633764999,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": 1597633765032,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 13,
+        "barcode": null,
+        "title": "Torta Tres Leches",
+        "description": "Biscocho blanco, crema vegetal, leche condensada, leche evaporada, merengue de huevo natural.",
+        "isNew": true,
+        "rating": 0,
+        "price": 24500.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765474,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 1,
+            "name": "Destacados",
+            "created": 1597633765155,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 52,
+                "alt": "tres_leches_03",
+                "src": "assets/dulcelia-demo/products/tres_leches_03.jpg",
+                "created": 1597633765153,
+                "modified": null
+            },
+            {
+                "idImage": 51,
+                "alt": "tres_leches_02",
+                "src": "assets/dulcelia-demo/products/tres_leches_02.jpg",
+                "created": 1597633765151,
+                "modified": null
+            },
+            {
+                "idImage": 50,
+                "alt": "tres_leches_01",
+                "src": "assets/dulcelia-demo/products/tres_leches_01.jpg",
+                "created": 1597633765149,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 2,
+                "name": "Tortas de Vanguardia",
+                "created": 1597633764999,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": 1597633765029,
+                "modified": null
+            },
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 14,
+        "barcode": null,
+        "title": "Pasteles Surtidos",
+        "description": "100 Unidades.",
+        "isNew": true,
+        "rating": 0,
+        "price": 32500.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765479,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 2,
+            "name": "Populares",
+            "created": 1597633765159,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 13,
+                "alt": "cupcake_02",
+                "src": "assets/dulcelia-demo/products/cupcake_02.jpg",
+                "created": 1597633765073,
+                "modified": null
+            },
+            {
+                "idImage": 17,
+                "alt": "cupcake_06",
+                "src": "assets/dulcelia-demo/products/cupcake_06.jpg",
+                "created": 1597633765082,
+                "modified": null
+            },
+            {
+                "idImage": 5,
+                "alt": "coctel_01",
+                "src": "assets/dulcelia-demo/products/coctel_01.jpg",
+                "created": 1597633765052,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 3,
+                "name": "Coctel",
+                "created": 1597633765002,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": 1597633765029,
+                "modified": null
+            },
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": 1597633765032,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 15,
+        "barcode": null,
+        "title": "Empanaditas Surtidas",
+        "description": "100 Unidades. Pino o queso o verndura, champiñones.",
+        "isNew": true,
+        "rating": 0,
+        "price": 34500.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765484,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 2,
+            "name": "Populares",
+            "created": 1597633765159,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 7,
+                "alt": "coctel_03",
+                "src": "assets/dulcelia-demo/products/coctel_03.jpg",
+                "created": 1597633765058,
+                "modified": null
+            },
+            {
+                "idImage": 8,
+                "alt": "coctel_04",
+                "src": "assets/dulcelia-demo/products/coctel_04.jpg",
+                "created": 1597633765061,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 3,
+                "name": "Coctel",
+                "created": 1597633765002,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": 1597633765029,
+                "modified": null
+            },
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": 1597633765032,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 16,
+        "barcode": null,
+        "title": "Canapes Surtidos",
+        "description": "100 Unidades. ",
+        "isNew": true,
+        "rating": 0,
+        "price": 34900.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765490,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 4,
+            "name": "Fechas Importantes",
+            "created": 1597633765163,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 6,
+                "alt": "coctel_02",
+                "src": "assets/dulcelia-demo/products/coctel_02.jpg",
+                "created": 1597633765055,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 3,
+                "name": "Coctel",
+                "created": 1597633765002,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": 1597633765029,
+                "modified": null
+            },
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": 1597633765032,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 17,
+        "barcode": null,
+        "title": "Tapaditos",
+        "description": "100 Unidades. ",
+        "isNew": true,
+        "rating": 0,
+        "price": 34500.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765495,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 3,
+            "name": "Más Vendidos",
+            "created": 1597633765161,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 9,
+                "alt": "coctel_05",
+                "src": "assets/dulcelia-demo/products/coctel_05.jpg",
+                "created": 1597633765063,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 3,
+                "name": "Coctel",
+                "created": 1597633765002,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": 1597633765029,
+                "modified": null
+            },
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": 1597633765032,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 18,
+        "barcode": null,
+        "title": "Pizzetas",
+        "description": "100 Unidades. ",
+        "isNew": true,
+        "rating": 0,
+        "price": 32500.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765499,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 4,
+            "name": "Fechas Importantes",
+            "created": 1597633765163,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 10,
+                "alt": "coctel_06",
+                "src": "assets/dulcelia-demo/products/coctel_06.jpg",
+                "created": 1597633765066,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 3,
+                "name": "Coctel",
+                "created": 1597633765002,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": 1597633765029,
+                "modified": null
+            },
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": 1597633765032,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 19,
+        "barcode": null,
+        "title": "Canoas",
+        "description": "100 Unidades. Rellenas saltadas.",
+        "isNew": true,
+        "rating": 0,
+        "price": 32500.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765504,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 3,
+            "name": "Más Vendidos",
+            "created": 1597633765161,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 11,
+                "alt": "coctel_07",
+                "src": "assets/dulcelia-demo/products/coctel_07.jpg",
+                "created": 1597633765068,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 3,
+                "name": "Coctel",
+                "created": 1597633765002,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": 1597633765029,
+                "modified": null
+            },
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": 1597633765032,
+                "modified": null
+            }
+        ],
+        "materials": []
+    },
+    {
+        "idProduct": 20,
+        "barcode": null,
+        "title": "Tacitas de Chocolate",
+        "description": "100 Unidades. Crema de diferentes sabores.",
+        "isNew": true,
+        "rating": 0,
+        "price": 33500.00,
+        "isSale": false,
+        "discountPercentage": null,
+        "priceDiscount": null,
+        "stock": null,
+        "isActive": true,
+        "created": 1597633765508,
+        "modified": null,
+        "brand": null,
+        "collection": {
+            "idCollection": 4,
+            "name": "Fechas Importantes",
+            "created": 1597633765163,
+            "modified": null
+        },
+        "images": [
+            {
+                "idImage": 12,
+                "alt": "cupcake_01",
+                "src": "assets/dulcelia-demo/products/cupcake_01.jpg",
+                "created": 1597633765071,
+                "modified": null
+            },
+            {
+                "idImage": 15,
+                "alt": "cupcake_04",
+                "src": "assets/dulcelia-demo/products/cupcake_04.jpg",
+                "created": 1597633765077,
+                "modified": null
+            },
+            {
+                "idImage": 16,
+                "alt": "cupcake_05",
+                "src": "assets/dulcelia-demo/products/cupcake_05.jpg",
+                "created": 1597633765080,
+                "modified": null
+            }
+        ],
+        "categories": [
+            {
+                "idCategory": 3,
+                "name": "Coctel",
+                "created": 1597633765002,
+                "modified": null
+            }
+        ],
+        "tags": [
+            {
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": 1597633765029,
+                "modified": null
+            },
+            {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": 1597633765021,
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": 1597633765032,
+                "modified": null
+            }
+        ],
+        "materials": []
+    }
+]

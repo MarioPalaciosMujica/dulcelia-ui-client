@@ -1,0 +1,26 @@
+[
+    {
+        "idCategory": 1,
+        "name": "Tortas Tradicionáles",
+        "created": 1597633763807,
+        "modified": null
+    },
+    {
+        "idCategory": 2,
+        "name": "Tortas de Vanguardia",
+        "created": 1597633764999,
+        "modified": null
+    },
+    {
+        "idCategory": 3,
+        "name": "Coctel",
+        "created": 1597633765002,
+        "modified": null
+    },
+    {
+        "idCategory": 4,
+        "name": "Masas",
+        "created": 1597633765005,
+        "modified": null
+    }
+]

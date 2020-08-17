@@ -1,3 +1,6 @@
+import { TagMockService } from './../../../../core/mocks/tag-mock.service';
+import { CategoryMockService } from './../../../../core/mocks/category-mock.service';
+import { ProductMockService } from './../../../../core/mocks/product-mock.service';
 import { TagService } from './../../../../core/services/tag.service';
 import { Tag } from './../../../../shared/models/tag.model';
 import { Component, OnInit } from '@angular/core';
@@ -42,9 +45,15 @@ export class CollectionLeftSidebarComponent implements OnInit {
     private route: ActivatedRoute, private router: Router,
     private viewScroller: ViewportScroller, 
     private productService: ProductService,
-    private tagService: TagService
+    private tagService: TagService,
+    private productMockService: ProductMockService,
+    private categoryMockService: CategoryMockService,
+    private tagMockservice: TagMockService
   ) 
   {  
+      this.products = [];
+      this.newProducts = [];
+      this.tags = [];
       this.isMainProductsLoaded = false;
       this.isNewProductsLoaded = false;
       this.isTagsLoaded = false;
@@ -79,7 +88,6 @@ export class CollectionLeftSidebarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.route.paramMap.subscribe(paramMap => {
       if(paramMap.has('idCategory')){
         this.getAllProductByCategory(Number(paramMap.get('idCategory')));
@@ -93,29 +101,67 @@ export class CollectionLeftSidebarComponent implements OnInit {
   }
 
   private getAllProducts(){
-    this.productService.findAllActives().subscribe(data => {
+    // this.productService.findAllActives().subscribe(data => {
+    //   this.products = data as Product[];
+    //   this.isMainProductsLoaded = true;
+    // });
+
+    //MOCK
+    this.productMockService.findAllActives().subscribe(data => {
       this.products = data as Product[];
       this.isMainProductsLoaded = true;
     });
   }
 
   private getAllNewProducts(){
-    this.productService.findAllActivesNew().subscribe(data => {
-      this.newProducts = data as Product[];
+    // this.productService.findAllActivesNew().subscribe(data => {
+    //   this.newProducts = data as Product[];
+    //   this.isNewProductsLoaded = true;
+    // });
+
+    //MOCK
+    this.productMockService.findAllActives().subscribe(data => {
+      this.newProducts = [];
+      let allProducts: Product[] = data as Product[];
+      allProducts.forEach(prod => {
+        if(prod.isNew){
+          this.newProducts.push(prod);
+        }
+      });
       this.isNewProductsLoaded = true;
     });
   }
 
   private getAllTags(){
-    this.tagService.findAll().subscribe(data => {
+    // this.tagService.findAll().subscribe(data => {
+    //   this.tags = data as Tag[];
+    //   this.isTagsLoaded = true;
+    // });
+
+    //MOCK
+    this.tagMockservice.findAll().subscribe(data => {
       this.tags = data as Tag[];
       this.isTagsLoaded = true;
     });
   }
 
   private getAllProductByCategory(idCategory: number){
-    this.productService.findAllActivesByCategory(idCategory).subscribe(data => {
-      this.products = data as Product[];
+    // this.productService.findAllActivesByCategory(idCategory).subscribe(data => {
+    //   this.products = data as Product[];
+    //   this.isMainProductsLoaded = true;
+    // });
+
+    //MOCK
+    this.productMockService.findAllActives().subscribe(data => {
+      this.products = [];
+      let allProducts: Product[] = data as Product[];
+      allProducts.forEach(prod => {
+        prod.categories.forEach(cat => {
+          if(cat.idCategory == idCategory){
+            this.products.push(prod);
+          }
+        })
+      });
       this.isMainProductsLoaded = true;
     });
   }

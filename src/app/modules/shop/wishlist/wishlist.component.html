@@ -86,7 +86,7 @@
                   <ng-template #showOutOfStock2>
                     <p>{{ 'wishlist.out_of_stock' | translate  }}</p>
                   </ng-template>
-            </td>
+              </td>
               <td>
                   <a href="javascript:void(0)" (click)="removeItem(product)" class="icon mr-3">
                     <i class="ti-close"></i>
@@ -105,7 +105,7 @@
         <!-- <a [routerLink]="['/shop/collection/left/sidebar']" class="btn btn-solid">continue shopping</a>
         <a [routerLink]="['/shop/checkout']" class="btn btn-solid">check out</a> -->
         <a [routerLink]="['/tienda/catalogo']" class="btn btn-solid">{{ 'button.continue_shopping' | translate }}</a>
-        <a [routerLink]="['/tienda/pago']" class="btn btn-solid">{{ 'button.check_out' | translate }}</a>
+        <a [routerLink]="['/tienda/carro']" class="btn btn-solid">{{ 'button.your_cart' | translate }}</a>
       </div>
     </div>
   </div>

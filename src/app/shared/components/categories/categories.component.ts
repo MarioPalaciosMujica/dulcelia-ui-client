@@ -1,3 +1,4 @@
+import { CategoryMockService } from './../../../core/mocks/category-mock.service';
 import { Category } from './../../models/category.model';
 import { CategoryService } from './../../../core/services/category.service';
 import { Component, OnInit } from '@angular/core';
@@ -18,7 +19,8 @@ export class CategoriesComponent implements OnInit {
 
   constructor(
     // public productService: ProductService,
-    public categoryService: CategoryService
+    public categoryService: CategoryService,
+    private categoryMockService: CategoryMockService
   ) { 
     //this.productService.getProducts.subscribe(product => this.products = product);
     this.isDataLoaded = false;
@@ -30,7 +32,13 @@ export class CategoriesComponent implements OnInit {
   }
 
   private getAllCategories(){
-    this.categoryService.findAll().subscribe(data => {
+    // this.categoryService.findAll().subscribe(data => {
+    //   this.categories = data as Category[];
+    //   this.isDataLoaded = true;
+    // });
+
+    //MOCK
+    this.categoryMockService.findAll().subscribe(data => {
       this.categories = data as Category[];
       this.isDataLoaded = true;
     });
