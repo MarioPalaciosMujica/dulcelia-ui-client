@@ -32,9 +32,9 @@
         "from_the_blog": "De nuestro Blog"
     },
     "shop": {
-        "header_title": "Tortas & Cocktail",
-        "header_subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "header_text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "header_title": "Tu pedido es importante para nosotros.",
+        "header_subtitle": "Ya que podemos saber que limitaciones o prohibiciones alimentarias tienes o tu familiar.",
+        "header_text": "Sí podemos elaborar algo especial y seguro excluyendo esos ingredientes dañinos. Que hacemos nosotros reemplazamos la harina de trigo por harina de arroz, almidón de mandioca, almidón de maíz, el azúcar por Stevia y la leche por sin lactosa o simplemente no la utilizamos , en algunos casos sacamos el Huevo o/u otros ingredientes, Lo que tratamos con estos ingredientes especiales es acercarnos al sabor y características a una preparación lo mas tradicional posible. Como es un producto hecho para ti siempre será único en su sabor y decoración.",
         "showing_products": "Productos mostrados",
         "of": "de",
         "result": "Total",
@@ -100,8 +100,14 @@
     },
     "contact": {
         "contact_us": "Contáctanos",
-        "email": "Correo",
-        "address": "Dirección"
+        "email_title": "Correo",
+        "address_title": "Dirección",
+        "email_1": "infodulcelia@gmail.com",
+        "email_2": "info@dulcelia.com",
+        "address_1": "Cerro de las Lomas 19367, San Bernardo, Santiago",
+        "address_2": "Santiago, Chile",
+        "phone_1": "22 792 4372",
+        "phone_2": "+56 9 9488 5218"
     },
     "blog": {
         "recent_blog": "Recientes",
@@ -192,16 +198,18 @@
         "online_payment_desc": "Pago rápido y seguro."
     },
     "footer": {
-        "company_msn": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+        "company_msn": "Dilo con alfajores, demuestra tu cariño con sensacionales y románticos Mini Alfajores Glaseados con el texto que quieras, muchos diseños a elección.Disponible en Sin Gluten.",
         "categories": "Categorías",
         "why_we_choose": "Información",
         "terms_and_conditions": "Términos & condiciónes",
         "shipping_and_returns": "Envíos & devoluciónes",
         "security": "Seguridad",
         "store_info": "Contacto",
-        "company_address": "Dulcelia, San Bernardo",
+        "company_address": "Cerro de las Lomas 19367, San Bernardo, Santiago",
         "call_us": "Llámanos",
-        "email_us": "Escríbenos"
+        "phone": "+56 9 9488 5218",
+        "email_us": "Escríbenos",
+        "email": "infodulcelia@gmail.com"
     },
     "bottom_bar": {
         "watermark": "Dulcelia Tienda, desarrollado por Mario Palacios"
