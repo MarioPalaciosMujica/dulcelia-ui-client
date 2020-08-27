@@ -14,6 +14,7 @@
     "top_bar": {
         "welcome": "Bienvenído a Dulcelia",
         "call_us": "Llámanos",
+        "phone": "+56 9 9488 5218",
         "compare": "Comparar",
         "wishlist": "Lista de deseados",
         "my_account": "Mi cuenta",
@@ -32,9 +33,9 @@
         "from_the_blog": "De nuestro Blog"
     },
     "shop": {
-        "header_title": "Tu pedido es importante para nosotros.",
+        "header_title": "Tu pedido siempre será único para nosotros.",
         "header_subtitle": "Ya que podemos saber que limitaciones o prohibiciones alimentarias tienes o tu familiar.",
-        "header_text": "Sí podemos elaborar algo especial y seguro excluyendo esos ingredientes dañinos. Que hacemos nosotros reemplazamos la harina de trigo por harina de arroz, almidón de mandioca, almidón de maíz, el azúcar por Stevia y la leche por sin lactosa o simplemente no la utilizamos , en algunos casos sacamos el Huevo o/u otros ingredientes, Lo que tratamos con estos ingredientes especiales es acercarnos al sabor y características a una preparación lo mas tradicional posible. Como es un producto hecho para ti siempre será único en su sabor y decoración.",
+        "header_text": "En donde sabemos que tendremos que poner todas nuestras energías y conocimiento para elaborarte un producto rico en sabor, presentación y con todas las necesidades gástricas que especialmente necesitas.",
         "showing_products": "Productos mostrados",
         "of": "de",
         "result": "Total",
@@ -96,7 +97,23 @@
         "cart_empty_msn": "Añade algo para ser felices :)"
     },
     "about": {
-        "our_team": "Nuestro equipo"
+        "header_title": "Somos la tienda oficial de Dulcelia. La pastelería pionera en Chile en productos dietéticos y sin gluten.",
+        "header_text_1": "Soy Beatriz Canales, reconocida por ser una de las primeras micro empresarias en atreverse en la elaboración de productos frescos sin gluten en Chile. Por mí compromiso con la comunidad Celiaca, con mucho orgullo fui premiada en 2013 con el Premio Pyme Mujer, incentivándome a un mayor compromiso de trabajo y contribución a la Celiaquia en Chile.",
+        "header_text_2": "Hoy puedo decir que con mí experiencia y dedicación, sigo esforzándome cada día en elaborar productos de mejor sabor y presentación, expandiéndome a otras intolerancias y alergias como al Azúcar, a la Lactosa, a la Leche, al Huevo y otros.",
+        "header_text_3": "Siempre fue un proyecto a largo plazo, pensando que las personas con necesidades especiales pudieran compartir un producto rico con sus seres queridos, y de esa manera festejar sus cumpleaños, aniversarios, baby shower y otras festividades.",
+        "header_text_4": "Estoy consciente que ser Celiaco, intolerante al Gluten y además tener otros problemas gástricos, es muy difícil y caro en este país, por esto existe Dulcelia, que a travez de muchos años, a satisfacido las necesidades dulces de sus clientes. Y ahora con un nuevo desafío, donde ademas podrás encontrar tu despensa familiar en un solo lugar.",
+        "header_text_5": "Les agradesco su confianza, preferencia y lealtad a todos mis clientes que han preferido nuestros productos por los últimos 11 años. Siendo siempre sus productos preferidos nuestras tortas, seguidas por nuestros Kuchenes, Tartaletas, Panes de molde, Empanadas, Pastelillos, Alfajores y Galletas.",
+        "header_text_6": "Invito a mis clientes antiguos que sigan prefiriendo mis productos; y a mis clientes nuevos, a probar nuestra pastelería, panadería y emporio, en donde seguiremos dando una atención personalizada y con un cariño que te cuida.",
+        "our_team": "Nuestro equipo",
+        "beatriz_name": "Beatriz Canales",
+        "beatriz_job": "Empresaria",
+        "beatriz_text": "Soy una mujer emprendedora, alegre, me gusta bailar, la naturaleza y las amistades. Soy una mujer soltera con 4 hijos, independiente, luchadora, valiente, con una vida enseñanzas y con muchas historias de esfuerzos.",
+        "andres_name": "Andres Cordova",
+        "andres_job": "Elaboración de alfajores y chocolateria",
+        "andres_text": "Palabras de Andres pendientes. Palabras de Andres pendientes. Palabras de Andres pendientes. Palabras de Andres pendientes.",
+        "felipe_name": "Felipe Cordova",
+        "felipe_job": "Ejecutivo Comercial",
+        "felipe_text": "Palabras de Felipe pendientes. Palabras de Felipe pendientes. Palabras de Felipe pendientes. Palabras de Felipe pendientes."
     },
     "contact": {
         "contact_us": "Contáctanos",
@@ -198,7 +215,7 @@
         "online_payment_desc": "Pago rápido y seguro."
     },
     "footer": {
-        "company_msn": "Dilo con alfajores, demuestra tu cariño con sensacionales y románticos Mini Alfajores Glaseados con el texto que quieras, muchos diseños a elección.Disponible en Sin Gluten.",
+        "company_msn": "Dilo con alfajores. Demuestra tu cariño con sensacionales y románticos Alfajores con el texto que quieras (glaseados y chocolates) y otros diseños a elección. Pueden ser Sin Gluten, Sin Lactosa y Sin Azúcar.",
         "categories": "Categorías",
         "why_we_choose": "Información",
         "terms_and_conditions": "Términos & condiciónes",
