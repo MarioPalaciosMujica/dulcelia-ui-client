@@ -19,7 +19,8 @@
         "wishlist": "Lista de deseados",
         "my_account": "Mi cuenta",
         "login": "Ingresar",
-        "logout": "Salir"
+        "logout": "Salir",
+        "back": "Ocultar"
     },
     "home": {
         "header_title": "Tortas",
