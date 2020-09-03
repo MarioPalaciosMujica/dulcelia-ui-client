@@ -12,7 +12,7 @@
         "cart": "Carro"
     },
     "top_bar": {
-        "welcome": "Bienvenído a Dulcelia",
+        "welcome": "Bienvenído(a) a Dulcelia",
         "call_us": "Llámanos",
         "phone": "+56 9 9488 5218",
         "compare": "Comparar",
@@ -124,7 +124,7 @@
         "email_2": "info@dulcelia.com",
         "address_1": "Cerro de las Lomas 19367, San Bernardo, Santiago",
         "address_2": "Santiago, Chile",
-        "phone_1": "22 792 4372",
+        "phone_1": "22 889 5298",
         "phone_2": "+56 9 9488 5218"
     },
     "blog": {
@@ -132,6 +132,7 @@
         "popupar_blog": "Populares",
         "hits": "Rating",
         "blog_by": "Publicado por",
+        "by": "Por",
         "blog_comment": "comentario(s)"
     },
     "wishlist": {
