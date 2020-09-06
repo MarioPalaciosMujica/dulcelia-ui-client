@@ -2,25 +2,37 @@
     {
         "idCategory": 1,
         "name": "Tortas Tradicionáles",
-        "created": 1599103877588,
+        "created": 1599428264017,
         "modified": null
     },
     {
         "idCategory": 2,
         "name": "Tortas de Vanguardia",
-        "created": 1599103878644,
+        "created": 1599428265487,
         "modified": null
     },
     {
         "idCategory": 3,
         "name": "Coctel",
-        "created": 1599103878646,
+        "created": 1599428265490,
         "modified": null
     },
     {
         "idCategory": 4,
         "name": "Masas",
-        "created": 1599103878648,
+        "created": 1599428265492,
+        "modified": null
+    },
+    {
+        "idCategory": 5,
+        "name": "Dulces",
+        "created": 1599428265540,
+        "modified": null
+    },
+    {
+        "idCategory": 6,
+        "name": "Pan",
+        "created": 1599428265543,
         "modified": null
     }
 ]
