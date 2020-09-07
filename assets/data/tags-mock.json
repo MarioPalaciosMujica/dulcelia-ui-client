@@ -2,37 +2,37 @@
     {
         "idTag": 1,
         "name": "Sin azúcar",
-        "created": 1599428265546,
+        "created": 1599499702356,
         "modified": null
     },
     {
         "idTag": 2,
         "name": "Sin lactosa",
-        "created": 1599428265552,
+        "created": 1599499702372,
         "modified": null
     },
     {
         "idTag": 3,
         "name": "Sin gluten",
-        "created": 1599428265555,
+        "created": 1599499702383,
         "modified": null
     },
     {
         "idTag": 4,
         "name": "Sin leche",
-        "created": 1599428265557,
+        "created": 1599499702402,
         "modified": null
     },
     {
         "idTag": 5,
         "name": "Con stevia",
-        "created": 1599428265559,
+        "created": 1599499702420,
         "modified": null
     },
     {
         "idTag": 6,
         "name": "Con sucralosa",
-        "created": 1599428265562,
+        "created": 1599499702439,
         "modified": null
     }
 ]
