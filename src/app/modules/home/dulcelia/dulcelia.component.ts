@@ -80,31 +80,34 @@ export class DulceliaComponent implements OnInit, OnDestroy {
 
     public ProductSliderConfig: any = ProductSlider;
 
-    public sliders = [{
-      title: 'Ahorra hasta un 20%',
-      subTitle: 'nuestro Catalogo',
-      image: 'assets/dulcelia-demo/slider-flowers.jpg'
-    }, {
-      title: 'Envíos',
-      subTitle: 'A todo santiago',
-      image: 'assets/dulcelia-demo/slider-bike.jpg'
-    }];
+    public sliders = [
+        {
+          title: 'Cumpleañeros(as) mayores de 60 años',
+          subTitle: '10% de descuento en tortas',
+          image: 'assets/dulcelia-demo/pages/portada.jpg'
+        }
+        // ,{
+        //   title: 'Compras sobre $30.00 en Emporio',
+        //   subTitle: 'Envio Gratis',
+        //   image: 'assets/dulcelia-demo/slider-bike.jpg'
+        // }
+    ];
     
     public blogs = [{
-        image: 'assets/dulcelia-demo/blog-1.jpg',
-        date: '25 January 2018',
-        title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
-        by: 'John Dio'
+        image: 'assets/dulcelia-demo/blog/blog_02_1000x591.jpg',
+        date: '25 Enero 2018',
+        title: 'En Mucho Gusto',
+        by: 'Beatriz Canales'
     }, {
-        image: 'assets/dulcelia-demo/blog-2.jpg',
-        date: '26 January 2018',
-        title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
-        by: 'John Dio'
+        image: 'assets/dulcelia-demo/blog/blog_03_1000x591.jpg',
+        date: '7 Junio 2015',
+        title: 'Una Visita Sorpresa',
+        by: 'Beatriz Canales'
     }, {
-        image: 'assets/dulcelia-demo/blog-3.jpg',
-        date: '27 January 2018',
-        title: 'Lorem ipsum dolor sit consectetur adipiscing elit,',
-        by: 'John Dio'
+        image: 'assets/dulcelia-demo/blog/blog_05_1000x591.jpg',
+        date: '15 Agosto 2009',
+        title: 'Reportaje Pyme Mujer',
+        by: 'Beatriz Canales'
     }];
 
 }

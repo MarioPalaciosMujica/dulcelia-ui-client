@@ -1,9 +1,8 @@
 
-// @import '/assets/scss/dulcelia-colors/orange-flower.scss';
-// @import '/assets/scss/dulcelia-colors/muted.scss';
-// @import '/assets/scss/dulcelia-colors/pretty-pink.scss';
-// @import '/assets/scss/dulcelia-colors/reliable.scss';
-// @import '/assets/scss/dulcelia-colors/starry-blue.scss';
+@font-face {
+    font-family: dancing-script;
+    src: url('assets/fonts/dancing_script/DancingScript-Regular.ttf') format("opentype");
+}
 
 body, header {
     background-color: #FFFFFF;
@@ -22,3 +21,37 @@ body, header {
 // .breadcrumb-section {
 //     background-color: #F2EBE5;
 // }
+
+.home-slider {
+    padding-top: 30%;
+}
+
+.home-slider-title{
+    color: #fcf3e3 !important;
+    font-family: 'dancing-script', 'arial', sans-serif;
+}
+
+.home-slider-subtitle{
+    color: #fcefd9 !important;
+    font-family: 'dancing-script', 'arial', sans-serif;
+}
+
+.about-me-header {
+    text-align: center;
+    padding: 0px 10% 35px 10%;
+    text-transform: none !important;
+}
+
+.about-me-paraph {
+    text-align: left;
+    padding: 0px 10% 20px 10%;
+}
+
+.shop-header {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.shop-header-title {
+    text-transform: none;
+}

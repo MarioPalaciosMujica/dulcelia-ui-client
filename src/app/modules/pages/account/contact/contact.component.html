@@ -4,7 +4,8 @@
     <div class="container">
         <div class="row section-b-space">
             <div class="col-lg-7 map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50059.12775918716!2d72.78534673554945!3d21.16564923510817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1533793756956"   allowfullscreen></iframe>
+                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d50059.12775918716!2d72.78534673554945!3d21.16564923510817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1533793756956"   allowfullscreen></iframe> -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.347241488186!2d-70.71491488436347!3d-33.62223741373615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d92c6de4c2ab%3A0xa331a2463d89b9f5!2sCerro%20de%20Las%20Lomas%2019367%2C%20San%20Bernardo%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1597995811078!5m2!1sen!2scl" allowfullscreen></iframe>
             </div>
             <div class="col-lg-5">
                 <div class="contact-right">
@@ -15,28 +16,29 @@
                                 <h6>{{ 'contact.contact_us' | translate }}</h6>
                             </div>
                             <div class="media-body">
-                                <p>+91 123 - 456 - 7890</p>
-                                <p>+86 163 - 451 - 7894</p>
+                                <p>{{ 'contact.phone_1' | translate }}</p>
+                                <p>{{ 'contact.phone_2' | translate }}</p>
                             </div>
                         </li>
                         <li>
                             <div class="contact-icon">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <h6>{{ 'contact.address' | translate }}</h6>
+                                <h6>{{ 'contact.address_title' | translate }}</h6>
                             </div>
                             <div class="media-body">
-                                <p>ABC Complex,Near xyz, New York</p>
-                                <p>USA 123456</p>
+                                <p>{{ 'contact.address_1' | translate }}</p>
+                                <h6>{{ 'contact.address_2' | translate }}</h6>
                             </div>
                         </li>
                         <li>
                             <div class="contact-icon">
                                 <img src="assets/images/icon/email.png" alt="Generic placeholder image">
-                                <h6>{{ 'contact.email' | translate }}</h6>
+                                <h6>{{ 'contact.email_title' | translate }}</h6>
                             </div>
                             <div class="media-body">
-                                <p>Support@Shopcart.com</p>
-                                <p>info@shopcart.com</p>
+                                <!-- <p>Support@Shopcart.com</p> -->
+                                <p>{{ 'contact.email_1' | translate }}</p>
+                                <p>{{ 'contact.email_2' | translate }}</p>
                             </div>
                         </li>
                         <!-- <li>
