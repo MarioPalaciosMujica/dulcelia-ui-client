@@ -30,7 +30,7 @@
               "rxjs-compat/add/operator/map",
               "rxjs-compat/add/operator/catch"
             ],
-            "outputPath": "dist/multikart/browser",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -185,6 +185,10 @@
           "configurations": {
             "production": {}
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }

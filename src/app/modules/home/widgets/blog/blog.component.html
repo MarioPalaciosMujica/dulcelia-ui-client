@@ -14,7 +14,8 @@
             <p>{{blog.title}}</p>
           </a>
           <hr class="style1">
-          <h6> {{ 'by:' +blog.by}} , {{ '2 Comment' }}</h6>
+          <!-- <h6> {{ 'by:' +blog.by}} , {{ '2 Comment' }}</h6> -->
+          <h6> {{ 'blog.by' | translate }}: {{ blog.by }} , 2 {{ 'blog.blog_comment' | translate }}</h6>
         </div>
       </div>
     </ng-template>
