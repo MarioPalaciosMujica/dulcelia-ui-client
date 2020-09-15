@@ -5,5 +5,4 @@ export interface Collection {
     name?: string;
     created?: string;
     modified?: string;
-    products?: Product[];
 }

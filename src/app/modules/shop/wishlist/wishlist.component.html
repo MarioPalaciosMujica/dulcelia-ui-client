@@ -46,10 +46,10 @@
                           <!-- {{ (product.price | discount:product) * productService?.Currency.price | currency:productService?.Currency.currency:'symbol' }} -->
                           <div *ngIf="product.isSale; then showDiscountPrice; else showNormalPrice"></div>
                           <ng-template #showDiscountPrice>
-                            ${{ product.priceDiscount | number:'':'es'}}
+                            ${{ product.currentTotalPrice | number:'':'es'}}
                           </ng-template>
                           <ng-template #showNormalPrice>
-                            ${{ product.price | number:'':'es'}}
+                            ${{ product.currentBasePrice | number:'':'es'}}
                           </ng-template>
                       </h2>
                     </div>
@@ -70,10 +70,10 @@
                     <!-- {{ (product.price | discount:product) * productService?.Currency.price | currency:productService?.Currency.currency:'symbol' }} -->
                     <div *ngIf="product.isSale; then showDiscountPrice2; else showNormalPrice2"></div>
                     <ng-template #showDiscountPrice2>
-                      ${{ product.priceDiscount | number:'':'es'}}
+                      ${{ product.currentTotalPrice | number:'':'es'}}
                     </ng-template>
                     <ng-template #showNormalPrice2>
-                      ${{ product.price | number:'':'es'}}
+                      ${{ product.currentBasePrice | number:'':'es'}}
                     </ng-template>
                   </h2>
               </td>

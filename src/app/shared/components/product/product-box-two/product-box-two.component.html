@@ -101,13 +101,13 @@
     <div *ngIf="product.isSale; then showDiscount else showNormalPrice"></div>
     <ng-template #showDiscount>
         <h4>
-            <del>${{ product.price | number:'':'es' }}</del>
+            <del>${{ product.currentBasePrice | number:'':'es' }}</del>
             <br>
-            <span class="money">${{ product.priceDiscount | number:'':'es' }}</span>
+            <span class="money">${{ product.currentTotalPrice | number:'':'es' }}</span>
         </h4>
     </ng-template>
     <ng-template #showNormalPrice>
-        <h4>${{ product.price | number:'':'es' }}</h4>
+        <h4>${{ product.currentBasePrice | number:'':'es' }}</h4>
     </ng-template>
 
 </div>

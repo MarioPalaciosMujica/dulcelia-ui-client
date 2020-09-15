@@ -101,69 +101,69 @@ export class CollectionLeftSidebarComponent implements OnInit {
   }
 
   private getAllProducts(){
-    // this.productService.findAllActives().subscribe(data => {
-    //   this.products = data as Product[];
-    //   this.isMainProductsLoaded = true;
-    // });
-
-    //MOCK
-    this.productMockService.findAllActives().subscribe(data => {
+    this.productService.findAllActives().subscribe(data => {
       this.products = data as Product[];
       this.isMainProductsLoaded = true;
     });
-  }
-
-  private getAllNewProducts(){
-    // this.productService.findAllActivesNew().subscribe(data => {
-    //   this.newProducts = data as Product[];
-    //   this.isNewProductsLoaded = true;
-    // });
 
     //MOCK
-    this.productMockService.findAllActives().subscribe(data => {
-      this.newProducts = [];
-      let allProducts: Product[] = data as Product[];
-      allProducts.forEach(prod => {
-        if(prod.isNew){
-          this.newProducts.push(prod);
-        }
-      });
-      this.isNewProductsLoaded = true;
-    });
-  }
-
-  private getAllTags(){
-    // this.tagService.findAll().subscribe(data => {
-    //   this.tags = data as Tag[];
-    //   this.isTagsLoaded = true;
-    // });
-
-    //MOCK
-    this.tagMockservice.findAll().subscribe(data => {
-      this.tags = data as Tag[];
-      this.isTagsLoaded = true;
-    });
-  }
-
-  private getAllProductByCategory(idCategory: number){
-    // this.productService.findAllActivesByCategory(idCategory).subscribe(data => {
+    // this.productMockService.findAllActives().subscribe(data => {
     //   this.products = data as Product[];
     //   this.isMainProductsLoaded = true;
     // });
+  }
+
+  private getAllNewProducts(){
+    this.productService.findAllActivesNew().subscribe(data => {
+      this.newProducts = data as Product[];
+      this.isNewProductsLoaded = true;
+    });
 
     //MOCK
-    this.productMockService.findAllActives().subscribe(data => {
-      this.products = [];
-      let allProducts: Product[] = data as Product[];
-      allProducts.forEach(prod => {
-        prod.categories.forEach(cat => {
-          if(cat.idCategory == idCategory){
-            this.products.push(prod);
-          }
-        })
-      });
+    // this.productMockService.findAllActives().subscribe(data => {
+    //   this.newProducts = [];
+    //   let allProducts: Product[] = data as Product[];
+    //   allProducts.forEach(prod => {
+    //     if(prod.isNew){
+    //       this.newProducts.push(prod);
+    //     }
+    //   });
+    //   this.isNewProductsLoaded = true;
+    // });
+  }
+
+  private getAllTags(){
+    this.tagService.findAll().subscribe(data => {
+      this.tags = data as Tag[];
+      this.isTagsLoaded = true;
+    });
+
+    //MOCK
+    // this.tagMockservice.findAll().subscribe(data => {
+    //   this.tags = data as Tag[];
+    //   this.isTagsLoaded = true;
+    // });
+  }
+
+  private getAllProductByCategory(idCategory: number){
+    this.productService.findAllActivesByCategory(idCategory).subscribe(data => {
+      this.products = data as Product[];
       this.isMainProductsLoaded = true;
     });
+
+    //MOCK
+    // this.productMockService.findAllActives().subscribe(data => {
+    //   this.products = [];
+    //   let allProducts: Product[] = data as Product[];
+    //   allProducts.forEach(prod => {
+    //     prod.categories.forEach(cat => {
+    //       if(cat.idCategory == idCategory){
+    //         this.products.push(prod);
+    //       }
+    //     })
+    //   });
+    //   this.isMainProductsLoaded = true;
+    // });
   }
 
 

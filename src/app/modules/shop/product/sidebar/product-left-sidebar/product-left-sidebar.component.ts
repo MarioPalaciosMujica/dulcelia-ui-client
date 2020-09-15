@@ -57,23 +57,23 @@ export class ProductLeftSidebarComponent implements OnInit {
   private getProduct(){
     this.route.paramMap.subscribe(paramMap => {
       
-      // this.productService.findById(Number(paramMap.get('idProduct'))).subscribe(data => {
-      //   this.product = data as Product;
-      //   this.product.quantity = 1;
-      //   this.isProductLoaded = true;
-      // });
+      this.productService.findById(Number(paramMap.get('idProduct'))).subscribe(data => {
+        this.product = data as Product;
+        this.product.quantity = 1;
+        this.isProductLoaded = true;
+      });
 
       //MOCK
-      this.productMockService.findAllActives().subscribe(data => {
-        let allProducts: Product[] = data as Product[];
-        allProducts.forEach(prod => {
-          if(prod.idProduct == Number(paramMap.get('idProduct'))){
-            this.product = prod;
-            this.product.quantity = 1;
-            this.isProductLoaded = true;
-          }
-        });
-      });
+      // this.productMockService.findAllActives().subscribe(data => {
+      //   let allProducts: Product[] = data as Product[];
+      //   allProducts.forEach(prod => {
+      //     if(prod.idProduct == Number(paramMap.get('idProduct'))){
+      //       this.product = prod;
+      //       this.product.quantity = 1;
+      //       this.isProductLoaded = true;
+      //     }
+      //   });
+      // });
 
     });
   }

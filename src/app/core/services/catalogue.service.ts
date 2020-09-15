@@ -4,11 +4,11 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
-})
-export class CategoryService extends BaseService {
-
-  constructor(http: HttpClient) {
-    super(environment.apiProductCatalogue, http);
+    providedIn: 'root'
+  })
+  export class CatalogueService extends BaseService {
+  
+    constructor(http: HttpClient) {
+      super(environment.apiProductCategory, http);
+    }
   }
-}

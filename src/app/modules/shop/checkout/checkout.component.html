@@ -159,10 +159,10 @@
                                             </span> -->
                                             <div *ngIf="product.isSale; then showDiscountTotalPrice; else showNormalTotalPrice"></div>
                                             <ng-template #showDiscountTotalPrice>
-                                                <span>${{ (product.priceDiscount * product.quantity) | number:'':'es' }}</span>
+                                                <span>${{ (product.currentTotalPrice * product.quantity) | number:'':'es' }}</span>
                                             </ng-template>
                                             <ng-template #showNormalTotalPrice>
-                                                <span>${{ (product.price * product.quantity) | number:'':'es' }}</span>
+                                                <span>${{ (product.currentBasePrice * product.quantity) | number:'':'es' }}</span>
                                             </ng-template>
                                         </li>
                                     </ul>

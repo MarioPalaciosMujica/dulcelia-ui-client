@@ -32,16 +32,16 @@ export class CategoriesComponent implements OnInit {
   }
 
   private getAllCategories(){
-    // this.categoryService.findAll().subscribe(data => {
-    //   this.categories = data as Category[];
-    //   this.isDataLoaded = true;
-    // });
-
-    //MOCK
-    this.categoryMockService.findAll().subscribe(data => {
+    this.categoryService.findAll().subscribe(data => {
       this.categories = data as Category[];
       this.isDataLoaded = true;
     });
+
+    //MOCK
+    // this.categoryMockService.findAll().subscribe(data => {
+    //   this.categories = data as Category[];
+    //   this.isDataLoaded = true;
+    // });
   }
 
   // get filterbyCategory() {

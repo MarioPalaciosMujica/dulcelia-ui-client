@@ -257,10 +257,10 @@ export class ProductService extends BaseService {
         // new
         let price: number;
         if(curr.isSale){
-          price = curr.priceDiscount;
+          price = curr.currentTotalPrice;
         } 
         else {
-          price = curr.price;
+          price = curr.currentBasePrice;
         }
         return (prev + price * curr.quantity);
 

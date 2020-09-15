@@ -44,25 +44,25 @@ export class DulceliaComponent implements OnInit, OnDestroy {
     }
 
     private getAllProducts(){
-        // this.productService.findAllActives().subscribe(data => {
-        //     this.products = data as Product[];
-        // });
-        
-        //MOCK
-        this.productMockService.findAllActives().subscribe(data => {
+        this.productService.findAllActives().subscribe(data => {
             this.products = data as Product[];
         });
+        
+        //MOCK
+        // this.productMockService.findAllActives().subscribe(data => {
+        //     this.products = data as Product[];
+        // });
     }
 
     private getAllCollections(){
-        // this.collectionService.findAll().subscribe(data => {
-        //     this.collections = data as Collection[];
-        // });
-        
-        //MOCK
-        this.collectionMockService.findAll().subscribe(data => {
+        this.collectionService.findAll().subscribe(data => {
             this.collections = data as Collection[];
         });
+        
+        //MOCK
+        // this.collectionMockService.findAll().subscribe(data => {
+        //     this.collections = data as Collection[];
+        // });
         
     }
 

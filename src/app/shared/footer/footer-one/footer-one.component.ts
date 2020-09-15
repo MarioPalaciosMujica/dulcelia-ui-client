@@ -32,14 +32,14 @@ export class FooterOneComponent implements OnInit {
   }
 
   private getAllCategories(){
-    // this.categoryService.findAll().subscribe(data => {
-    //   this.categories = data as Category[];
-    // });
-
-    //MOCK
-    this.categoryMockService.findAll().subscribe(data => {
+    this.categoryService.findAll().subscribe(data => {
       this.categories = data as Category[];
     });
+
+    //MOCK
+    // this.categoryMockService.findAll().subscribe(data => {
+    //   this.categories = data as Category[];
+    // });
   }
 
 }
