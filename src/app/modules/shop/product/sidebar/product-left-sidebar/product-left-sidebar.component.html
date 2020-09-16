@@ -98,8 +98,6 @@
                       </ng-template>
                   </div>
 
-                  
-
                   <!-- <ul class="color-variant" *ngIf="Color(product?.variants).length">
                     <li [class]="color" [class.active]="activeSlide == i.toString()" 
                         *ngFor="let color of Color(product?.variants); index as i" 
@@ -107,6 +105,7 @@
                         (click)="owlCar.to(activeSlide = i.toString())">
                     </li>
                   </ul> -->
+                  
 
                   <!-- Stock -->
                   <!-- <app-stock-inventory *ngIf="isProductLoaded" [stock]="product?.stock"></app-stock-inventory> -->
@@ -148,6 +147,38 @@
                         </span>
                       </div>
                     </div>
+                  </div>
+                  
+                  
+                  <div *ngIf="isProductLoaded" class="border-product">
+                    <div *ngIf="product.isCapacityQty; then showClientCapacity; else showUnitQuantity"></div>
+                    <!-- Clients Capacity -->
+                    <ng-template #showClientCapacity>
+                      <ul *ngFor=" let variant of product.variants | sort:'clientsCapacity' ">
+                        <li *ngIf="variant.clientsCapacity != null">
+                          <input name="variants" ng-control="variants" type="radio" [value]="variant.idVariant" [checked]="variant.isSelected" (click)="selectVariant(variant.idVariant)">
+                          &nbsp;&nbsp; <span>{{ variant.clientsCapacity }}</span> {{ 'product.capacity' | translate }}
+                        </li>
+                      </ul>
+                    </ng-template>
+                    <!-- Units Quantity -->
+                    <ng-template #showUnitQuantity>
+                      <ul *ngFor=" let variant of product.variants | sort:'unitQuantity' ">
+                        <li *ngIf="variant.unitQuantity != null">
+                          <input name="variants" ng-control="variants" type="radio" [value]="variant.idVariant" [checked]="variant.isSelected" (click)="selectVariant(variant.idVariant)">
+                          &nbsp;&nbsp; <span>{{ variant.unitQuantity }}</span> {{ 'product.units' | translate }}
+                        </li>
+                      </ul>
+                    </ng-template>
+                  </div>
+
+                  <div *ngIf="isProductLoaded" class="border-product">
+                    <ul *ngFor="let opt of product.options">
+                      <li>
+                        <input name="options" ng-control="options" type="checkbox" [value]="opt.idOption">
+                        &nbsp;&nbsp; <span>{{ opt.optionName }}</span>
+                      </li>
+                    </ul>
                   </div>
 
                   <div *ngIf="isProductLoaded" class="product-buttons">

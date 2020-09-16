@@ -26,6 +26,14 @@ export class CartComponent implements OnInit {
     registerLocaleData(es);
   }
 
+  getClientsCapacity(product: Product){
+    return product.variants.find(item => item.isSelected).clientsCapacity;
+  }
+
+  getUnitsQuantity(product: Product){
+    return product.variants.find(item => item.isSelected).unitQuantity;
+  }
+
   public get getTotal(): Observable<number> {
     return this.productService.cartTotalAmount();
   }

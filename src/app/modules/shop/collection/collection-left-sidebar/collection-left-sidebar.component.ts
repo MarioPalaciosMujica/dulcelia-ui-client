@@ -1,9 +1,10 @@
+import { Observable, Subscription } from 'rxjs';
 import { TagMockService } from './../../../../core/mocks/tag-mock.service';
 import { CategoryMockService } from './../../../../core/mocks/category-mock.service';
 import { ProductMockService } from './../../../../core/mocks/product-mock.service';
 import { TagService } from './../../../../core/services/tag.service';
 import { Tag } from './../../../../shared/models/tag.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 //import { ProductService } from "./../../../../shared/services/product.service";
@@ -98,7 +99,20 @@ export class CollectionLeftSidebarComponent implements OnInit {
     });
     this.getAllNewProducts();
     this.getAllTags();
+
+    // TEST
+    // this.sub = this.productService.findAllActives().subscribe(data => {
+    //   this.products = data as Product[];
+    //   this.isMainProductsLoaded = true;
+    // });
   }
+  
+  // TEST
+  // private sub: Subscription;
+
+  // ngOnDestroy(): void {
+  //   this.sub.unsubscribe();
+  // }
 
   private getAllProducts(){
     this.productService.findAllActives().subscribe(data => {

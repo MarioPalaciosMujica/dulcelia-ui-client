@@ -20,6 +20,7 @@ export interface Product {
     currentBasePrice?: number;
     currentTotalPrice?: number;
     stock?: number;
+    isCapacityQty?: boolean;
     isActive?: boolean;
     created?: string;
     modified?: string;

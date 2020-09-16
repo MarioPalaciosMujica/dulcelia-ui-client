@@ -105,6 +105,26 @@ export class ProductService extends BaseService {
 
   // ---------------- TOOLS ---------------- 
 
+  // Select Variant
+  public changeVariant(product: Product, idVariant: number): Product{
+    for(let variant of product.variants){
+      if(variant.idVariant == idVariant){
+        variant.isSelected = true;
+        product.currentBasePrice = variant.basePriceAmount;
+        product.currentTotalPrice = variant.totalPriceAmount;
+      }
+      else {
+        variant.isSelected = false;
+      }
+    }
+    return product;
+  }
+
+  // Get Selected Variant
+  public getSelectedVariant(product: Product): any{
+    return product.variants.find(v=> v.isSelected);
+  }
+
   // WISH LIST:
   // Get Wishlist Items
   public get wishlistItems(): Observable<Product[]> {
@@ -151,7 +171,10 @@ export class ProductService extends BaseService {
 
   // Add to Compare
   public addToCompare(product: Product): any {
-    const compareItem = state.compare.find(item => item.idProduct === product.idProduct)
+    const compareItem = state.compare.find(
+      item => item.idProduct === product.idProduct &&
+      this.getSelectedVariant(item).idVariant === this.getSelectedVariant(product).idVariant
+    );
     if (!compareItem) {
       state.compare.push({
         ...product
@@ -182,10 +205,18 @@ export class ProductService extends BaseService {
     });
     return <Observable<Product[]>>itemsStream;
   }
+
+  
   
   // Add to Cart
   public addToCart(product: Product): any {
-    const cartItem = state.cart.find(item => item.idProduct === product.idProduct);
+    //const cartItem = state.cart.find(item => item.idProduct === product.idProduct && item.currentTotalPrice === product.currentTotalPrice);
+
+    const cartItem = state.cart.find(
+      item => item.idProduct === product.idProduct &&
+      this.getSelectedVariant(item).idVariant === this.getSelectedVariant(product).idVariant
+    );
+
     const qty = product.quantity ? product.quantity : 1;
     const items = cartItem ? cartItem : product;
     const stock = this.calculateStockCounts(items, qty);
@@ -210,7 +241,7 @@ export class ProductService extends BaseService {
   // Update Cart Quantity
   public updateCartQuantity(product: Product, quantity: number): Product | boolean {
     return state.cart.find((items, index) => {
-      if (items.idProduct === product.idProduct) {
+      if (items.idProduct === product.idProduct && this.getSelectedVariant(items).idVariant === this.getSelectedVariant(product).idVariant) {
         const qty = state.cart[index].quantity + quantity
         const stock = this.calculateStockCounts(state.cart[index], quantity)
         if (qty !== 0 && stock) {

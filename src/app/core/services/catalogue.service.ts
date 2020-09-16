@@ -9,6 +9,6 @@ import { Injectable } from '@angular/core';
   export class CatalogueService extends BaseService {
   
     constructor(http: HttpClient) {
-      super(environment.apiProductCategory, http);
+      super(environment.apiProductCatalogue, http);
     }
   }

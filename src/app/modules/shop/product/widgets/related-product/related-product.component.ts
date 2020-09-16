@@ -40,26 +40,26 @@ export class RelatedProductComponent implements OnInit {
   private getRelatedProduct(){
     if(this.product.tags.length > 1){
 
-      // this.productService.findAllActivesByTags(this.product.tags).subscribe(data => {
-      //   this.relatedProducts = data as Product[];
-      //   this.isDataLoaded = true;
-      // });
-
-      //MOCK
-      this.productMockService.findAllActives().subscribe(data => {
-        this.relatedProducts = [];
-        let allProducts: Product[] = data as Product[];
-        allProducts.forEach(prod => {
-          this.product.tags.forEach(viewTag => {
-            prod.tags.forEach(prodTag => {
-              if(viewTag.idTag == prodTag.idTag && !this.relatedProducts.includes(prod)){
-                this.relatedProducts.push(prod);
-              }
-            })
-          })
-        });
+      this.productService.findAllActivesByTags(this.product.tags).subscribe(data => {
+        this.relatedProducts = data as Product[];
         this.isDataLoaded = true;
       });
+
+      //MOCK
+      // this.productMockService.findAllActives().subscribe(data => {
+      //   this.relatedProducts = [];
+      //   let allProducts: Product[] = data as Product[];
+      //   allProducts.forEach(prod => {
+      //     this.product.tags.forEach(viewTag => {
+      //       prod.tags.forEach(prodTag => {
+      //         if(viewTag.idTag == prodTag.idTag && !this.relatedProducts.includes(prod)){
+      //           this.relatedProducts.push(prod);
+      //         }
+      //       })
+      //     })
+      //   });
+      //   this.isDataLoaded = true;
+      // });
 
     }
 

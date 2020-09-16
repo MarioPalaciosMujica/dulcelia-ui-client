@@ -31,7 +31,7 @@ export class ProductLeftSidebarComponent implements OnInit {
   public newProductList: Product[];
   public relatedProductList: Product[];
 
-  public isProductLoaded : boolean;
+  public isProductLoaded: boolean;
   public isRelatedProductsLoaded: boolean;
   public isNewProductLoaded: boolean;
 
@@ -76,6 +76,10 @@ export class ProductLeftSidebarComponent implements OnInit {
       // });
 
     });
+  }
+
+  selectVariant(idVariant: number) {
+    this.product = this.productService.changeVariant(this.product, idVariant);
   }
 
   // Get Product Color

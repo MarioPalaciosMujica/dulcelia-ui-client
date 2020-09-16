@@ -70,7 +70,10 @@
         "rating": "Rating",
         "related_products": "Relacionados",
         "modal_add_cart_msn": "Este producto fue añadido a tu carro exitosamente!",
-        "all": "Todos los productos"
+        "all": "Todos los productos",
+        "for": "Para",
+        "capacity": "personas",
+        "units": "Unidad(es)"
     },
     "product_modal": {
         "item": "",
