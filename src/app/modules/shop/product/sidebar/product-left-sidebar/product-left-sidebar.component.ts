@@ -1,10 +1,8 @@
-import { ProductMockService } from './../../../../../core/mocks/product-mock.service';
+import { Option } from './../../../../../shared/models/option.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductDetailsMainSlider, ProductDetailsThumbSlider } from './../../../../../shared/data/slider';
-// import { Product } from './../../../../../shared/classes/product';
 import { Product } from './../../../../../shared/models/product.model';
-//import { ProductService } from './../../../../../shared/services/product.service';
 import { ProductService } from './../../../../../core/services/product.service';
 import { SizeModalComponent } from "./../../../../../shared/components/modal/size-modal/size-modal.component";
 import { registerLocaleData } from '@angular/common';
@@ -18,7 +16,6 @@ import es from '@angular/common/locales/es';
 export class ProductLeftSidebarComponent implements OnInit {
 
   public product: Product;
-  //public counter: number = 1;
   public activeSlide: any = 0;
   public selectedSize: any;
   public mobileSidebar: boolean = false;
@@ -38,11 +35,9 @@ export class ProductLeftSidebarComponent implements OnInit {
   constructor(
     private route: ActivatedRoute, 
     private router: Router,
-    public productService: ProductService,
-    private productMockService: ProductMockService
+    public productService: ProductService
   ) 
   { 
-    //this.route.data.subscribe(response => this.product = response.data );
     this.product = {};
     this.isProductLoaded = false;
     this.isRelatedProductsLoaded = false;
@@ -62,19 +57,6 @@ export class ProductLeftSidebarComponent implements OnInit {
         this.product.quantity = 1;
         this.isProductLoaded = true;
       });
-
-      //MOCK
-      // this.productMockService.findAllActives().subscribe(data => {
-      //   let allProducts: Product[] = data as Product[];
-      //   allProducts.forEach(prod => {
-      //     if(prod.idProduct == Number(paramMap.get('idProduct'))){
-      //       this.product = prod;
-      //       this.product.quantity = 1;
-      //       this.isProductLoaded = true;
-      //     }
-      //   });
-      // });
-
     });
   }
 
@@ -82,31 +64,41 @@ export class ProductLeftSidebarComponent implements OnInit {
     this.product = this.productService.changeVariant(this.product, idVariant);
   }
 
-  // Get Product Color
-  Color(variants) {
-    const uniqColor = []
-    for (let i = 0; i < Object.keys(variants).length; i++) {
-      if (uniqColor.indexOf(variants[i].color) === -1 && variants[i].color) {
-        uniqColor.push(variants[i].color)
+  selectOption(values: any) {
+    let opt: Option = null;
+    for(let option of this.product.options){
+      if(option.idOption == values.currentTarget.defaultValue){
+        opt = option;
       }
     }
-    return uniqColor
+    this.product = this.productService.changeOptions(this.product, opt, values.currentTarget.checked);
   }
+
+  // Get Product Color
+  // Color(variants) {
+  //   const uniqColor = []
+  //   for (let i = 0; i < Object.keys(variants).length; i++) {
+  //     if (uniqColor.indexOf(variants[i].color) === -1 && variants[i].color) {
+  //       uniqColor.push(variants[i].color)
+  //     }
+  //   }
+  //   return uniqColor
+  // }
 
   // Get Product Size
-  Size(variants) {
-    const uniqSize = []
-    for (let i = 0; i < Object.keys(variants).length; i++) {
-      if (uniqSize.indexOf(variants[i].size) === -1 && variants[i].size) {
-        uniqSize.push(variants[i].size)
-      }
-    }
-    return uniqSize
-  }
+  // Size(variants) {
+  //   const uniqSize = []
+  //   for (let i = 0; i < Object.keys(variants).length; i++) {
+  //     if (uniqSize.indexOf(variants[i].size) === -1 && variants[i].size) {
+  //       uniqSize.push(variants[i].size)
+  //     }
+  //   }
+  //   return uniqSize
+  // }
 
-  selectSize(size) {
-    this.selectedSize = size;
-  }
+  // selectSize(size) {
+  //   this.selectedSize = size;
+  // }
   
   increment() {
     //this.counter++ ;

@@ -105,24 +105,85 @@ export class ProductService extends BaseService {
 
   // ---------------- TOOLS ---------------- 
 
+  // Get Selected Variant
+  public getSelectedVariant(product: Product): any{
+    for(let variant of product.variants){
+      if(variant.isSelected) {
+        return variant;
+      }
+    }
+  }
+
+  // Find if Product already exists
+  public isProductExist(localProducts: Product[], newProduct: Product): Product{
+    for(let localProd of localProducts){
+      if(localProd.idProduct == newProduct.idProduct &&
+        this.getSelectedVariant(localProd).idVariant == this.getSelectedVariant(newProduct).idVariant &&
+        this.getSelectedVariant(localProd).options.length ==  this.getSelectedVariant(newProduct).options.length
+      ){
+        if(this.getSelectedVariant(localProd).options.length == 0 && this.getSelectedVariant(newProduct).options.length == 0){
+          return localProd;
+        }
+        let flags: boolean[] = [];
+        for(var i = 0; i < this.getSelectedVariant(newProduct).options.length; i++){
+          if(JSON.stringify(this.getSelectedVariant(localProd).options).indexOf(JSON.stringify(this.getSelectedVariant(newProduct).options[i])) > -1){
+            flags.push(true);
+          }
+          else {
+            flags.push(false);
+          }
+          if(i+1 == this.getSelectedVariant(newProduct).options.length){
+            if(flags.length > 0 && flags.indexOf(false) == -1){
+              return localProd;
+            }
+          }
+        }
+      }
+    }
+    return null;
+  }
+
   // Select Variant
   public changeVariant(product: Product, idVariant: number): Product{
-    for(let variant of product.variants){
-      if(variant.idVariant == idVariant){
-        variant.isSelected = true;
-        product.currentBasePrice = variant.basePriceAmount;
-        product.currentTotalPrice = variant.totalPriceAmount;
+    let currentVariant: any = this.getSelectedVariant(product);
+    if(currentVariant.idVariant != idVariant){
+      for(let variant of product.variants){
+        if(variant.idVariant == idVariant){
+          variant.options = currentVariant.options;
+          variant.isSelected = true;
+          product.currentBasePrice = variant.basePriceAmount;
+          product.currentTotalPrice = variant.totalPriceAmount;
+        }
+        else {
+          variant.isSelected = false;
+        }
       }
-      else {
-        variant.isSelected = false;
+    }
+    for(let variant of product.variants){
+      if(variant.idVariant != idVariant){
+        variant.options = [];
       }
     }
     return product;
   }
 
-  // Get Selected Variant
-  public getSelectedVariant(product: Product): any{
-    return product.variants.find(v=> v.isSelected);
+  // Add or Remove Options to Variant
+  public changeOptions(product: Product, option: any, checked: boolean): Product{
+    for(let variant of product.variants){
+      if(variant.isSelected){
+        if(checked){
+          variant.options.push(option);
+        }
+        else {
+          variant.options.forEach( (item, index) => {
+            if(item.idOption === option.idOption){
+              variant.options.splice(index,1);
+            }
+          });
+        }
+      }
+    }
+    return product;
   }
 
   // WISH LIST:
@@ -137,7 +198,8 @@ export class ProductService extends BaseService {
 
   // Add to Wishlist
   public addToWishlist(product: Product): any {
-    const wishlistItem = state.wishlist.find(item => item.idProduct === product.idProduct)
+    // const wishlistItem = state.wishlist.find(item => item.idProduct === product.idProduct)
+    const wishlistItem = this.isProductExist(state.cart, product);
     if (!wishlistItem) {
       state.wishlist.push({
         ...product
@@ -151,7 +213,8 @@ export class ProductService extends BaseService {
 
   // Remove Wishlist items
   public removeWishlistItem(product: Product): any {
-    const index = state.wishlist.indexOf(product);
+    // const index = state.wishlist.indexOf(product);
+    const index = this.isProductExist(state.cart, product);
     state.wishlist.splice(index, 1);
     localStorage.setItem("wishlistItems", JSON.stringify(state.wishlist));
     return true
@@ -171,10 +234,13 @@ export class ProductService extends BaseService {
 
   // Add to Compare
   public addToCompare(product: Product): any {
-    const compareItem = state.compare.find(
-      item => item.idProduct === product.idProduct &&
-      this.getSelectedVariant(item).idVariant === this.getSelectedVariant(product).idVariant
-    );
+    // const compareItem = state.compare.find(
+    //   item => item.idProduct === product.idProduct &&
+    //   this.getSelectedVariant(item).idVariant === this.getSelectedVariant(product).idVariant
+    // );
+
+    const compareItem = this.isProductExist(state.cart, product);
+
     if (!compareItem) {
       state.compare.push({
         ...product
@@ -212,10 +278,16 @@ export class ProductService extends BaseService {
   public addToCart(product: Product): any {
     //const cartItem = state.cart.find(item => item.idProduct === product.idProduct && item.currentTotalPrice === product.currentTotalPrice);
 
-    const cartItem = state.cart.find(
-      item => item.idProduct === product.idProduct &&
-      this.getSelectedVariant(item).idVariant === this.getSelectedVariant(product).idVariant
-    );
+    // const cartItem = state.cart.find(
+    //   currProduct => currProduct.idProduct === product.idProduct &&
+    //   this.getSelectedVariant(currProduct).idVariant === this.getSelectedVariant(product).idVariant &&
+    //   this.isOptionsExists(currProduct, this.getSelectedVariant(product))
+    // );
+
+    const cartItem = this.isProductExist(state.cart, product);
+
+    console.log('addToCart()');
+    console.log(cartItem);
 
     const qty = product.quantity ? product.quantity : 1;
     const items = cartItem ? cartItem : product;
@@ -267,7 +339,8 @@ export class ProductService extends BaseService {
 
   // Remove Cart items
   public removeCartItem(product: Product): any {
-    const index = state.cart.indexOf(product);
+    // const index = state.cart.indexOf(product);
+    const index = this.isProductExist(state.cart, product);
     state.cart.splice(index, 1);
     localStorage.setItem("cartItems", JSON.stringify(state.cart));
     return true

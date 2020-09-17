@@ -35,6 +35,7 @@
                                 <p class="cart-product-title"><strong>{{ product.title | titlecase }}</strong></p>
                                 <p *ngIf="product.isCapacityQty" class="cart-product-subtitle">{{ getClientsCapacity(product) }}&nbsp;{{ 'product.capacity' | translate }}</p>
                                 <p *ngIf="!product.isCapacityQty" class="cart-product-subtitle">{{ getUnitsQuantity(product) }}&nbsp;{{ 'product.units' | translate }}</p>
+                                <p *ngFor="let option of getVariant(product).options" class="cart-product-subtitle">{{ option.optionName }}</p>
                             </a>
                             <div class="mobile-cart-content row">
                                 <div class="col-xs-3">

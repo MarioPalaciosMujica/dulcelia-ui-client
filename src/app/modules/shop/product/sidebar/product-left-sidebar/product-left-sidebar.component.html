@@ -173,10 +173,10 @@
                   </div>
 
                   <div *ngIf="isProductLoaded" class="border-product">
-                    <ul *ngFor="let opt of product.options">
+                    <ul *ngFor="let option of product.options">
                       <li>
-                        <input name="options" ng-control="options" type="checkbox" [value]="opt.idOption">
-                        &nbsp;&nbsp; <span>{{ opt.optionName }}</span>
+                        <input name="{{option.optionName}}" ng-control="options" type="checkbox" [value]="option.idOption" (change)="selectOption($event)">
+                        &nbsp;&nbsp; <span>{{ option.optionName }}</span>
                       </li>
                     </ul>
                   </div>

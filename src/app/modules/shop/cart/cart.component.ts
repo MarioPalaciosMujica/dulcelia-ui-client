@@ -26,6 +26,10 @@ export class CartComponent implements OnInit {
     registerLocaleData(es);
   }
 
+  getVariant(product: Product): any {
+    return this.productService.getSelectedVariant(product);
+  }
+
   getClientsCapacity(product: Product){
     return product.variants.find(item => item.isSelected).clientsCapacity;
   }
