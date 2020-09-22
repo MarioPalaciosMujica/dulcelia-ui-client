@@ -1,6 +1,6 @@
 import { Option } from './option.model';
 
-export class Variant {
+export interface Variant {
     idVariant?: number;
     sku?: number;
     basePriceAmount?: number;

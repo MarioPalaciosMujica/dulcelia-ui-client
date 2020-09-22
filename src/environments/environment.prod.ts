@@ -17,6 +17,8 @@ export const environment = {
 
   apiCoupon: 'http://localhost:8081/Coupon',
   apiOrderPurchaseOrder: 'http://localhost:8081/PurchaseOrder',
-  apiOrderPurchaseOrderStatus: 'http://localhost:8081/PurchaseOrderStatus'
+  apiOrderPurchaseOrderStatus: 'http://localhost:8081/PurchaseOrderStatus',
+
+  apiWebpayClient: 'http://localhost:8081/WebpayPlus'
   
 };

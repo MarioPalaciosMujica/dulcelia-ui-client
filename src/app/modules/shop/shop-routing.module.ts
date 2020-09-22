@@ -1,3 +1,4 @@
+import { WebpayFormComponent } from './webpay/webpay-form.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -102,6 +103,10 @@ const routes: Routes = [
   {
     path: 'pago', //'checkout',
     component: CheckoutComponent
+  },
+  {
+    path: 'webpay', 
+    component: WebpayFormComponent
   },
   {
     path: 'pago/exito/:id', //'checkout/success/:id',

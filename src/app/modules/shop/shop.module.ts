@@ -34,6 +34,7 @@ import { ColorsComponent } from './collection/widgets/colors/colors.component';
 import { SizeComponent } from './collection/widgets/size/size.component';
 import { PriceComponent } from './collection/widgets/price/price.component';
 
+import { WebpayFormComponent } from './webpay/webpay-form.component';
 import { CartComponent } from './cart/cart.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { CompareComponent } from './compare/compare.component';
@@ -67,7 +68,8 @@ import { SuccessComponent } from './checkout/success/success.component';
     WishlistComponent,
     CompareComponent,
     CheckoutComponent,
-    SuccessComponent
+    SuccessComponent,
+    WebpayFormComponent
   ],
   imports: [
     CommonModule,

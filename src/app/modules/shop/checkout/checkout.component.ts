@@ -1,15 +1,18 @@
+import { Router } from '@angular/router';
+import { WpInitTransactionOutputModel } from './../../../shared/models/wpInitTransactionOutput.model';
+import { WebpayService } from './../../../core/services/webpay.service';
 import { ProductService } from './../../../core/services/product.service';
 import { Product } from './../../../shared/models/product.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
 import { environment } from './../../../../environments/environment';
-// import { Product } from "./../../../shared/classes/product";
-// import { ProductService } from "./../../../shared/services/product.service";
 import { OrderService } from "./../../../shared/services/order.service";
 import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
+import { DOCUMENT } from '@angular/common';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-checkout',
@@ -21,22 +24,42 @@ export class CheckoutComponent implements OnInit {
   public checkoutForm:  FormGroup;
   public products: Product[] = [];
   public payPalConfig ? : IPayPalConfig;
-  public payment: string = 'Stripe';
+  // public payment: string = 'Stripe';
+  public payment: string = 'Webpay';
+  public wpInitTransactionOutput: WpInitTransactionOutputModel;
   public amount:  any;
+  @Inject(DOCUMENT) private document: any
 
   constructor(private fb: FormBuilder,
     public productService: ProductService,
-    private orderService: OrderService) { 
+    private orderService: OrderService,
+    private webpayService: WebpayService,
+    private router: Router,
+    private  http : HttpClient
+  ) { 
+
+    // this.checkoutForm = this.fb.group({
+    //   firstname: ['', [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z ]+[a-zA-Z]$')]],
+    //   lastname: ['', [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z ]+[a-zA-Z]$')]],
+    //   phone: ['', [Validators.required, Validators.pattern('[0-9]+')]],
+    //   email: ['', [Validators.required, Validators.email]],
+    //   address: ['', [Validators.required, Validators.maxLength(50)]],
+    //   country: ['', Validators.required],
+    //   town: ['', Validators.required],
+    //   state: ['', Validators.required],
+    //   postalcode: ['', Validators.required]
+    // });
+
     this.checkoutForm = this.fb.group({
-      firstname: ['', [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z ]+[a-zA-Z]$')]],
-      lastname: ['', [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z ]+[a-zA-Z]$')]],
-      phone: ['', [Validators.required, Validators.pattern('[0-9]+')]],
-      email: ['', [Validators.required, Validators.email]],
-      address: ['', [Validators.required, Validators.maxLength(50)]],
-      country: ['', Validators.required],
-      town: ['', Validators.required],
-      state: ['', Validators.required],
-      postalcode: ['', Validators.required]
+      firstname: [''],
+      lastname: [''],
+      phone: [''],
+      email: [''],
+      address: [''],
+      country: [''],
+      town: [''],
+      state: [''],
+      postalcode: ['']
     })
   }
 
@@ -49,6 +72,28 @@ export class CheckoutComponent implements OnInit {
 
   public get getTotal(): Observable<number> {
     return this.productService.cartTotalAmount();
+  }
+
+  webpayCheckout(){
+    console.log('apiWebpayClient()');
+    this.webpayService.initTransactionOutput().subscribe(data => {
+      this.wpInitTransactionOutput = data as WpInitTransactionOutputModel;
+      //this.router.navigate(['/tienda/webpay'], { state : this.wpInitTransactionOutput });
+      //this.http.post(this.wpInitTransactionOutput.formAction, { token_ws: this.wpInitTransactionOutput.tokenWs });
+
+      var form = document.createElement('form');
+      form.setAttribute('method', 'POST');
+      form.setAttribute('action', this.wpInitTransactionOutput.formAction);
+      var hidden = document.createElement('input');
+      hidden.setAttribute('type', 'hidden');
+      hidden.setAttribute('name', 'token_ws');
+      hidden.setAttribute('value', this.wpInitTransactionOutput.tokenWs);
+      form.appendChild(hidden);
+      document.body.appendChild(form);
+      form.submit();
+    });
+
+    
   }
 
   // Stripe Payment Gateway
