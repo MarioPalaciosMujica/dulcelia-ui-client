@@ -27,12 +27,15 @@ export interface Product {
     brand?: Brand;
     collection?: Collection;
     images?: Image[];
+    imageSrc?: string;
     categories?: Category[];
     tags?: Tag[];
     productMaterials?: ProductMaterial[];
     options?: Option[];
     variants?: Variant[];
+    variant?: Variant;
     // extra:
+    msProductIdProduct?: number;
     quantity?: number;
     coupon?: Coupon;
 }

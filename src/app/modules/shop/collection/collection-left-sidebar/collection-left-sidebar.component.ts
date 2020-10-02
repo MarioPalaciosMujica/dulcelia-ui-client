@@ -43,7 +43,8 @@ export class CollectionLeftSidebarComponent implements OnInit {
   public isTagsLoaded: boolean;
 
   constructor(
-    private route: ActivatedRoute, private router: Router,
+    private route: ActivatedRoute, 
+    private router: Router,
     private viewScroller: ViewportScroller, 
     private productService: ProductService,
     private tagService: TagService,

@@ -1,4 +1,5 @@
-import { Router } from '@angular/router';
+import { ResultTransactionMessage } from './../../../shared/models/result-transaction-message.model';
+import { Router, ActivatedRoute } from '@angular/router';
 import { WpInitTransactionOutputModel } from './../../../shared/models/wpInitTransactionOutput.model';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -13,7 +14,13 @@ import es from '@angular/common/locales/es';
 })
 export class WebpayFormComponent implements OnInit {
 
-    constructor(){}
+    constructor(
+        private activatedRoute: ActivatedRoute
+    ){
+        this.activatedRoute.queryParams.subscribe(params => {
+            console.log(params);
+        });
+    }
 
     ngOnInit(): void { }
 }

@@ -9,7 +9,8 @@
         "compare": "Comparar",
         "product": "Producto",
         "checkout": "Pagar",
-        "cart": "Carro"
+        "cart": "Carro",
+        "terms": "Términos y Condiciones"
     },
     "top_bar": {
         "welcome": "Bienvenído(a) a Dulcelia",

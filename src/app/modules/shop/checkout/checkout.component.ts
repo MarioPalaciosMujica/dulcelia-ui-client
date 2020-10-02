@@ -1,3 +1,6 @@
+import { BuyOrder } from './../../../shared/models/buy-order.model';
+import { PurchaseOrder } from './../../../shared/models/purchase-order.model';
+import { PurchaseOrderService } from './../../../core/services/purchase-order.service';
 import { Router } from '@angular/router';
 import { WpInitTransactionOutputModel } from './../../../shared/models/wpInitTransactionOutput.model';
 import { WebpayService } from './../../../core/services/webpay.service';
@@ -34,6 +37,7 @@ export class CheckoutComponent implements OnInit {
     public productService: ProductService,
     private orderService: OrderService,
     private webpayService: WebpayService,
+    private purchaseOrderService: PurchaseOrderService,
     private router: Router,
     private  http : HttpClient
   ) { 
@@ -75,25 +79,33 @@ export class CheckoutComponent implements OnInit {
   }
 
   webpayCheckout(){
-    console.log('apiWebpayClient()');
-    this.webpayService.initTransactionOutput().subscribe(data => {
-      this.wpInitTransactionOutput = data as WpInitTransactionOutputModel;
-      //this.router.navigate(['/tienda/webpay'], { state : this.wpInitTransactionOutput });
-      //this.http.post(this.wpInitTransactionOutput.formAction, { token_ws: this.wpInitTransactionOutput.tokenWs });
+    let order: PurchaseOrder = {} as PurchaseOrder;
+    order.products = this.products;
 
-      var form = document.createElement('form');
-      form.setAttribute('method', 'POST');
-      form.setAttribute('action', this.wpInitTransactionOutput.formAction);
-      var hidden = document.createElement('input');
-      hidden.setAttribute('type', 'hidden');
-      hidden.setAttribute('name', 'token_ws');
-      hidden.setAttribute('value', this.wpInitTransactionOutput.tokenWs);
-      form.appendChild(hidden);
-      document.body.appendChild(form);
-      form.submit();
+    console.log(order);
+
+    // 1. insert Purchase Order
+    this.purchaseOrderService.save(order).subscribe(data => {
+      let buyOrder: BuyOrder = data as BuyOrder;
+
+      // 2. create Webpay Transaction
+      this.webpayService.initTransaction(buyOrder).subscribe(data => {
+        this.wpInitTransactionOutput = data as WpInitTransactionOutputModel;
+
+        // 3. redirect to Webpay
+        var form = document.createElement('form');
+        form.setAttribute('method', 'POST');
+        form.setAttribute('action', this.wpInitTransactionOutput.formAction);
+        var hidden = document.createElement('input');
+        hidden.setAttribute('type', 'hidden');
+        hidden.setAttribute('name', 'token_ws');
+        hidden.setAttribute('value', this.wpInitTransactionOutput.tokenWs);
+        form.appendChild(hidden);
+        document.body.appendChild(form);
+        form.submit();
+      });
+
     });
-
-    
   }
 
   // Stripe Payment Gateway

@@ -95,54 +95,6 @@
                                     </div>
                                 </div>
                             </div>
-                          <div class="row ">
-                            <div class="col-12">
-                              <div class="stripe-section">
-                                <h5>stripe js</h5>
-                                <div class="content">
-                                  <h5>{{ 'checkout.dummy_test' | translate }}</h5>
-                                  <table>
-                                    <tr>
-                                      <td>{{ 'checkout.cart_number' | translate }}</td>
-                                      <td>4242424242424242</td>
-                                    </tr>
-                                    <tr>
-                                      <td>{{ 'checkout.mm/yy' | translate }}</td>
-                                      <td>2/2020</td>
-                                    </tr>
-                                    <tr>
-                                      <td>{{ 'checkout.cvc' | translate }}</td>
-                                      <td>2222</td>
-                                    </tr>
-                                  </table>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row margin-cls">
-                            <div class="col-12">
-                              <div class="stripe-section">
-                                <h5>paypal</h5>
-                                <div class="content">
-                                  <h5>{{ 'checkout.dummy_test' | translate }}</h5>
-                                  <table>
-                                    <tr>
-                                      <td>{{ 'checkout.cart_number' | translate }}</td>
-                                      <td>4152521541244</td>
-                                    </tr>
-                                    <tr>
-                                      <td>{{ 'checkout.mm/yy' | translate }}</td>
-                                      <td>11/18</td>
-                                    </tr>
-                                    <tr>
-                                      <td>{{ 'checkout.cvc' | translate }}</td>
-                                      <td>521</td>
-                                    </tr>
-                                  </table>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                         </div>
 
                         <div class="col-lg-6 col-sm-12 col-xs-12">
@@ -199,11 +151,11 @@
                                                 <li>
                                                     <div class="radio-option">
                                                         <input type="radio" [(ngModel)]="payment" [value]="'Webpay'"  name="payment-group" id="payment-1">
-                                                        <label for="payment-1">Webpay
-                                                            <span class="small-text">Webpay plus Normal Integration</span></label>
+                                                        <!-- <label for="payment-1">Webpay <span class="small-text">Webpay plus Normal Integration</span></label> -->
+                                                        <label for="payment-1">Webpay Plus<span class="image"><img src="assets/images/webpay/logo_webpay.png" alt="" /></span></label>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <!-- <li>
                                                     <div class="radio-option">
                                                         <input type="radio" [(ngModel)]="payment" [value]="'Stripe'"  name="payment-group" id="payment-2">
                                                         <label for="payment-2">Stripe
@@ -215,7 +167,7 @@
                                                         <input type="radio" [(ngModel)]="payment" [value]="'Paypal'" name="payment-group" id="payment-3">
                                                         <label for="payment-3">PayPal<span class="image"><img src="assets/images/paypal.png" alt="" /></span></label>
                                                     </div>
-                                                </li>
+                                                </li> -->
                                             </ul>
                                         </div>
                                     </div>

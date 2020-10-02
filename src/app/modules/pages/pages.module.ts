@@ -15,6 +15,8 @@ import { ProfileComponent } from './account/profile/profile.component';
 import { ContactComponent } from './account/contact/contact.component';
 import { CheckoutComponent } from './account/checkout/checkout.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { TermsConditionComponent } from './terms-conditions/terms-conditions.component';
+import { ShippingReturnComponent } from './shipping-returns/shipping-return.component';
 import { SearchComponent } from './search/search.component';
 import { TypographyComponent } from './typography/typography.component';
 import { ReviewComponent } from './review/review.component';
@@ -52,6 +54,8 @@ import { MasonryFullWidthComponent } from './portfolio/masonry-full-width/masonr
     ContactComponent,
     CheckoutComponent,
     AboutUsComponent,
+    TermsConditionComponent,
+    ShippingReturnComponent,
     SearchComponent,
     TypographyComponent,
     ReviewComponent,

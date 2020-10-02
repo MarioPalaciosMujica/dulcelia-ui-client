@@ -12,8 +12,8 @@ export class WebpayService extends BaseService {
         super(environment.apiWebpayClient, http);
     }
 
-    initTransactionOutput(){
-        return this.http.get(this.endpoint + '/initIntegration')
+    initTransaction(resource: any){
+        return this.http.post(this.endpoint + '/initTransaction', resource)
             .map(response => response)
             .catch(this.handleError)
     }

@@ -1,16 +1,16 @@
 <!-- breadcrumb start -->
-<app-breadcrumb [title]="'404 page'" [breadcrumb]="'404 page'" *ngIf="!orderDetails"></app-breadcrumb>
+<app-breadcrumb [title]="'404 page'" [breadcrumb]="'404 page'" *ngIf="!purchaseOrder"></app-breadcrumb>
 <!-- breadcrumb End -->
 
 <!-- section start -->
-<section class="p-0" *ngIf="!orderDetails">
+<section class="p-0" *ngIf="!purchaseOrder">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="error-section">
                     <h1>404</h1>
                     <h2>{{ 'success.not_found' | translate }}</h2>
-                    <a [routerLink]="'/home/fashion'" class="btn btn-solid">{{ 'success.back_to_home' | translate }}</a>
+                    <a [routerLink]="'/inicio/dulcelia'" class="btn btn-solid">{{ 'success.back_to_home' | translate }}</a>
                 </div>
             </div>
         </div>
@@ -19,7 +19,7 @@
 <!-- Section ends -->
 
 <!-- thank-you section start -->
-<section class="section-b-space light-layout" *ngIf="orderDetails">
+<section class="section-b-space light-layout" *ngIf="isLoaded">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -27,7 +27,7 @@
                     <i class="fa fa-check-circle" aria-hidden="true"></i>
                     <h2>{{ 'success.thanks' | translate }}</h2>
                     <p>{{ 'success.msn' | translate }}</p>
-                    <p>{{ 'success.transaction_id' | translate }}:{{ orderDetails.orderId }}</p>
+                    <p>{{ 'success.transaction_id' | translate }}: {{ purchaseOrder.idPurchaseOrder }}</p>
                 </div>
             </div>
         </div>
@@ -36,15 +36,15 @@
 <!-- Section ends -->
 
 <!-- order-detail section start -->
-<section class="section-b-space" *ngIf="orderDetails">
+<section class="section-b-space" *ngIf="isLoaded">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="product-order">
                     <h3>{{ 'success.order_detail' | translate }}</h3>
-                    <div class="row product-order-detail" *ngFor="let product of orderDetails.product">
+                    <div class="row product-order-detail" *ngFor="let product of purchaseOrder.products">
                         <div class="col-3">
-                            <img [src]="product.images[0].src" alt="" class="img-fluid">
+                            <img [src]="product.imageSrc" alt="" class="img-fluid">
                         </div>
                         <div class="col-3 order_detail">
                             <div>
@@ -61,19 +61,19 @@
                         <div class="col-3 order_detail">
                             <div>
                                 <h4>{{ 'success.price' | translate }}</h4>
-                                <h5>{{ product?.price * productService?.Currency?.price | discount:product | currency:productService?.Currency.currency:'symbol' }}</h5>
+                                <h5>{{ product?.currentTotalPrice }}</h5>
                             </div>
                         </div>
                     </div>
                     <div class="total-sec">
                         <ul>
-                            <li>{{ 'success.sub_total' | translate }} <span>{{ orderDetails.totalAmount | currency:productService?.Currency.currency:'symbol' }}</span></li>
-                            <li>{{ 'success.shipping' | translate }} <span>$00.00</span></li>
-                            <li>{{ 'success.tax' | translate }} <span>$00.00</span></li>
+                            <li>{{ 'success.sub_total' | translate }} <span>{{ purchaseOrder.purchaseOrderSummary.subTotal }}</span></li>
+                            <li>{{ 'success.shipping' | translate }} <span>{{ purchaseOrder.purchaseOrderSummary.shipmentCost }}</span></li>
+                            <li>{{ 'success.tax' | translate }} <span>{{ purchaseOrder.purchaseOrderSummary.taxTotal }}</span></li>
                         </ul>
                     </div>
                     <div class="final-total">
-                        <h3>{{ 'success.total' | translate }} <span>{{ orderDetails.totalAmount | currency:productService?.Currency.currency:'symbol' }}</span></h3>
+                        <h3>{{ 'success.total' | translate }} <span>{{ purchaseOrder.purchaseOrderSummary.total }}</span></h3>
                     </div>
                 </div>
             </div>
@@ -82,24 +82,24 @@
                     <div class="col-sm-6">
                         <h4>{{ 'success.summery' | translate }}</h4>
                         <ul class="order-detail">
-                            <li>{{ 'success.order_id' | translate }}: {{ orderDetails.orderId }}</li>
-                            <li>{{ 'success.order_date' | translate }}: October 22, 2021</li>
-                            <li>{{ 'success.order_total' | translate }}: {{ orderDetails.totalAmount | currency:productService?.Currency.currency:'symbol' }}</li>
+                            <li>{{ 'success.order_id' | translate }}: {{ purchaseOrder.idPurchaseOrder }}</li>
+                            <li>{{ 'success.order_date' | translate }}: {{ purchaseOrder.created }}</li>
+                            <li>{{ 'success.order_total' | translate }}: {{ purchaseOrder.purchaseOrderSummary.total }}</li>
                         </ul>
                     </div>
                     <div class="col-sm-6">
                         <h4>{{ 'success.shipping_address' | translate }}</h4>
-                        <ul class="order-detail">
-                            <li>{{ orderDetails.shippingDetails.address }}</li>
-                            <li>{{ orderDetails.shippingDetails.state }}</li>
-                            <li>{{ orderDetails.shippingDetails.country }}, {{ orderDetails.shippingDetails.postalcode }}</li>
-                            <li>{{ 'success.contact_no' | translate }} {{ orderDetails.shippingDetails.phone }}</li>
+                        <ul class="order-detail" *ngIf="purchaseOrder.shipment != null && purchaseOrder.shipment != undefined">
+                            <li>{{ purchaseOrder.shipment.address }}</li>
+                            <li>{{ purchaseOrder.shipment.stateRegion }}</li>
+                            <li>{{ purchaseOrder.shipment.provinceCommune }}, {{ purchaseOrder.shipment.zipCode }}</li>
+                            <!-- <li>{{ 'success.contact_no' | translate }} {{ purchaseOrder.shipment.phone }}</li> -->
                         </ul>
                     </div>
 
                     <div class="col-sm-12 payment-mode">
                         <h4>{{ 'success.payment_method' | translate }}</h4>
-                        <p>Pay on Delivery (Cash/Card). Cash on delivery (COD) available. Card/Net banking acceptance subject to device availability.</p>
+                        <p>{{ purchaseOrder.paymentStatus.paymentMethod.paymentMethodName }}</p>
                     </div>
                     <div class="col-md-12">
                         <div class="delivery-sec">

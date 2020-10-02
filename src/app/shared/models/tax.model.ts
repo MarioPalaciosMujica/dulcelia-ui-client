@@ -1,7 +1,7 @@
 
 export interface Tax {
     idTax?: number;
-    name?: string;
+    taxName?: string;
     percentage?: number;
     isActive?: boolean;
     created?: string;
