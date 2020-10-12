@@ -1,32 +1,85 @@
-<app-breadcrumb [title]="'Register'" [breadcrumb]="'Register'"></app-breadcrumb>
+<app-breadcrumb [title]="'breadcrumb.register' | translate" [breadcrumb]="'breadcrumb.register' | translate"></app-breadcrumb>
 <!-- section start -->
 <section class="register-page section-b-space">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3>create account</h3>
+                <h3>{{ 'register.create_account' | translate }}</h3>
                 <div class="theme-card">
-                    <form class="theme-form">
+                    <form class="theme-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                         <div class="form-row">
-                            <div class="col-md-6">
-                                <label for="email">First Name</label>
-                                <input type="text" class="form-control" id="fname" placeholder="First Name" required="">
+                            <div class="col-md-6 input-margin">
+                                <label for="email">{{ 'register.first_name' | translate }}</label>
+                                <input type="text" class="form-control" formControlName="firstname" placeholder="{{'register.first_name_placeholder' | translate}}">
+                                <span class="text-danger" *ngIf="getFirstName.errors?.required && (getFirstName.dirty || getFirstName.touched)">{{ 'register.first_name_error_required' | translate }}</span>
+                                <span class="text-danger" *ngIf="getFirstName.errors?.minlength && (getFirstName.dirty || getFirstName.touched)">{{ 'register.first_name_error_min' | translate }} {{ getFirstName.errors?.minlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getFirstName.errors?.maxlength && (getFirstName.dirty || getFirstName.touched)">{{ 'register.first_name_error_max' | translate }} {{ getFirstName.errors?.maxlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getFirstName.errors?.pattern && !getFirstName.errors?.minlength && !getFirstName.errors?.maxlength && (getFirstName.dirty || getFirstName.touched)">{{ 'register.first_name_error_format' | translate }}</span>
                             </div>
-                            <div class="col-md-6">
-                                <label for="review">Last Name</label>
-                                <input type="password" class="form-control" id="lname" placeholder="Last Name" required="">
+                            <div class="col-md-6 input-margin">
+                                <label for="review">{{ 'register.last_name' | translate }}</label>
+                                <input type="text" class="form-control" formControlName="lastname" placeholder="{{'register.last_name_placeholder' | translate}}">
+                                <span class="text-danger" *ngIf="getLastName.errors?.required && (getLastName.dirty || getLastName.touched)">{{ 'register.last_name_error_required' | translate }}</span>
+                                <span class="text-danger" *ngIf="getLastName.errors?.minlength && (getLastName.dirty || getLastName.touched)">{{ 'register.last_name_error_min' | translate }} {{ getLastName.errors?.minlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getLastName.errors?.maxlength && (getLastName.dirty || getLastName.touched)">{{ 'register.last_name_error_max' | translate }} {{ getLastName.errors?.maxlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getLastName.errors?.pattern && !getLastName.errors?.minlength && !getLastName.errors?.maxlength && (getLastName.dirty || getLastName.touched)">{{ 'register.last_name_error_format' | translate }}</span>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="col-md-6">
-                                <label for="email">email</label>
-                                <input type="text" class="form-control" id="email" placeholder="Email" required="">
+                            <div class="col-md-6 input-margin">
+                                <label for="email">{{ 'register.email' | translate }}</label>
+                                <input type="text" class="form-control" formControlName="email" placeholder="{{'register.email_placeholder' | translate}}">
+                                <span class="text-danger" *ngIf="getEmail.errors?.required && (getEmail.dirty || getEmail.touched)">{{ 'register.email_error_required' | translate }}</span>
+                                <span class="text-danger" *ngIf="getEmail.errors?.minlength && (getEmail.dirty || getEmail.touched)">{{ 'register.email_error_min' | translate }} {{ getEmail.errors?.minlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getEmail.errors?.maxlength && (getEmail.dirty || getEmail.touched)">{{ 'register.email_error_max' | translate }} {{ getEmail.errors?.maxlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getEmail.errors?.pattern && !getEmail.errors?.minlength && !getEmail.errors?.maxlength && (getEmail.dirty || getEmail.touched)">{{ 'register.email_error_format' | translate }}</span>
+                                <!-- <span class="text-danger" *ngIf="getEmail.errors?.uniqueEmail && (getEmail.dirty || getEmail.touched)">{{ 'register.email_error_unique' | translate }}</span> -->
+                                
                             </div>
-                            <div class="col-md-6">
-                                <label for="review">Password</label>
-                                <input type="password" class="form-control" id="review" placeholder="Enter your password" required="">
+                            <div class="col-md-6 input-margin">
+                                <label for="review">{{ 'register.phone' | translate }}</label>
+                                <input type="text" class="form-control" formControlName="phone" placeholder="{{'register.phone_placeholder' | translate}}">
+                                <span class="text-danger" *ngIf="getPhone.errors?.required && (getPhone.dirty || getPhone.touched)">{{ 'register.phone_error_required' | translate }}</span>
+                                <span class="text-danger" *ngIf="getPhone.errors?.minlength && (getPhone.dirty || getPhone.touched)">{{ 'register.phone_error_min' | translate }} {{ getPhone.errors?.minlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getPhone.errors?.maxlength && (getPhone.dirty || getPhone.touched)">{{ 'register.phone_error_max' | translate }} {{ getPhone.errors?.maxlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getPhone.errors?.pattern && !getPhone.errors?.minlength && !getPhone.errors?.maxlength && (getPhone.dirty || getPhone.touched)">{{ 'register.phone_error_format' | translate }}</span>
                             </div>
-                            <button class="btn btn-solid">create Account</button>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 input-margin">
+                                <label for="email">{{ 'register.province_commune' | translate }}</label>
+                                <input type="text" class="form-control" formControlName="commune" placeholder="{{'register.province_commune_placeholder' | translate}}">
+                                <span class="text-danger" *ngIf="getCommune.errors?.required && (getCommune.dirty || getCommune.touched)">{{ 'register.province_commune_error_required' | translate }}</span>
+                                <span class="text-danger" *ngIf="getCommune.errors?.minlength && (getCommune.dirty || getCommune.touched)">{{ 'register.province_commune_error_min' | translate }} {{ getCommune.errors?.minlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getCommune.errors?.maxlength && (getCommune.dirty || getCommune.touched)">{{ 'register.province_commune_error_max' | translate }} {{ getCommune.errors?.maxlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getCommune.errors?.pattern && !getCommune.errors?.minlength && !getCommune.errors?.maxlength && (getCommune.dirty || getCommune.touched)">{{ 'register.province_commune_error_format' | translate }}</span>
+                            </div>
+                            <div class="col-md-6 input-margin">
+                                <label for="review">{{ 'register.address' | translate }}</label>
+                                <input type="text" class="form-control" formControlName="address" placeholder="{{'register.address_placeholder' | translate}}">
+                                <span class="text-danger" *ngIf="getAddress.errors?.required && (getAddress.dirty || getAddress.touched)">{{ 'register.address_error_required' | translate }}</span>
+                                <span class="text-danger" *ngIf="getAddress.errors?.minlength && (getAddress.dirty || getAddress.touched)">{{ 'register.address_error_min' | translate }} {{ getAddress.errors?.minlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getAddress.errors?.maxlength && (getAddress.dirty || getAddress.touched)">{{ 'register.address_error_max' | translate }} {{ getAddress.errors?.maxlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getAddress.errors?.pattern && !getAddress.errors?.minlength && !getAddress.errors?.maxlength && (getAddress.dirty || getAddress.touched)">{{ 'register.address_error_format' | translate }}</span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 input-margin">
+                                <label for="email">{{ 'register.password' | translate }}</label>
+                                <input type="password" class="form-control" formControlName="password" placeholder="{{'register.password_placeholder' | translate}}">
+                                <span class="text-danger" *ngIf="getPassword.errors?.required && (getPassword.dirty || getPassword.touched)">{{ 'register.password_error_required' | translate }}</span>
+                                <span class="text-danger" *ngIf="getPassword.errors?.minlength && (getPassword.dirty || getPassword.touched)">{{ 'register.password_error_min' | translate }} {{ getPassword.errors?.minlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getPassword.errors?.maxlength && (getPassword.dirty || getPassword.touched)">{{ 'register.password_error_max' | translate }} {{ getPassword.errors?.maxlength.requiredLength }}</span>
+                            </div>
+                            <div class="col-md-6 input-margin">
+                                <label for="review">{{ 'register.password_confirmation' | translate }}</label>
+                                <input type="password" class="form-control" formControlName="passwordConfirm" placeholder="{{'register.password_confirmation_placeholder' | translate}}">
+                                <span class="text-danger" *ngIf="getPasswordConfirm.errors?.required && (getPasswordConfirm.dirty || getPasswordConfirm.touched)">{{ 'register.password_confirmation_error_required' | translate }}</span>
+                                <span class="text-danger" *ngIf="getPasswordConfirm.errors?.minlength && (getPasswordConfirm.dirty || getPasswordConfirm.touched)">{{ 'register.password_confirmation_error_min' | translate }} {{ getPasswordConfirm.errors?.minlength.requiredLength }}</span>
+                                <span class="text-danger" *ngIf="getPasswordConfirm.errors?.maxlength && (getPasswordConfirm.dirty || getPasswordConfirm.touched)">{{ 'register.password_confirmation_error_max' | translate }} {{ getPasswordConfirm.errors?.maxlength.requiredLength }}</span>
+                                <!-- <span class="text-danger" *ngIf="getPasswordConfirm.errors?.passwordConfirmation && !getPasswordConfirm.errors?.minlength && !getPasswordConfirm.errors?.maxlength && (getPasswordConfirm.dirty || getPasswordConfirm.touched)">{{ 'register.password_confirmation_valid' | translate }}</span> -->
+                            </div>
+                            <button class="btn btn-solid" [disabled]="!registerForm.valid">{{ 'button.register' | translate }}</button>
                         </div>
                     </form>
                 </div>

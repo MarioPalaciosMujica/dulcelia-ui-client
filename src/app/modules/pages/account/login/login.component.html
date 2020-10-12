@@ -1,30 +1,39 @@
-<app-breadcrumb [title]="'Login'" [breadcrumb]="'Login'"></app-breadcrumb>
+<app-breadcrumb [title]="'breadcrumb.login' | translate" [breadcrumb]="'breadcrumb.login' | translate"></app-breadcrumb>
 <!-- section start -->
 <section class="login-page section-b-space">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h3>Login</h3>
+                <h3>{{ 'login.login' | translate }}</h3>
                 <div class="theme-card">
-                    <form class="theme-form">
+                    <form class="theme-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" class="form-control" id="email" placeholder="Email" required="">
+                            <label for="email">{{ 'login.email' | translate }}</label>
+                            <input type="text" class="form-control"formControlName="email" placeholder="{{ 'login.email_placeholder' | translate }}" required="">
+                            <span class="text-danger" *ngIf="getEmail.errors?.required && (getEmail.dirty || getEmail.touched)">{{ 'login.email_error_required' | translate }}</span>
+                            <span class="text-danger" *ngIf="getEmail.errors?.email && (getEmail.dirty || getEmail.touched)">{{ 'login.email_error_format' | translate }}</span>
                         </div>
                         <div class="form-group">
-                            <label for="review">Password</label>
-                            <input type="password" class="form-control" id="review" placeholder="Enter your password" required="">
+                            <label for="review">{{ 'login.password' | translate }}</label>
+                            <input type="password" class="form-control" formControlName="password" placeholder="{{ 'login.password_placeholder' | translate }}" required="">
+                            <span class="text-danger" *ngIf="getPassword.errors?.required && (getPassword.dirty || getPassword.touched)">{{ 'login.password_error_required' | translate }}</span>
+                            <span class="text-danger" *ngIf="getPassword.errors?.minlength && (getPassword.dirty || getPassword.touched)">{{ 'login.password_error_min' | translate }} {{ getPassword.errors?.minlength.requiredLength }}</span>
+                            <span class="text-danger" *ngIf="getPassword.errors?.maxlength && (getPassword.dirty || getPassword.touched)">{{ 'login.password_error_max' | translate }} {{ getPassword.errors?.maxlength.requiredLength }}</span>
                         </div>
-                        <button class="btn btn-solid">Login</button>
+                        <div *ngIf="!isLoginCorrect && isLoginCorrect != null">
+                            <span class="text-danger">Cuenta no encontrada</span>
+                        </div>
+                        <button class="btn btn-solid" [disabled]="!loginForm.valid">{{ 'button.login' | translate }}</button>
                     </form>
                 </div>
             </div>
             <div class="col-lg-6 right-login">
-                <h3>New Customer</h3>
+                <h3>{{ 'login.new_customer' | translate }}</h3>
                 <div class="theme-card authentication-right">
-                    <h6 class="title-font">Create A Account</h6>
-                    <p>Sign up for a free account at our store. Registration is quick and easy. It allows you to be able to order from our shop. To start shopping click register.</p>
-                    <button class="btn btn-solid">Create an Account</button>
+                    <h6 class="title-font">{{ 'login.create_account' | translate }}</h6>
+                    <p>{{ 'login.register_text' | translate }}</p>
+                    <!-- <button class="btn btn-solid">{{ 'button.register' | translate }}</button> -->
+                    <a [routerLink]="['/pagina/registrar']" class="btn btn-solid">{{ 'button.register' | translate }}</a>
                 </div>
             </div>
         </div>

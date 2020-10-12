@@ -21,10 +21,11 @@
                   <a [routerLink]="['/tienda/deseados']"><i class="fa fa-heart" aria-hidden="true"></i>{{ 'top_bar.wishlist' | translate }}</a>
                 </li>
                 <li class="onhover-dropdown mobile-account">
-                  <i class="fa fa-user" aria-hidden="true"></i> {{ 'top_bar.my_account' | translate }}
+                  <!-- <i class="fa fa-user" aria-hidden="true"></i> {{ 'top_bar.my_account' | translate }} -->
+                  <i class="fa fa-user" aria-hidden="true"></i> {{ authToken | async }}
                   <ul class="onhover-show-div">
                     <li>
-                      <a data-lng="en">
+                      <a data-lng="en" [routerLink]="['/pagina/login']">
                         {{ 'top_bar.login' | translate }}
                       </a>
                     </li>

@@ -55,15 +55,15 @@ const routes: Routes = [
     component: LoginComponent 
   },
   { 
-    path: 'register', 
+    path: 'registrar', 
     component: RegisterComponent 
   },
   { 
-    path: 'forget/password', 
+    path: 'recuperar/password', 
     component: ForgetPasswordComponent 
   },
   { 
-    path: 'profile', 
+    path: 'perfil', 
     component: ProfileComponent 
   },
   { 
@@ -79,11 +79,11 @@ const routes: Routes = [
     component: AboutUsComponent 
   },
   { 
-    path: 'terminosycondiciones', 
+    path: 'terminos', 
     component: TermsConditionComponent 
   },
   { 
-    path: 'enviosydevoluciones', 
+    path: 'envios', 
     component: ShippingReturnComponent 
   },
   // { 
@@ -94,10 +94,10 @@ const routes: Routes = [
   //   path: 'typography', 
   //   component: TypographyComponent 
   // },
-  { 
-    path: 'review', 
-    component: ReviewComponent 
-  },
+  // { 
+  //   path: 'review', 
+  //   component: ReviewComponent 
+  // },
   { 
     path: 'order/success', 
     component: OrderSuccessComponent 

@@ -1,3 +1,6 @@
+import { NgRedux, select } from '@angular-redux/store';
+import { IAuthState } from './../../../core/reducers/auth.reducers';
+import { Subscription, Observable } from 'rxjs';
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 
 @Component({
@@ -15,7 +18,16 @@ export class HeaderThreeComponent implements OnInit {
   
   public stick: boolean = false;
 
-  constructor() { }
+  @select(state => state.authToken) authToken;
+  
+  constructor(
+    private authState: NgRedux<IAuthState>
+  ) {
+    // this.authState.subscribe( () => {
+    //   var store = this.authState.getState();
+    //   console.log(store);
+    // });
+  }
 
   ngOnInit(): void {
   }

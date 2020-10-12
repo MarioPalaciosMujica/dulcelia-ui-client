@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -10,11 +11,13 @@ import { TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import { TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
+import { NgRedux, NgReduxModule } from '@angular-redux/store';
 
 import { AppComponent } from './app.component';
 import { ShopComponent } from './modules/shop/shop.component';
 import { PagesComponent } from './modules/pages/pages.component';
 import { ElementsComponent } from './modules/elements/elements.component';
+import { IAuthState, initAuthState, rootReducer } from './core/reducers/auth.reducers';
 
 import 'hammerjs';
 import 'mousetrap';
@@ -51,9 +54,22 @@ export function HttpLoaderFactory(http: HttpClient) {
         }
     }),
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgReduxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(
+    authState: NgRedux<IAuthState>
+  ){
+    console.log("AppModule Constructor")
+    authState.configureStore(rootReducer, initAuthState);
+
+    var state = authState.getState();
+    console.log("authState.getState()");
+    console.log(state);
+
+  }
+}
