@@ -55,7 +55,7 @@ const routes: Routes = [
     component: LoginComponent 
   },
   { 
-    path: 'register', 
+    path: 'registrar', 
     component: RegisterComponent 
   },
   { 
