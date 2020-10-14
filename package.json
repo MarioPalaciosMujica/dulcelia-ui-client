@@ -31,6 +31,8 @@
     "@ks89/angular-modal-gallery": "^7.2.5",
     "@ng-bootstrap/ng-bootstrap": "^6.0.0",
     "@ngneat/content-loader": "^4.1.0",
+    "@ngrx/store": "^10.0.1",
+    "@ngrx/store-devtools": "^10.0.1",
     "@nguniversal/express-engine": "^10.0.1",
     "@nguniversal/module-map-ngfactory-loader": "^8.2.6",
     "@ngx-loading-bar/core": "^4.2.0",

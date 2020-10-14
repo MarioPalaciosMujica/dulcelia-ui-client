@@ -1,7 +1,10 @@
+import { Login } from './../../../../core/actions/auth.actions';
 import { AuthService } from './../../../../core/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Store, select } from '@ngrx/store';
+import { AuthActionTypes } from 'src/app/core/actions/auth.actions';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +17,7 @@ export class LoginComponent implements OnInit {
   public isLoginCorrect: boolean = null;
 
   constructor(
+    private store: Store<any>,
     private fb: FormBuilder,
     private authService: AuthService,
     private router: Router,
@@ -43,6 +47,9 @@ export class LoginComponent implements OnInit {
     };
 
     console.log(loginModel); // DEBUG
+
+    this.store.dispatch({ type: AuthActionTypes.Login });
+    this.router.navigate(['/']);
 
     //this.authState.dispatch({type: AuthActionTypes.Login});
     //this.router.navigate(['/']);

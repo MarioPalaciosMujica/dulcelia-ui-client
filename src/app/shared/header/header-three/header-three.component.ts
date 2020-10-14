@@ -1,4 +1,10 @@
+import { AuthModel } from './../../models/auth.model';
 import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Store, select } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { AuthActions, AuthActionTypes } from './../../../core/actions/auth.actions';
+import { AuthState, authReducer } from './../../../core/reducers/auth.reducer';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header-three',
@@ -14,8 +20,16 @@ export class HeaderThreeComponent implements OnInit {
   @Input() sticky: boolean = false; // Default false
   
   public stick: boolean = false;
+  authStateModel: any; //AuthModel; //Observable<AuthModel>;
 
-  constructor() { }
+  constructor(
+    private store: Store<any>
+  ) { 
+    //this.store.dispatch({ type: AuthActionTypes.Load });
+    this.store.subscribe(state => {
+      this.authStateModel = state.authReducer.authModel;
+    });
+  }
 
   ngOnInit(): void {
   }

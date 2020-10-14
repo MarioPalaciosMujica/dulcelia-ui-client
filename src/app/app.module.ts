@@ -16,6 +16,10 @@ import { ShopComponent } from './modules/shop/shop.component';
 import { PagesComponent } from './modules/pages/pages.component';
 import { ElementsComponent } from './modules/elements/elements.component';
 
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { authReducer, initAuthState, AuthState } from './core/reducers/auth.reducer';
+
 import 'hammerjs';
 import 'mousetrap';
 
@@ -51,7 +55,12 @@ export function HttpLoaderFactory(http: HttpClient) {
         }
     }),
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({}),
+    StoreModule.forFeature('authReducer', authReducer),
+    StoreDevtoolsModule.instrument({
+      maxAge: 10
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

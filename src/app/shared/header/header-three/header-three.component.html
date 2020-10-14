@@ -21,7 +21,7 @@
                   <a [routerLink]="['/tienda/deseados']"><i class="fa fa-heart" aria-hidden="true"></i>{{ 'top_bar.wishlist' | translate }}</a>
                 </li>
                 <li class="onhover-dropdown mobile-account">
-                  <i class="fa fa-user" aria-hidden="true"></i> {{ 'top_bar.my_account' | translate }}
+                  <i class="fa fa-user" aria-hidden="true"></i> {{ authStateModel.loggedIn? authStateModel.clientName : 'top_bar.my_account' | translate }}
                   <ul class="onhover-show-div">
                     <li>
                       <a data-lng="en" [routerLink]="['/pagina/login']">
