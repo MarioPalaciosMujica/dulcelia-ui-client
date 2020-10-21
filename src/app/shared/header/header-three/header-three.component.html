@@ -22,7 +22,47 @@
                 </li>
                 <li class="onhover-dropdown mobile-account">
                   <i class="fa fa-user" aria-hidden="true"></i> {{ authStateModel.loggedIn? authStateModel.clientName : 'top_bar.my_account' | translate }}
-                  <ul class="onhover-show-div">
+                  <div *ngIf="authStateModel.loggedIn then ingresar else settings"></div>
+                  <ng-template #ingresar>
+                    <ul class="onhover-show-div">
+                      <li>
+                        <a data-lng="en" [routerLink]="['/pagina/login']">
+                          dashboard
+                        </a>
+                      </li>
+                      <li>
+                        <a data-lng="en" [routerLink]="['/pagina/login']">
+                          Ordenes
+                        </a>
+                      </li>
+                      <li>
+                        <a data-lng="en" [routerLink]="['/pagina/login']">
+                          Configuración
+                        </a>
+                      </li>
+                      <li>
+                        <a data-lng="es">
+                          Salir
+                        </a>
+                      </li>
+                    </ul>
+                  </ng-template>
+                  <ng-template #settings>
+                    <ul class="onhover-show-div">
+                      <li>
+                        <a data-lng="en" [routerLink]="['/pagina/login']">
+                          {{ 'top_bar.login' | translate }}
+                        </a>
+                      </li>
+                      <li>
+                        <a data-lng="es">
+                          <!-- {{ 'top_bar.logout' | translate }} -->
+                          Registrar
+                        </a>
+                      </li>
+                    </ul>
+                  </ng-template>
+                  <!-- <ul class="onhover-show-div">
                     <li>
                       <a data-lng="en" [routerLink]="['/pagina/login']">
                         {{ 'top_bar.login' | translate }}
@@ -33,7 +73,8 @@
                         {{ 'top_bar.logout' | translate }}
                       </a>
                     </li>
-                  </ul>
+                  </ul> -->
+
                 </li>
               </ul>
             </div>

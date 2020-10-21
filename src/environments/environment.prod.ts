@@ -19,6 +19,8 @@ export const environment = {
   apiOrderPurchaseOrder: 'http://localhost:8081/PurchaseOrder',
   apiOrderPurchaseOrderStatus: 'http://localhost:8081/PurchaseOrderStatus',
 
-  apiWebpayClient: 'http://localhost:8090/WebpayPlus'
+  apiWebpayClient: 'http://localhost:8090/WebpayPlus',
+
+  fileTermsAndConditions: 'assets/files/terminos_condiciones_20201020.pdf'
   
 };

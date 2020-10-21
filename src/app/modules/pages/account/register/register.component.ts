@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from './../../../../core/services/auth.service';
+import { environment } from './../../../../../environments/environment';
 
 @Component({
   selector: 'app-register',
@@ -11,6 +12,7 @@ import { AuthService } from './../../../../core/services/auth.service';
 export class RegisterComponent implements OnInit {
 
   registerForm: FormGroup;
+  filePdf = environment.fileTermsAndConditions;
 
   constructor(
     private fb: FormBuilder,
@@ -66,6 +68,7 @@ export class RegisterComponent implements OnInit {
         Validators.maxLength(20)
         // ,CustomValidators.passwordConfirmation(null)
       ]]
+      ,acceptTerms: [false, Validators.requiredTrue]
     });
   }
 
@@ -73,6 +76,8 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(){
+    console.log(this.registerForm.errors);
+
     let customerAccountModel = {
       firstName: this.getFirstName.value,
       lastName: this.getLastName.value,
@@ -97,5 +102,6 @@ export class RegisterComponent implements OnInit {
   get getAddress(){ return this.registerForm.get('address'); }
   get getPassword(){ return this.registerForm.get('password'); }
   get getPasswordConfirm(){ return this.registerForm.get('passwordConfirm'); }
+  get getAcceptTerms(){ return this.registerForm.get('acceptTerms'); }
 
 }
