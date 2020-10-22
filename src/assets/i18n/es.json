@@ -22,8 +22,12 @@
         "wishlist": "Lista de deseados",
         "my_account": "Invitado(a)",
         "login": "Ingresar",
-        "logout": "Salir",
-        "back": "Ocultar"
+        "register": "Registrar",
+        "back": "Ocultar",
+        "dashboard": "Tablero",
+        "buyOrders": "Ordenes",
+        "settings": "Configuración",
+        "logout": "Salir"
     },
     "home": {
         "header_title": "Tortas",

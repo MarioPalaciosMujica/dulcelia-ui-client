@@ -26,23 +26,23 @@
                   <ng-template #ingresar>
                     <ul class="onhover-show-div">
                       <li>
-                        <a data-lng="en" [routerLink]="['/pagina/login']">
-                          dashboard
+                        <a [routerLink]="['/pagina/tablero']">
+                          {{ 'top_bar.dashboard' | translate }}
                         </a>
                       </li>
                       <li>
-                        <a data-lng="en" [routerLink]="['/pagina/login']">
-                          Ordenes
+                        <a [routerLink]="['/pagina/ordenes']">
+                          {{ 'top_bar.buyOrders' | translate }}
                         </a>
                       </li>
                       <li>
-                        <a data-lng="en" [routerLink]="['/pagina/login']">
-                          Configuración
+                        <a [routerLink]="['/pagina/configuracion']">
+                          {{ 'top_bar.settings' | translate }}
                         </a>
                       </li>
                       <li>
-                        <a data-lng="es">
-                          Salir
+                        <a [routerLink]="" (click)="logout()">
+                          {{ 'top_bar.logout' | translate }}
                         </a>
                       </li>
                     </ul>
@@ -50,15 +50,10 @@
                   <ng-template #settings>
                     <ul class="onhover-show-div">
                       <li>
-                        <a data-lng="en" [routerLink]="['/pagina/login']">
-                          {{ 'top_bar.login' | translate }}
-                        </a>
+                        <a [routerLink]="['/pagina/login']">{{ 'top_bar.login' | translate }}</a>
                       </li>
                       <li>
-                        <a data-lng="es">
-                          <!-- {{ 'top_bar.logout' | translate }} -->
-                          Registrar
-                        </a>
+                        <a [routerLink]="['/pagina/registrar']">{{ 'top_bar.register' | translate }}</a>
                       </li>
                     </ul>
                   </ng-template>

@@ -24,32 +24,20 @@ export function authReducer(state: AuthState = initAuthState, action: AuthAction
 
         case AuthActionTypes.Login: {
             console.log("Login");
-            // const authModel: AuthModel = action.payload;
-            // return Object.assign({}, state, {
-            //     authModel: {
-            //         loggedIn: true,
-            //         clientName: authModel.clientName,
-            //         token: authModel.token,
-            //         role: authModel.role
-            //     },
-            //     loading: true,
-            //     loaded: true
-            // });
-
+            const authModel: AuthModel = action.payload;
             return Object.assign({}, state, {
                 authModel: {
                     loggedIn: true,
-                    clientName: 'Mario',
-                    token: 'asdf_asdf',
-                    role: undefined
+                    clientName: authModel.clientName,
+                    token: authModel.token,
+                    role: authModel.role
                 },
-                loading: true,
+                loading: false,
                 loaded: true
             });
         }
 
         case AuthActionTypes.Logout: {
-            console.log("Logout");
             return initAuthState;
         }
 
@@ -63,7 +51,7 @@ export function authReducer(state: AuthState = initAuthState, action: AuthAction
                     token: authModel.token,
                     role: authModel.role
                 },
-                loading: true,
+                loading: false,
                 loaded: true
             });
         }
@@ -73,13 +61,11 @@ export function authReducer(state: AuthState = initAuthState, action: AuthAction
             return {
                 ...state,
                 loading: true,
-                loaded: true
+                loaded: false
             }
         }
 
         default: {
-            // console.log("default");
-            // console.log(state);
             return state;
         }
 

@@ -16,6 +16,7 @@ import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
 import { DOCUMENT } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-checkout',
@@ -39,7 +40,8 @@ export class CheckoutComponent implements OnInit {
     private webpayService: WebpayService,
     private purchaseOrderService: PurchaseOrderService,
     private router: Router,
-    private  http : HttpClient
+    private  http : HttpClient,
+    private store: Store<any>
   ) { 
 
     // this.checkoutForm = this.fb.group({
@@ -79,32 +81,32 @@ export class CheckoutComponent implements OnInit {
   }
 
   webpayCheckout(){
-    let order: PurchaseOrder = {} as PurchaseOrder;
-    order.products = this.products;
-
-    console.log(order);
-
-    // 1. insert Purchase Order
-    this.purchaseOrderService.save(order).subscribe(data => {
-      let buyOrder: BuyOrder = data as BuyOrder;
-
-      // 2. create Webpay Transaction
-      this.webpayService.initTransaction(buyOrder).subscribe(data => {
-        this.wpInitTransactionOutput = data as WpInitTransactionOutputModel;
-
-        // 3. redirect to Webpay
-        var form = document.createElement('form');
-        form.setAttribute('method', 'POST');
-        form.setAttribute('action', this.wpInitTransactionOutput.formAction);
-        var hidden = document.createElement('input');
-        hidden.setAttribute('type', 'hidden');
-        hidden.setAttribute('name', 'token_ws');
-        hidden.setAttribute('value', this.wpInitTransactionOutput.tokenWs);
-        form.appendChild(hidden);
-        document.body.appendChild(form);
-        form.submit();
+    this.store.subscribe(state => {
+      let authStateModel: any = state.authReducer.authModel;
+      let order: PurchaseOrder = {} as PurchaseOrder;
+      order.idSession = authStateModel.token;
+      order.msUserAccountsIdAccount = authStateModel.token;
+      order.products = this.products;
+      
+      // 1. insert Purchase Order
+      this.purchaseOrderService.save(order).subscribe(data => {
+        let buyOrder: BuyOrder = data as BuyOrder;
+        // 2. create Webpay Transaction
+        this.webpayService.initTransaction(buyOrder).subscribe(data => {
+          this.wpInitTransactionOutput = data as WpInitTransactionOutputModel;
+          // 3. redirect to Webpay
+          var form = document.createElement('form');
+          form.setAttribute('method', 'POST');
+          form.setAttribute('action', this.wpInitTransactionOutput.formAction);
+          var hidden = document.createElement('input');
+          hidden.setAttribute('type', 'hidden');
+          hidden.setAttribute('name', 'token_ws');
+          hidden.setAttribute('value', this.wpInitTransactionOutput.tokenWs);
+          form.appendChild(hidden);
+          document.body.appendChild(form);
+          form.submit();
+        });
       });
-
     });
   }
 

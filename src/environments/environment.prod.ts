@@ -21,6 +21,8 @@ export const environment = {
 
   apiWebpayClient: 'http://localhost:8090/WebpayPlus',
 
+  apiAuthUserAccount: 'http://localhost:8082/UserAccount',
+
   fileTermsAndConditions: 'assets/files/terminos_condiciones_20201020.pdf'
   
 };

@@ -1,3 +1,5 @@
+import { AuthGuard } from './../../core/guards/auth.guard';
+import { SystemPermission } from './../../shared/models/system-permission.enum';
 import { WebpayFormComponent } from './webpay/webpay-form.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -102,7 +104,9 @@ const routes: Routes = [
   },
   {
     path: 'pago', //'checkout',
-    component: CheckoutComponent
+    component: CheckoutComponent,
+    canActivate: [AuthGuard],
+    data: { module: [SystemPermission.Checkout] }
   },
   {
     path: 'webpay/:id', 
@@ -110,7 +114,9 @@ const routes: Routes = [
   },
   {
     path: 'pago/exito/:id', //'checkout/success/:id',
-    component: SuccessComponent
+    component: SuccessComponent,
+    canActivate: [AuthGuard],
+    data: { module: [SystemPermission.Checkout] }
   }
 ];
 

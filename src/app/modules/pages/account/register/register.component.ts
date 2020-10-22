@@ -1,8 +1,13 @@
+import { UserContactModel } from './../../../../shared/models/user-contact.model';
+import { UserAccountModel } from './../../../../shared/models/user-account.model';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from './../../../../core/services/auth.service';
 import { environment } from './../../../../../environments/environment';
+import { AuthModel } from 'src/app/shared/models/auth.model';
+import { Store } from '@ngrx/store';
+import { AuthActionTypes } from 'src/app/core/actions/auth.actions';
 
 @Component({
   selector: 'app-register',
@@ -15,6 +20,7 @@ export class RegisterComponent implements OnInit {
   filePdf = environment.fileTermsAndConditions;
 
   constructor(
+    private store: Store<any>,
     private fb: FormBuilder,
     private authService: AuthService,
     private router: Router
@@ -76,22 +82,29 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.registerForm.errors);
-
-    let customerAccountModel = {
+    let userContact: UserContactModel = {
+      idUserContact: null,
+      phoneNumber: this.getPhone.value,
+      commune: this.getCommune.value,
+      address: this.getAddress.value
+    }
+    let userAccountModel: UserAccountModel = {
+      username: null,
+      password: this.getPassword.value,
+      email: this.getEmail.value,
       firstName: this.getFirstName.value,
       lastName: this.getLastName.value,
-      email: this.getEmail.value,
-      phone: this.getPhone.value,
-      commune: this.getCommune.value,
-      address: this.getAddress.value,
-      password: this.getPassword.value
+      userContact: userContact,
+      role: null
     }
+    console.log(userAccountModel); // DEBUG
 
-    console.log(customerAccountModel); // DEBUG
-
-    // this.authService.register(customerAccountModel).subscribe();
-    // this.router.navigate(['/']);
+    this.authService.register(userAccountModel).subscribe(data => {
+      let authModel: AuthModel = data as AuthModel;
+      this.store.dispatch({ type: AuthActionTypes.Load });
+      this.store.dispatch({ type: AuthActionTypes.Register, payload: authModel });
+      this.router.navigate(['/']);
+    });
   }
 
   get getFirstName(){ return this.registerForm.get('firstname'); }

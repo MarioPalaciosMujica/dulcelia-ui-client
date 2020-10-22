@@ -1,9 +1,10 @@
+import { AuthModel } from './../../../../shared/models/auth.model';
 import { Login } from './../../../../core/actions/auth.actions';
 import { AuthService } from './../../../../core/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Store, select } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import { AuthActionTypes } from 'src/app/core/actions/auth.actions';
 
 @Component({
@@ -46,26 +47,18 @@ export class LoginComponent implements OnInit {
       password: this.getPassword.value
     };
 
-    console.log(loginModel); // DEBUG
-
-    this.store.dispatch({ type: AuthActionTypes.Login });
-    this.router.navigate(['/']);
-
-    //this.authState.dispatch({type: AuthActionTypes.Login});
-    //this.router.navigate(['/']);
-
-    // this.authenticationService.login(loginModel).subscribe(data => {
-    //   this.userAccountmodel = data as UserAccountModel;
-    //   if(this.userAccountmodel){
-    //     this.isLoginCorrect = true;
-    //     this.authState.dispatch({type: AuthActionTypes.Login});
-    //     this.router.navigate(['/']);
-    //   }
-    //   else{
-    //     this.isLoginCorrect = false;
-    //   }
-    // });
-    
+    this.authService.login(loginModel).subscribe(data => {
+      let authModel: AuthModel = data as AuthModel;
+      if(authModel){
+        this.isLoginCorrect = true;
+        this.store.dispatch({ type: AuthActionTypes.Load });
+        this.store.dispatch({ type: AuthActionTypes.Login, payload: authModel });
+        this.router.navigate(['/']);
+      }
+      else {
+        this.isLoginCorrect = false;
+      }
+    });
   }
   
   get getEmail() { return this.loginForm.get('email'); }
