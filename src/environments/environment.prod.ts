@@ -4,25 +4,25 @@ export const environment = {
   stripe_token: 'STRIPE_PUBLISHABLE_KEY',
   paypal_token: 'PAYPAL_CLIENT_ID',
 
-  apiProductBrand: 'http://localhost:8080/Brand',
-  apiProductCatalogue: 'http://localhost:8080/Catalogue',
-  apiProductCategory: 'http://localhost:8080/Category',
-  apiProductCollection: 'http://localhost:8080/Collection',
-  apiProductImage: 'http://localhost:8080/Image',
-  apiProductMaterial: 'http://localhost:8080/Material',
-  apiProductOption: 'http://localhost:8080/Option',
-  apiProductProduct: 'http://localhost:8080/Product',
-  apiProductTag: 'http://localhost:8080/Tag',
-  apiProductVariant: 'http://localhost:8080/Variant',
+  fileTermsAndConditions: 'assets/files/terminos_condiciones_20201020.pdf',
 
-  apiCoupon: 'http://localhost:8081/Coupon',
-  apiOrderPurchaseOrder: 'http://localhost:8081/PurchaseOrder',
-  apiOrderPurchaseOrderStatus: 'http://localhost:8081/PurchaseOrderStatus',
+  apiProductBrand: 'http://54.94.70.82:8080/Brand',
+  apiProductCatalogue: 'http://54.94.70.82:8080/Catalogue',
+  apiProductCategory: 'http://54.94.70.82:8080/Category',
+  apiProductCollection: 'http://54.94.70.82:8080/Collection',
+  apiProductImage: 'http://54.94.70.82:8080/Image',
+  apiProductMaterial: 'http://54.94.70.82:8080/Material',
+  apiProductOption: 'http://54.94.70.82:8080/Option',
+  apiProductProduct: 'http://54.94.70.82:8080/Product',
+  apiProductTag: 'http://54.94.70.82:8080/Tag',
+  apiProductVariant: 'http://54.94.70.82:8080/Variant',
 
-  apiWebpayClient: 'http://localhost:8090/WebpayPlus',
+  apiOrderCoupon: 'http://54.94.70.82:8081/Coupon',
+  apiOrderPurchaseOrder: 'http://54.94.70.82:8081/PurchaseOrder',
+  apiOrderPurchaseOrderStatus: 'http://54.94.70.82:8081/PurchaseOrderStatus',
 
-  apiAuthUserAccount: 'http://localhost:8082/UserAccount',
+  apiWebpayClient: 'http://54.94.70.82:8090/WebpayPlus',
 
-  fileTermsAndConditions: 'assets/files/terminos_condiciones_20201020.pdf'
-  
+  apiAuthUserAccount: 'http://54.94.70.82:8082/UserAccount'
+
 };

@@ -51,6 +51,7 @@ export class LoginComponent implements OnInit {
       let authModel: AuthModel = data as AuthModel;
       if(authModel){
         this.isLoginCorrect = true;
+        localStorage.setItem('authData', JSON.stringify(authModel));
         this.store.dispatch({ type: AuthActionTypes.Load });
         this.store.dispatch({ type: AuthActionTypes.Login, payload: authModel });
         this.router.navigate(['/']);

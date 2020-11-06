@@ -26,4 +26,4 @@ export class Load implements Action {
     readonly type = AuthActionTypes.Load;
 }
 
-export type AuthActions = Login | Logout | Register | Load;
+export type AuthActions = Login | Logout | Register | Load ;

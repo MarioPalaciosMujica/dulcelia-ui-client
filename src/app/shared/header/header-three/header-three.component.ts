@@ -33,6 +33,7 @@ export class HeaderThreeComponent implements OnInit {
 
   logout(){
     this.store.dispatch({ type: AuthActionTypes.Logout });
+    localStorage.setItem('authData', null);
     this.router.navigate(['/']);
   }
 

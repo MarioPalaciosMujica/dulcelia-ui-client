@@ -3,7 +3,8 @@ import { AppError, NotFoundError, BadInputError } from './../../shared/models/er
 import { HttpClient } from '@angular/common/http';
 import { throwError } from 'rxjs';
 import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
+//import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
 
 // @Injectable({
 //   providedIn: 'root'
@@ -16,39 +17,69 @@ export class BaseService {
     ) { }
   
     save(resource: any){
-      return this.http.post(this.endpoint + '/save', resource)
-        .map(response => response)
-        .catch(this.handleError);
+      // return this.http.post(this.endpoint + '/save', resource)
+      //   .map(response => response)
+      //   .catch(this.handleError);
+      return this.http.post(this.endpoint + '/save', resource).pipe(
+        map((data: any) => {
+          return data;
+        })
+      ); //.catch(this.handleError);
     }
   
     findAll(){
-      return this.http.get(this.endpoint + '/findAll')
-        .map(response => response)
-        .catch(this.handleError)
+      // return this.http.get(this.endpoint + '/findAll')
+      //   .map(response => response)
+      //   .catch(this.handleError)
+      return this.http.get(this.endpoint + '/findAll').pipe(
+        map((data: any) => {
+          return data;
+        })
+      ); //.catch(this.handleError);
     }
   
     findById(id: number){
-      return this.http.get(this.endpoint + '/findById/' + id)
-        .map(response => response)
-        .catch(this.handleError)
+      // return this.http.get(this.endpoint + '/findById/' + id)
+      //   .map(response => response)
+      //   .catch(this.handleError)
+      return this.http.get(this.endpoint + '/findById/' + id).pipe(
+        map((data: any) => {
+          return data;
+        })
+      ); //.catch(this.handleError);
     }
   
     update(resource: any){
-      return this.http.patch(this.endpoint + '/update', resource)
-        .map(response => response)
-        .catch(this.handleError);
+      // return this.http.patch(this.endpoint + '/update', resource)
+      //   .map(response => response)
+      //   .catch(this.handleError);
+      return this.http.patch(this.endpoint + '/update', resource).pipe(
+        map((data: any) => {
+          return data;
+        })
+      ); //.catch(this.handleError);
     }
   
     updateActive(id: number){
-      return this.http.get(this.endpoint + '/updateActive/' + id)
-        .map(response => response)
-        .catch(this.handleError);
+      // return this.http.get(this.endpoint + '/updateActive/' + id)
+      //   .map(response => response)
+      //   .catch(this.handleError);
+      return this.http.get(this.endpoint + '/updateActive/' + id).pipe(
+        map((data: any) => {
+          return data;
+        })
+      ); //.catch(this.handleError);
     }
     
     deleteById(id: number){
-      return this.http.delete(this.endpoint + '/deleteById/' + id)
-        .map(response => response)
-        .catch(this.handleError);
+      // return this.http.delete(this.endpoint + '/deleteById/' + id)
+      //   .map(response => response)
+      //   .catch(this.handleError);
+      return this.http.delete(this.endpoint + '/deleteById/' + id).pipe(
+        map((data: any) => {
+          return data;
+        })
+      ); //.catch(this.handleError);
     }
   
     protected handleError(error: Response){

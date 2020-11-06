@@ -101,6 +101,7 @@ export class RegisterComponent implements OnInit {
 
     this.authService.register(userAccountModel).subscribe(data => {
       let authModel: AuthModel = data as AuthModel;
+      localStorage.setItem('authData', JSON.stringify(authModel));
       this.store.dispatch({ type: AuthActionTypes.Load });
       this.store.dispatch({ type: AuthActionTypes.Register, payload: authModel });
       this.router.navigate(['/']);

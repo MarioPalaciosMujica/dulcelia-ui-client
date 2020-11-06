@@ -1,3 +1,4 @@
+import { AuthService } from './../../../core/services/auth.service';
 import { BuyOrder } from './../../../shared/models/buy-order.model';
 import { PurchaseOrder } from './../../../shared/models/purchase-order.model';
 import { PurchaseOrderService } from './../../../core/services/purchase-order.service';
@@ -17,6 +18,10 @@ import es from '@angular/common/locales/es';
 import { DOCUMENT } from '@angular/common';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Store } from '@ngrx/store';
+import { UserContactModel } from 'src/app/shared/models/user-contact.model';
+import { UserAccountModel } from 'src/app/shared/models/user-account.model';
+import { AuthModel } from 'src/app/shared/models/auth.model';
+import { AuthActionTypes } from 'src/app/core/actions/auth.actions';
 
 @Component({
   selector: 'app-checkout',
@@ -41,20 +46,9 @@ export class CheckoutComponent implements OnInit {
     private purchaseOrderService: PurchaseOrderService,
     private router: Router,
     private  http : HttpClient,
-    private store: Store<any>
+    private store: Store<any>,
+    private authService: AuthService
   ) { 
-
-    // this.checkoutForm = this.fb.group({
-    //   firstname: ['', [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z ]+[a-zA-Z]$')]],
-    //   lastname: ['', [Validators.required, Validators.pattern('[a-zA-Z][a-zA-Z ]+[a-zA-Z]$')]],
-    //   phone: ['', [Validators.required, Validators.pattern('[0-9]+')]],
-    //   email: ['', [Validators.required, Validators.email]],
-    //   address: ['', [Validators.required, Validators.maxLength(50)]],
-    //   country: ['', Validators.required],
-    //   town: ['', Validators.required],
-    //   state: ['', Validators.required],
-    //   postalcode: ['', Validators.required]
-    // });
 
     this.checkoutForm = this.fb.group({
       firstname: [''],
@@ -73,7 +67,7 @@ export class CheckoutComponent implements OnInit {
     registerLocaleData(es);
     this.productService.cartItems.subscribe(response => this.products = response);
     this.getTotal.subscribe(amount => this.amount = amount);
-    this.initConfig();
+    //this.initConfig();
   }
 
   public get getTotal(): Observable<number> {
@@ -110,72 +104,86 @@ export class CheckoutComponent implements OnInit {
     });
   }
 
+  // get getFirstName(){ return this.registerForm.get('firstname'); }
+  // get getLastName(){ return this.registerForm.get('lastname'); }
+  // get getEmail(){ return this.registerForm.get('email'); }
+  // get getPhone(){ return this.registerForm.get('phone'); }
+  // get getCommune(){ return this.registerForm.get('commune'); }
+  // get getAddress(){ return this.registerForm.get('address'); }
+  // get getPassword(){ return this.registerForm.get('password'); }
+  // get getPasswordConfirm(){ return this.registerForm.get('passwordConfirm'); }
+  // get getAcceptTerms(){ return this.registerForm.get('acceptTerms'); }
+
+  // set setFirstName(value: string){ this.registerForm.get('firstname').setValue(value); }
+
+
+
   // Stripe Payment Gateway
-  stripeCheckout() {
-    var handler = (<any>window).StripeCheckout.configure({
-      key: environment.stripe_token, // publishble key
-      locale: 'auto',
-      token: (token: any) => {
-        // You can access the token ID with `token.id`.
-        // Get the token ID to your server-side code for use.
-        this.orderService.createOrder(this.products, this.checkoutForm.value, token.id, this.amount);
-      }
-    });
-    handler.open({
-      name: 'Multikart',
-      description: 'Online Fashion Store',
-      amount: this.amount * 100
-    }) 
-  }
+  // stripeCheckout() {
+  //   var handler = (<any>window).StripeCheckout.configure({
+  //     key: environment.stripe_token, // publishble key
+  //     locale: 'auto',
+  //     token: (token: any) => {
+  //       // You can access the token ID with `token.id`.
+  //       // Get the token ID to your server-side code for use.
+  //       this.orderService.createOrder(this.products, this.checkoutForm.value, token.id, this.amount);
+  //     }
+  //   });
+  //   handler.open({
+  //     name: 'Multikart',
+  //     description: 'Online Fashion Store',
+  //     amount: this.amount * 100
+  //   }) 
+  // }
 
   // Paypal Payment Gateway
-  private initConfig(): void {
-    this.payPalConfig = {
-        currency: null, //this.productService.Currency.currency,
-        clientId: environment.paypal_token,
-        createOrderOnClient: (data) => < ICreateOrderRequest > {
-          intent: 'CAPTURE',
-          purchase_units: [{
-              amount: {
-                currency_code: null, //this.productService.Currency.currency,
-                value: this.amount,
-                breakdown: {
-                    item_total: {
-                        currency_code: null, //this.productService.Currency.currency,
-                        value: this.amount
-                    }
-                }
-              }
-          }]
-      },
-        advanced: {
-            commit: 'true'
-        },
-        style: {
-            label: 'paypal',
-            size:  'small', // small | medium | large | responsive
-            shape: 'rect', // pill | rect
-        },
-        onApprove: (data, actions) => {
-            this.orderService.createOrder(this.products, this.checkoutForm.value, data.orderID, this.getTotal);
-            console.log('onApprove - transaction was approved, but not authorized', data, actions);
-            actions.order.get().then(details => {
-                console.log('onApprove - you can get full order details inside onApprove: ', details);
-            });
-        },
-        onClientAuthorization: (data) => {
-            console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
-        },
-        onCancel: (data, actions) => {
-            console.log('OnCancel', data, actions);
-        },
-        onError: err => {
-            console.log('OnError', err);
-        },
-        onClick: (data, actions) => {
-            console.log('onClick', data, actions);
-        }
-    };
-  }
+  // private initConfig(): void {
+  //   this.payPalConfig = {
+  //       currency: null, //this.productService.Currency.currency,
+  //       clientId: environment.paypal_token,
+  //       createOrderOnClient: (data) => < ICreateOrderRequest > {
+  //         intent: 'CAPTURE',
+  //         purchase_units: [{
+  //             amount: {
+  //               currency_code: null, //this.productService.Currency.currency,
+  //               value: this.amount,
+  //               breakdown: {
+  //                   item_total: {
+  //                       currency_code: null, //this.productService.Currency.currency,
+  //                       value: this.amount
+  //                   }
+  //               }
+  //             }
+  //         }]
+  //     },
+  //       advanced: {
+  //           commit: 'true'
+  //       },
+  //       style: {
+  //           label: 'paypal',
+  //           size:  'small', // small | medium | large | responsive
+  //           shape: 'rect', // pill | rect
+  //       },
+  //       onApprove: (data, actions) => {
+  //           this.orderService.createOrder(this.products, this.checkoutForm.value, data.orderID, this.getTotal);
+  //           console.log('onApprove - transaction was approved, but not authorized', data, actions);
+  //           actions.order.get().then(details => {
+  //               console.log('onApprove - you can get full order details inside onApprove: ', details);
+  //           });
+  //       },
+  //       onClientAuthorization: (data) => {
+  //           console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
+  //       },
+  //       onCancel: (data, actions) => {
+  //           console.log('OnCancel', data, actions);
+  //       },
+  //       onError: err => {
+  //           console.log('OnError', err);
+  //       },
+  //       onClick: (data, actions) => {
+  //           console.log('onClick', data, actions);
+  //       }
+  //   };
+  // }
 
 }

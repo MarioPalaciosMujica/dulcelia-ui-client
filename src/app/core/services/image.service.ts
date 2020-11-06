@@ -2,6 +2,8 @@ import { environment } from './../../../environments/environment';
 import { BaseService } from './base.service';
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/catch';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +15,13 @@ export class ImageService extends BaseService {
   }
 
   uploadImage(resource: any){
-    return this.http.post(this.endpoint + '/uploadImage', resource)
-      .map(response => response)
-      .catch(this.handleError);
+    // return this.http.post(this.endpoint + '/uploadImage', resource)
+    //   .map(response => response)
+    //   .catch(this.handleError);
+    return this.http.post(this.endpoint + '/uploadImage', resource).pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 }

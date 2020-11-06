@@ -7,7 +7,7 @@
                 <form>
                     <div class="row">
                         <div class="col-lg-6 col-sm-12 col-xs-12">
-                            <div class="checkout-title">
+                            <!-- <div class="checkout-title">
                                 <h3>{{ 'checkout.billing_details' | translate }}</h3>
                             </div>
                             <div class="row check-out">
@@ -94,7 +94,7 @@
                                         {{ 'form.postal_code_required' | translate }}
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
 
                         <div class="col-lg-6 col-sm-12 col-xs-12">
@@ -175,10 +175,12 @@
                                         <button type="submit" class="btn-solid btn" [disabled]="!checkoutForm.valid" (click)="webpayCheckout()" *ngIf="payment == 'Webpay'">
                                             {{ 'button.place_order' | translate }}
                                         </button>
+                                        <!-- 
                                         <button type="submit" class="btn-solid btn" [disabled]="!checkoutForm.valid" (click)="stripeCheckout()" *ngIf="payment == 'Stripe'">
                                             {{ 'button.place_order' | translate }}
                                         </button>
                                         <ngx-paypal [config]="payPalConfig" *ngIf="payment == 'Paypal'"></ngx-paypal>
+                                        -->
                                     </div>
                                 </div>
                             </div>

@@ -4,9 +4,11 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { map, startWith, delay } from 'rxjs/operators';
+import { startWith, delay } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { ToastrService } from 'ngx-toastr';
 import { Product } from './../../shared/models/product.model';
+
 
 const state = {
   products: JSON.parse(localStorage['products'] || '[]'),
@@ -32,75 +34,135 @@ export class ProductService extends BaseService {
   }
 
   findAllActives(){
-    return this.http.get(this.endpoint + '/findAllActives')
-      .map(response => response)
-      .catch(this.handleError)
+    // return this.http.get(this.endpoint + '/findAllActives')
+    //   .map(response => response)
+    //   .catch(this.handleError);
+    return this.http.get(this.endpoint + '/findAllActives').pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 
   findAllActivesByTag(idTag: number){
-    return this.http.get(this.endpoint + '/findAllActivesByTag/' + idTag)
-      .map(response => response)
-      .catch(this.handleError)
+    // return this.http.get(this.endpoint + '/findAllActivesByTag/' + idTag)
+    //   .map(response => response)
+    //   .catch(this.handleError);
+    return this.http.get(this.endpoint + '/findAllActivesByTag/' + idTag).pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 
   findAllActivesByTags(resource: any[]){
-    return this.http.post(this.endpoint + '/findAllActivesByTags/', resource)
-      .map(response => response)
-      .catch(this.handleError)
+    // return this.http.post(this.endpoint + '/findAllActivesByTags/', resource)
+    //   .map(response => response)
+    //   .catch(this.handleError);
+    return this.http.post(this.endpoint + '/findAllActivesByTags/', resource).pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 
   findAllActivesNew(){
-    return this.http.get(this.endpoint + '/findAllActivesNew')
-      .map(response => response)
-      .catch(this.handleError)
+    // return this.http.get(this.endpoint + '/findAllActivesNew')
+    //   .map(response => response)
+    //   .catch(this.handleError)
+    return this.http.get(this.endpoint + '/findAllActivesNew').pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 
   findAllActivesOnSale(){
-    return this.http.get(this.endpoint + '/findAllActivesOnSale')
-      .map(response => response)
-      .catch(this.handleError)
+    // return this.http.get(this.endpoint + '/findAllActivesOnSale')
+    //   .map(response => response)
+    //   .catch(this.handleError);
+    return this.http.get(this.endpoint + '/findAllActivesOnSale').pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 
   findAllActivesByCollection(idCollection: number){
-    return this.http.get(this.endpoint + '/findAllActivesByCollection/' + idCollection)
-      .map(response => response)
-      .catch(this.handleError)
+    // return this.http.get(this.endpoint + '/findAllActivesByCollection/' + idCollection)
+    //   .map(response => response)
+    //   .catch(this.handleError);
+    return this.http.get(this.endpoint + '/findAllActivesByCollection/' + idCollection).pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 
   findAllActivesInStock(){
-    return this.http.get(this.endpoint + '/findAllActivesInStock')
-      .map(response => response)
-      .catch(this.handleError)
+    // return this.http.get(this.endpoint + '/findAllActivesInStock')
+    //   .map(response => response)
+    //   .catch(this.handleError);
+    return this.http.get(this.endpoint + '/findAllActivesInStock').pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 
   findAllActivesByCategory(idCategory: number){
-    return this.http.get(this.endpoint + '/findAllActivesByCategory/' + idCategory)
-      .map(response => response)
-      .catch(this.handleError)
+    // return this.http.get(this.endpoint + '/findAllActivesByCategory/' + idCategory)
+    //   .map(response => response)
+    //   .catch(this.handleError);
+    return this.http.get(this.endpoint + '/findAllActivesByCategory/' + idCategory).pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 
   findAllActivesByBrand(idBrand: number){
-    return this.http.get(this.endpoint + '/findAllActivesByBrand/' + idBrand)
-      .map(response => response)
-      .catch(this.handleError)
+    // return this.http.get(this.endpoint + '/findAllActivesByBrand/' + idBrand)
+    //   .map(response => response)
+    //   .catch(this.handleError);
+    return this.http.get(this.endpoint + '/findAllActivesByBrand/' + idBrand).pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 
   findAllActivesByTitle(partialTitle: string){
-    return this.http.get(this.endpoint + '/findAllActivesByTitle/' + partialTitle)
-      .map(response => response)
-      .catch(this.handleError)
+    // return this.http.get(this.endpoint + '/findAllActivesByTitle/' + partialTitle)
+    //   .map(response => response)
+    //   .catch(this.handleError);
+    return this.http.get(this.endpoint + '/findAllActivesByTitle/' + partialTitle).pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 
   findAllActivesByPriceRange(minPrice: number, maxPrice: number){
-    return this.http.get(this.endpoint + '/findAllActivesByPriceRange/' + minPrice + '/' + maxPrice)
-      .map(response => response)
-      .catch(this.handleError)
+    // return this.http.get(this.endpoint + '/findAllActivesByPriceRange/' + minPrice + '/' + maxPrice)
+    //   .map(response => response)
+    //   .catch(this.handleError);
+    return this.http.get(this.endpoint + '/findAllActivesByPriceRange/' + minPrice + '/' + maxPrice).pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 
   updateRanking(idProduct: number){
-    return this.http.get(this.endpoint + '/updateRanking/' + idProduct)
-      .map(response => response)
-      .catch(this.handleError)
+    // return this.http.get(this.endpoint + '/updateRanking/' + idProduct)
+    //   .map(response => response)
+    //   .catch(this.handleError);
+    return this.http.get(this.endpoint + '/updateRanking/' + idProduct).pipe(
+      map((data: any) => {
+        return data;
+      })
+    ); //.catch(this.handleError);
   }
 
   // ---------------- TOOLS ---------------- 
