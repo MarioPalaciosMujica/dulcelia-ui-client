@@ -427,7 +427,7 @@ export class ProductService extends BaseService {
   }
 
   // Total amount 
-  public cartTotalAmount(): Observable<number> {
+  public cartTotalAmount(deliveryCost: number = 0): Observable<number> {
     return this.cartItems.pipe(map((product: Product[]) => {
       return product.reduce((prev, curr: Product) => {
 
@@ -446,7 +446,7 @@ export class ProductService extends BaseService {
         else {
           price = curr.currentBasePrice;
         }
-        return (prev + price * curr.quantity);
+        return (prev + price * curr.quantity) + deliveryCost;
 
       }, 0);
     }));

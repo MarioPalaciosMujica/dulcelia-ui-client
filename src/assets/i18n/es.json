@@ -80,7 +80,8 @@
         "all": "Todos los productos",
         "for": "Para",
         "capacity": "personas",
-        "units": "Unidad(es)"
+        "units": "Unidad(es)",
+        "gluten_free": "Le recordamos que todos nuestros productos son Sin Gluten."
     },
     "product_modal": {
         "item": "",
@@ -284,8 +285,8 @@
         "price": "Precio"
     },
     "service": {
-        "free_shipping_title": "Envío gratis",
-        "free_shipping_desc": "A San Bernardo.",
+        "free_shipping_title": "Envíos",
+        "free_shipping_desc": "A todo Santiago.",
         "24/7_title": "Entregas los 7 días",
         "24/7_desc": "Servicio de Lunes a Domingo.",
         "festival_offer_title": "Días festivos",

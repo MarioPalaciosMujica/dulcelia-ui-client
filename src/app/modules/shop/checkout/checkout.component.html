@@ -123,20 +123,22 @@
                                     </ul>
                                     <ul class="sub-total">
                                         <li>
-                                        	{{ 'checkout.sub_total' | translate }} <span class="count">${{ getTotal | async | number:'':'es'}}</span>
+                                        	{{ 'checkout.sub_total' | translate }} <span class="count">${{ getSubTotal | async | number:'':'es'}}</span>
                                         </li>
                                         <li *ngIf='products.length'>
-                                        	{{ 'checkout.shipping' | translate }}
-                                         <div class="shipping">
-                                            <div class="shopping-option">
-                                                <input type="radio" name="shipping" checked="checked" id="free-shipping">
-                                                <label for="free-shipping">{{ 'checkout.delivery' | translate }}</label>
-                                            </div>
-                                            <div class="shopping-option">
-                                                <input type="radio"  name="shipping" id="local-pickup">
-                                                <label for="local-pickup">{{ 'checkout.local_pickup' | translate }}</label>
-                                            </div>
-                                         </div>
+                                        	{{ 'checkout.shipping' | translate }} <span class="count">${{ deliveryAmount | number:'':'es'}}</span>
+                                        </li>
+                                        <li>
+                                            <div class="">
+                                                <div class="shopping-option">
+                                                    <input type="radio"  name="shipping" id="local-pickup" checked="checked" (click)="isRadioDeliveryChecked()">
+                                                    <label for="local-pickup">{{ 'checkout.local_pickup' | translate }}</label>
+                                                </div>
+                                                <div class="shopping-option">
+                                                    <input type="radio" name="shipping" id="free-shipping" (click)="isRadioDeliveryChecked()">
+                                                    <label for="free-shipping">{{ 'checkout.delivery' | translate }}</label>
+                                                </div>
+                                             </div>
                                         </li>
                                     </ul>
                                     <ul class="total">

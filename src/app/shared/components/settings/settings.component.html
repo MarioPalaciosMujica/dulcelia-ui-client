@@ -8,6 +8,11 @@
         <i class="ti-search"></i>
       </div>
     </li>
+    <!-- <li class="mobile-setting">
+      <div>
+        <img [src]="'assets/images/icon/sin_gluten_logo.png'" class="img-fluid sin-gluten-logo-header" alt="logo">
+      </div>
+    </li> -->
 
     <!-- Settings Icon -->
     <!-- <li class="onhover-div mobile-setting">
@@ -59,8 +64,8 @@
                   {{ product?.quantity }} x 
                   <!-- {{ product?.price * productService?.Currency.price | discount:product | currency:productService?.Currency.currency:'symbol' }} -->
                   <div *ngIf="product.isSale; then showDiscountPrice; else showNormalPrice"></div>
-                  <ng-template #showDiscountPrice>${{ product.priceDiscount | number:'':'es' }}</ng-template>
-                  <ng-template #showNormalPrice>${{ product.price | number:'':'es' }}</ng-template>
+                  <ng-template #showDiscountPrice>${{ product.currentTotalPrice | number:'':'es' }}</ng-template>
+                  <ng-template #showNormalPrice>${{ product.currentTotalPrice | number:'':'es' }}</ng-template>
                 </span>
               </h4>
             </div>

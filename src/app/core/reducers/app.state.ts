@@ -4,6 +4,7 @@ import { Category } from '../../shared/models/category.model';
 export interface AppState {
     authModel?: AuthModel;
     categories?: Category[];
+    catalogue?: string;
     loading?: boolean;
     loaded?: boolean;
 }
@@ -16,6 +17,7 @@ export const initAppState: AppState = {
         role: undefined
     },
     categories: [],
+    catalogue: 'tortas',
     loading: false,
     loaded: false
 }

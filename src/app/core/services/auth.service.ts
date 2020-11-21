@@ -16,6 +16,14 @@ export class AuthService extends BaseService {
         super(environment.apiAuthUserAccount, http);
     }
 
+    findByUuid(uuid: string){
+        return this.http.get(this.endpoint + '/findById/' + uuid).pipe(
+            map( (data: any) => {
+                return data;
+            })
+        );
+    }
+
     login(resource: any) {
         // return this.http.post(this.endpoint + '/login', resource)
         //     .map(response => response)

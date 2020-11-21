@@ -1,9 +1,9 @@
-import { CategoryMockService } from './../../../core/mocks/category-mock.service';
+//import { CategoryMockService } from './../../../core/mocks/category-mock.service';
 import { Category } from './../../models/category.model';
 import { CategoryService } from './../../../core/services/category.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { map } from 'rxjs/operators';
+//import { map } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 // import { Product } from '../../classes/product';
 // import { ProductService } from '../../services/product.service';
@@ -19,13 +19,14 @@ export class CategoriesComponent implements OnInit, OnDestroy {
   public collapse: boolean = true;
   public isDataLoaded: boolean;
   public categories: Category[];
+  public catalogueName: string;
   private subscriptions$: Subscription[] = []
 
   constructor(
     // public productService: ProductService,
     private store: Store<any>,
     public categoryService: CategoryService,
-    private categoryMockService: CategoryMockService
+    //private categoryMockService: CategoryMockService
   ) { 
     //this.productService.getProducts.subscribe(product => this.products = product);
     this.isDataLoaded = false;
@@ -48,7 +49,10 @@ export class CategoriesComponent implements OnInit, OnDestroy {
 
     const getCategories$: Subscription = this.store.select('categoryReducer').subscribe(data => {
       this.categories = data.categories as Category[];
-      this.isDataLoaded = true;
+      this.store.select('categoryReducer').subscribe(data => {
+        this.catalogueName = data.catalogue as string;
+        this.isDataLoaded = true;
+      });
     });
     this.subscriptions$.push(getCategories$);
 

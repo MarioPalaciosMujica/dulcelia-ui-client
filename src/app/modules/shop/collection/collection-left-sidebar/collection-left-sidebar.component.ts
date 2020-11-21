@@ -102,37 +102,29 @@ export class CollectionLeftSidebarComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(paramMap => {
-      if(paramMap.has('catalogue')){
+      // if(paramMap.has('catalogue')){
+      //   let catalogueName: string = paramMap.get('catalogue');
+      //   let idCatalogue: number = this.getIdCatalogue(catalogueName);
+      //   this.getAllCategoriesByCatalogue(idCatalogue, catalogueName);
+      //   this.getAllProductsByCatalogue(idCatalogue);
+      // }
+
+      if(paramMap.has('catalogue') && !paramMap.has('idCategory')){
         let catalogueName: string = paramMap.get('catalogue');
-        // let idCatalogue: number = Number(paramMap.get('idCategory'));
         let idCatalogue: number = this.getIdCatalogue(catalogueName);
-        this.getAllCategoriesByCatalogue(idCatalogue);
+        this.getAllCategoriesByCatalogue(idCatalogue, catalogueName);
         this.getAllProductsByCatalogue(idCatalogue);
       }
-      else {
-        console.log('paramMap: Error');
+      if(paramMap.has('catalogue') && paramMap.has('idCategory')){
+        let idCategory: number = Number(paramMap.get('idCategory'));
+        let catalogueName: string = paramMap.get('catalogue');
+        let idCatalogue: number = this.getIdCatalogue(catalogueName);
+        this.getAllCategoriesByCatalogue(idCatalogue, catalogueName);
+	      this.getAllProductsByCatalogue(idCategory);
       }
-
-      // if(paramMap.has('catalogue') && !paramMap.has('idCategory')){
-      //   let catalogueName: string = paramMap.get('catalogue');
-      //   let idCatalogue: number = Number(paramMap.get('idCategory'));
-      //   this.getAllCategoriesByCatalogue(idCatalogue);
-      //   this.getAllProductsByCatalogue(this.getIdCatalogue(catalogueName));
-      // }
-      // if(paramMap.has('catalogue') && paramMap.has('idCategory')){
-      // 	let idCategory: number = Number(paramMap.get('idCategory'));
-	    //   this.getAllProductsByCatalogue(idCategory);
-      // }
-
-      // if(paramMap.has('idCategory')){
-      //   this.getAllProductByCategory(Number(paramMap.get('idCategory')));
-      // }
-      // else{
-      //   this.getAllProducts();
-      // }
     });
-    //this.getAllNewProducts();
-    //this.getAllTags();
+    this.getAllNewProducts();
+    this.getAllTags();
 
     // TEST
     // this.sub = this.productService.findAllActives().subscribe(data => {
@@ -165,10 +157,11 @@ export class CollectionLeftSidebarComponent implements OnInit, OnDestroy {
     }
   }
 
-  private getAllCategoriesByCatalogue(id: number){
+  private getAllCategoriesByCatalogue(id: number, catalogueName: string){
     const findAllByCatalogue$: Subscription = this.categoryService.findAllByCatalogue(id).subscribe(data => {
       let categories: Category[] = data as Category[];
       this.store.dispatch({ type: CategoryActionTypes.Load });
+      this.store.dispatch({ type: CategoryActionTypes.PartialUrl, payload: catalogueName });
       this.store.dispatch({ type: CategoryActionTypes.Read, payload: categories });
     });
     this.subscriptions$.push(findAllByCatalogue$);

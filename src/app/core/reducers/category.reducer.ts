@@ -14,6 +14,15 @@ export function categoryReducer(state: AppState = initAppState, action: Category
             });
         }
 
+        case CategoryActionTypes.PartialUrl: {
+            const url: string = action.payload;
+            return Object.assign({}, state, {
+                catalogue: url,
+                loading: false,
+                loaded: true
+            });
+        }
+
         case CategoryActionTypes.Load: {
             return {
                 ...state,

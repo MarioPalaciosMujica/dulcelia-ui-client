@@ -188,7 +188,11 @@
 
                   <div *ngIf="isProductLoaded" class="border-product">
                     <h6 class="product-title">{{ 'product.product_details' | translate }}</h6>
-                    <p>{{ product?.description.substring(0, 200)+'...' }}</p>
+                    <p>{{ product?.description.substring(0, 1000) }}</p>
+                    <p>{{ 'product.gluten_free' | translate }}</p>
+                    <div class="sin-gluten-box">
+                      <img [src]="'assets/images/icon/sin_gluten_logo.png'" class="img-fluid sin-gluten-product" alt="logo">
+                    </div>
                   </div>
 
                   <div *ngIf="isProductLoaded"class="border-product">

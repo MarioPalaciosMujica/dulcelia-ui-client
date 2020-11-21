@@ -37,7 +37,10 @@ export class CheckoutComponent implements OnInit {
   public payment: string = 'Webpay';
   public wpInitTransactionOutput: WpInitTransactionOutputModel;
   public amount:  any;
-  @Inject(DOCUMENT) private document: any
+  @Inject(DOCUMENT) private document: any;
+
+  public isDeliveryChecked: boolean = false;
+  public deliveryAmount: number = 0.00;
 
   constructor(private fb: FormBuilder,
     public productService: ProductService,
@@ -70,36 +73,65 @@ export class CheckoutComponent implements OnInit {
     //this.initConfig();
   }
 
-  public get getTotal(): Observable<number> {
+  isRadioDeliveryChecked() {
+    if(!this.isDeliveryChecked){
+      this.isDeliveryChecked = true;
+      this.deliveryAmount = 4000.00;
+    }
+    else {
+      this.isDeliveryChecked = false;
+      this.deliveryAmount = 0.00;
+    }
+  }
+
+  public get getSubTotal(): Observable<number> {
     return this.productService.cartTotalAmount();
+  }
+
+  public get getTotal(): Observable<number> {
+    return this.productService.cartTotalAmount(this.deliveryAmount);
   }
 
   webpayCheckout(){
     this.store.subscribe(state => {
       let authStateModel: any = state.authReducer.authModel;
       let order: PurchaseOrder = {} as PurchaseOrder;
-      order.idSession = authStateModel.token;
-      order.msUserAccountsIdAccount = authStateModel.token;
-      order.products = this.products;
-      
-      // 1. insert Purchase Order
-      this.purchaseOrderService.save(order).subscribe(data => {
-        let buyOrder: BuyOrder = data as BuyOrder;
-        // 2. create Webpay Transaction
-        this.webpayService.initTransaction(buyOrder).subscribe(data => {
-          this.wpInitTransactionOutput = data as WpInitTransactionOutputModel;
-          // 3. redirect to Webpay
-          var form = document.createElement('form');
-          form.setAttribute('method', 'POST');
-          form.setAttribute('action', this.wpInitTransactionOutput.formAction);
-          var hidden = document.createElement('input');
-          hidden.setAttribute('type', 'hidden');
-          hidden.setAttribute('name', 'token_ws');
-          hidden.setAttribute('value', this.wpInitTransactionOutput.tokenWs);
-          form.appendChild(hidden);
-          document.body.appendChild(form);
-          form.submit();
+      let account: UserAccountModel;
+
+      this.authService.findByUuid(authStateModel.token).subscribe(data => {
+        account = data as UserAccountModel;
+        order.idSession = authStateModel.token;
+        order.msUserAccountsIdAccount = authStateModel.token;
+        order.products = this.products;
+
+        if(this.isDeliveryChecked){
+          order.shipment = {};
+          order.shipment.address = account.userContact.address;
+          order.shipment.provinceCommune = account.userContact.commune;
+        }
+        console.log(order);
+
+        // WEBPAY TRANSACTION
+        //1. insert Purchase Order
+        this.purchaseOrderService.save(order).subscribe(data => {
+          let buyOrder: BuyOrder = data as BuyOrder;
+          // 2. create Webpay Transaction
+          this.webpayService.initTransaction(buyOrder).subscribe(data => {
+            this.wpInitTransactionOutput = data as WpInitTransactionOutputModel;
+            // 3. redirect to Webpay
+            var form = document.createElement('form');
+            form.setAttribute('method', 'POST');
+            form.setAttribute('action', this.wpInitTransactionOutput.formAction);
+            var hidden = document.createElement('input');
+            hidden.setAttribute('type', 'hidden');
+            hidden.setAttribute('name', 'token_ws');
+            hidden.setAttribute('value', this.wpInitTransactionOutput.tokenWs);
+            form.appendChild(hidden);
+            document.body.appendChild(form);
+            form.submit();
+          });
         });
+        // /WEBPAY TRANSACTION
       });
     });
   }
