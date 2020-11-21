@@ -2,37 +2,73 @@
     {
         "idCategory": 1,
         "name": "Tortas Tradicionáles",
-        "created": 1599580771425,
-        "modified": null
+        "created": "17/11/2020 21:07:27",
+        "modified": null,
+        "catalogue": {
+            "idCatalogue": 1,
+            "catalogueName": "Dulcelia Tortas",
+            "created": "17/11/2020 21:07:27",
+            "modified": null
+        }
     },
     {
         "idCategory": 2,
         "name": "Tortas de Vanguardia",
-        "created": 1599580773029,
-        "modified": null
+        "created": "17/11/2020 21:07:27",
+        "modified": null,
+        "catalogue": {
+            "idCatalogue": 1,
+            "catalogueName": "Dulcelia Tortas",
+            "created": "17/11/2020 21:07:27",
+            "modified": null
+        }
     },
     {
         "idCategory": 3,
         "name": "Coctel",
-        "created": 1599580773032,
-        "modified": null
+        "created": "17/11/2020 21:07:27",
+        "modified": null,
+        "catalogue": {
+            "idCatalogue": 1,
+            "catalogueName": "Dulcelia Tortas",
+            "created": "17/11/2020 21:07:27",
+            "modified": null
+        }
     },
     {
         "idCategory": 4,
         "name": "Masas",
-        "created": 1599580773035,
-        "modified": null
+        "created": "17/11/2020 21:07:28",
+        "modified": null,
+        "catalogue": {
+            "idCatalogue": 1,
+            "catalogueName": "Dulcelia Tortas",
+            "created": "17/11/2020 21:07:27",
+            "modified": null
+        }
     },
     {
         "idCategory": 5,
         "name": "Dulces",
-        "created": 1599580773037,
-        "modified": null
+        "created": "17/11/2020 21:07:28",
+        "modified": null,
+        "catalogue": {
+            "idCatalogue": 1,
+            "catalogueName": "Dulcelia Tortas",
+            "created": "17/11/2020 21:07:27",
+            "modified": null
+        }
     },
     {
         "idCategory": 6,
         "name": "Pan",
-        "created": 1599580773040,
-        "modified": null
+        "created": "17/11/2020 21:07:28",
+        "modified": null,
+        "catalogue": {
+            "idCatalogue": 1,
+            "catalogueName": "Dulcelia Tortas",
+            "created": "17/11/2020 21:07:27",
+            "modified": null
+        }
     }
 ]

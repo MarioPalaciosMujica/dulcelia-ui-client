@@ -33,6 +33,16 @@ export class ProductService extends BaseService {
     super(environment.apiProductProduct, http);
   }
 
+  // MOCK
+  // private _dataFile: string = "assets/data/products-mock.json";
+  // public findAllActives(): Observable<any> {
+  //   return this.http.get(this._dataFile);
+  // }
+  // public findById(id: number): Observable<any> {
+  //   let list: any[] = <any[]> JSON.parse(this._dataFile);
+  //   return this.http.get(list.find(el => el.idProduct = id));
+  // }
+
   findAllActives(){
     // return this.http.get(this.endpoint + '/findAllActives')
     //   .map(response => response)
@@ -42,6 +52,14 @@ export class ProductService extends BaseService {
         return data;
       })
     ); //.catch(this.handleError);
+  }
+
+  findAllActivesByCatalogue(idCatalogue: number){
+    return this.http.get(this.endpoint + '/findAllActivesByCatalogue/' + idCatalogue).pipe(
+      map((data: any) => {
+        return data;
+      })
+    );
   }
 
   findAllActivesByTag(idTag: number){

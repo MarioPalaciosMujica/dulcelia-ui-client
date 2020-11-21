@@ -1,7 +1,9 @@
+import { CategoryService } from './../../../../core/services/category.service';
+import { CataloguesEnum } from './../../../../shared/enums/calalogues.enum';
 import { Observable, Subscription } from 'rxjs';
-import { TagMockService } from './../../../../core/mocks/tag-mock.service';
-import { CategoryMockService } from './../../../../core/mocks/category-mock.service';
-import { ProductMockService } from './../../../../core/mocks/product-mock.service';
+//import { TagMockService } from './../../../../core/mocks/tag-mock.service';
+//import { CategoryMockService } from './../../../../core/mocks/category-mock.service';
+//import { ProductMockService } from './../../../../core/mocks/product-mock.service';
 import { TagService } from './../../../../core/services/tag.service';
 import { Tag } from './../../../../shared/models/tag.model';
 import { Component, OnInit, OnDestroy } from '@angular/core';
@@ -11,13 +13,16 @@ import { ViewportScroller } from '@angular/common';
 //import { Product } from './../../../../shared/classes/product';
 import { ProductService } from './../../../../core/services/product.service';
 import { Product } from './../../../../shared/models/product.model';
+import { Category } from 'src/app/shared/models/category.model';
+import { Store } from '@ngrx/store';
+import { CategoryActionTypes } from './../../../../core/actions/category.actions';
 
 @Component({
   selector: 'app-collection-left-sidebar',
   templateUrl: './collection-left-sidebar.component.html',
   styleUrls: ['./collection-left-sidebar.component.scss']
 })
-export class CollectionLeftSidebarComponent implements OnInit {
+export class CollectionLeftSidebarComponent implements OnInit, OnDestroy {
   
   public grid: string = 'col-xl-3 col-md-6';
   public layoutView: string = 'grid-view';
@@ -42,15 +47,21 @@ export class CollectionLeftSidebarComponent implements OnInit {
   public isNewProductsLoaded: boolean;
   public isTagsLoaded: boolean;
 
+  public title: string = "catálogo";
+
+  private subscriptions$: Subscription[] = [];
+
   constructor(
+    private store: Store<any>,
     private route: ActivatedRoute, 
     private router: Router,
     private viewScroller: ViewportScroller, 
     private productService: ProductService,
     private tagService: TagService,
-    private productMockService: ProductMockService,
-    private categoryMockService: CategoryMockService,
-    private tagMockservice: TagMockService
+    private categoryService: CategoryService
+    //private productMockService: ProductMockService,
+    //private categoryMockService: CategoryMockService,
+    //private tagMockservice: TagMockService
   ) 
   {  
       this.products = [];
@@ -91,15 +102,37 @@ export class CollectionLeftSidebarComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(paramMap => {
-      if(paramMap.has('idCategory')){
-        this.getAllProductByCategory(Number(paramMap.get('idCategory')));
+      if(paramMap.has('catalogue')){
+        let catalogueName: string = paramMap.get('catalogue');
+        // let idCatalogue: number = Number(paramMap.get('idCategory'));
+        let idCatalogue: number = this.getIdCatalogue(catalogueName);
+        this.getAllCategoriesByCatalogue(idCatalogue);
+        this.getAllProductsByCatalogue(idCatalogue);
       }
-      else{
-        this.getAllProducts();
+      else {
+        console.log('paramMap: Error');
       }
+
+      // if(paramMap.has('catalogue') && !paramMap.has('idCategory')){
+      //   let catalogueName: string = paramMap.get('catalogue');
+      //   let idCatalogue: number = Number(paramMap.get('idCategory'));
+      //   this.getAllCategoriesByCatalogue(idCatalogue);
+      //   this.getAllProductsByCatalogue(this.getIdCatalogue(catalogueName));
+      // }
+      // if(paramMap.has('catalogue') && paramMap.has('idCategory')){
+      // 	let idCategory: number = Number(paramMap.get('idCategory'));
+	    //   this.getAllProductsByCatalogue(idCategory);
+      // }
+
+      // if(paramMap.has('idCategory')){
+      //   this.getAllProductByCategory(Number(paramMap.get('idCategory')));
+      // }
+      // else{
+      //   this.getAllProducts();
+      // }
     });
-    this.getAllNewProducts();
-    this.getAllTags();
+    //this.getAllNewProducts();
+    //this.getAllTags();
 
     // TEST
     // this.sub = this.productService.findAllActives().subscribe(data => {
@@ -107,21 +140,56 @@ export class CollectionLeftSidebarComponent implements OnInit {
     //   this.isMainProductsLoaded = true;
     // });
   }
-  
-  // TEST
-  // private sub: Subscription;
 
-  // ngOnDestroy(): void {
-  //   this.sub.unsubscribe();
-  // }
+  ngOnDestroy(): void {
+    this.subscriptions$.forEach(el => el.unsubscribe());
+  }
 
-  private getAllProducts(){
-    this.productService.findAllActives().subscribe(data => {
+  private getIdCatalogue(catalogueName: string): number {
+    switch(catalogueName) {
+      case CataloguesEnum[CataloguesEnum.tortas]: {
+        this.title = 'tortas';
+        return CataloguesEnum.tortas;
+      }
+      case CataloguesEnum[CataloguesEnum.emporio]: {
+        this.title = 'emporio';
+        return CataloguesEnum.emporio;
+      }
+      case CataloguesEnum[CataloguesEnum.chocolateria]: {
+        this.title = 'chocolateria';
+        return CataloguesEnum.chocolateria;
+      }
+      default: {
+        return null;
+      }
+    }
+  }
+
+  private getAllCategoriesByCatalogue(id: number){
+    const findAllByCatalogue$: Subscription = this.categoryService.findAllByCatalogue(id).subscribe(data => {
+      let categories: Category[] = data as Category[];
+      this.store.dispatch({ type: CategoryActionTypes.Load });
+      this.store.dispatch({ type: CategoryActionTypes.Read, payload: categories });
+    });
+    this.subscriptions$.push(findAllByCatalogue$);
+  }
+
+  private getAllProductsByCatalogue(id: number){
+    const findAllProductsByCatalogue$: Subscription = this.productService.findAllActivesByCatalogue(id).subscribe(data => {
       this.products = data as Product[];
       this.isMainProductsLoaded = true;
     });
+    this.subscriptions$.push(findAllProductsByCatalogue$);
+  }
 
-    //MOCK
+  private getAllProducts(){
+    const findAllProducts$: Subscription = this.productService.findAllActives().subscribe(data => {
+      this.products = data as Product[];
+      this.isMainProductsLoaded = true;
+    });
+    this.subscriptions$.push(findAllProducts$);
+
+    // MOCK
     // this.productMockService.findAllActives().subscribe(data => {
     //   this.products = data as Product[];
     //   this.isMainProductsLoaded = true;
@@ -129,12 +197,13 @@ export class CollectionLeftSidebarComponent implements OnInit {
   }
 
   private getAllNewProducts(){
-    this.productService.findAllActivesNew().subscribe(data => {
+    const findAllNewProducts$: Subscription = this.productService.findAllActivesNew().subscribe(data => {
       this.newProducts = data as Product[];
       this.isNewProductsLoaded = true;
     });
+    this.subscriptions$.push(findAllNewProducts$);
 
-    //MOCK
+    // MOCK
     // this.productMockService.findAllActives().subscribe(data => {
     //   this.newProducts = [];
     //   let allProducts: Product[] = data as Product[];
@@ -148,12 +217,13 @@ export class CollectionLeftSidebarComponent implements OnInit {
   }
 
   private getAllTags(){
-    this.tagService.findAll().subscribe(data => {
+    const findAllTags$: Subscription = this.tagService.findAll().subscribe(data => {
       this.tags = data as Tag[];
       this.isTagsLoaded = true;
     });
+    this.subscriptions$.push(findAllTags$);
 
-    //MOCK
+    // MOCK
     // this.tagMockservice.findAll().subscribe(data => {
     //   this.tags = data as Tag[];
     //   this.isTagsLoaded = true;
@@ -161,12 +231,13 @@ export class CollectionLeftSidebarComponent implements OnInit {
   }
 
   private getAllProductByCategory(idCategory: number){
-    this.productService.findAllActivesByCategory(idCategory).subscribe(data => {
+    const findAllActivesByCategory$: Subscription = this.productService.findAllActivesByCategory(idCategory).subscribe(data => {
       this.products = data as Product[];
       this.isMainProductsLoaded = true;
     });
+    this.subscriptions$.push(findAllActivesByCategory$);
 
-    //MOCK
+    // MOCK
     // this.productMockService.findAllActives().subscribe(data => {
     //   this.products = [];
     //   let allProducts: Product[] = data as Product[];

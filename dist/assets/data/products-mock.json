@@ -4,21 +4,22 @@
         "barcode": null,
         "title": "Torta Rosa",
         "description": "Biscocho blanco, crema vegetal, mermelada de frambuesa, frambuesa natural, puede ser sin lactosa, con Stevia. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 19990.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 19990.00,
+        "currentTotalPrice": 19990.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773272,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 4,
             "name": "Fechas Importantes",
-            "created": 1599580773250,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -26,14 +27,14 @@
                 "idImage": 69,
                 "alt": "torta_rosa_02",
                 "src": "assets/dulcelia-demo/products/torta_rosa_02.jpg",
-                "created": 1599580773212,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 68,
                 "alt": "torta_rosa_01",
                 "src": "assets/dulcelia-demo/products/torta_rosa_01.jpg",
-                "created": 1599580773210,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -41,68 +42,145 @@
             {
                 "idCategory": 1,
                 "name": "Tortas Tradicionáles",
-                "created": 1599580771425,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 2,
-                "name": "Sin lactosa",
-                "created": 1599580773049,
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 5,
-                "name": "Con stevia",
-                "created": 1599580773057,
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 2,
+                "optionName": "Sin Lactosa"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 1,
+                "sku": null,
+                "basePriceAmount": 54500.00,
+                "totalPriceAmount": 54500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 5,
+                "sku": null,
+                "basePriceAmount": 24500.00,
+                "totalPriceAmount": 24500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 2,
+                "sku": null,
+                "basePriceAmount": 43500.00,
+                "totalPriceAmount": 43500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 3,
+                "sku": null,
+                "basePriceAmount": 19990.00,
+                "totalPriceAmount": 19990.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 4,
+                "sku": null,
+                "basePriceAmount": 34500.00,
+                "totalPriceAmount": 34500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 2,
         "barcode": null,
         "title": "Selva Negra",
         "description": "Biscocho Negro, crema vegetal, mermelada de frambuesa, frambuesa natural, guindas, cacao, chocolate. puede ser sin lactosa y  con Stevia. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 19990.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 19990.00,
+        "currentTotalPrice": 19990.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773441,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 2,
             "name": "Populares",
-            "created": 1599580773245,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
             {
-                "idImage": 37,
-                "alt": "selva_negra_01",
-                "src": "assets/dulcelia-demo/products/selva_negra_01.jpg",
-                "created": 1599580773148,
-                "modified": null
-            },
-            {
                 "idImage": 38,
                 "alt": "selva_negra_02",
                 "src": "assets/dulcelia-demo/products/selva_negra_02.jpg",
-                "created": 1599580773150,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 39,
                 "alt": "selva_negra_03",
                 "src": "assets/dulcelia-demo/products/selva_negra_03.jpg",
-                "created": 1599580773152,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -110,46 +188,130 @@
             {
                 "idCategory": 1,
                 "name": "Tortas Tradicionáles",
-                "created": 1599580771425,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 2,
-                "name": "Sin lactosa",
-                "created": 1599580773049,
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 5,
-                "name": "Con stevia",
-                "created": 1599580773057,
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 2,
+                "optionName": "Sin Lactosa"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 10,
+                "sku": null,
+                "basePriceAmount": 19990.00,
+                "totalPriceAmount": 19990.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 6,
+                "sku": null,
+                "basePriceAmount": 34500.00,
+                "totalPriceAmount": 34500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 7,
+                "sku": null,
+                "basePriceAmount": 54500.00,
+                "totalPriceAmount": 54500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 9,
+                "sku": null,
+                "basePriceAmount": 43500.00,
+                "totalPriceAmount": 43500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 8,
+                "sku": null,
+                "basePriceAmount": 24500.00,
+                "totalPriceAmount": 24500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 3,
         "barcode": null,
         "title": "Torta de Piña",
         "description": "Biscocho blanco, crema vegetal y piña natural. Puede ser sin lactosa y con Stevia Torta para 15 personas..",
-        "isNew": true,
-        "rating": 0,
-        "price": 19990.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 19990.00,
+        "currentTotalPrice": 19990.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773448,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 2,
             "name": "Populares",
-            "created": 1599580773245,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -157,21 +319,21 @@
                 "idImage": 65,
                 "alt": "torta_pina_01",
                 "src": "assets/dulcelia-demo/products/torta_pina_01.jpg",
-                "created": 1599580773204,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 67,
                 "alt": "torta_pina_03",
                 "src": "assets/dulcelia-demo/products/torta_pina_03.jpg",
-                "created": 1599580773208,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 66,
                 "alt": "torta_pina_02",
                 "src": "assets/dulcelia-demo/products/torta_pina_02.jpg",
-                "created": 1599580773206,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -179,46 +341,130 @@
             {
                 "idCategory": 1,
                 "name": "Tortas Tradicionáles",
-                "created": 1599580771425,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 2,
-                "name": "Sin lactosa",
-                "created": 1599580773049,
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 5,
-                "name": "Con stevia",
-                "created": 1599580773057,
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 2,
+                "optionName": "Sin Lactosa"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 13,
+                "sku": null,
+                "basePriceAmount": 24500.00,
+                "totalPriceAmount": 24500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 11,
+                "sku": null,
+                "basePriceAmount": 34500.00,
+                "totalPriceAmount": 34500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 12,
+                "sku": null,
+                "basePriceAmount": 43500.00,
+                "totalPriceAmount": 43500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 14,
+                "sku": null,
+                "basePriceAmount": 54500.00,
+                "totalPriceAmount": 54500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 15,
+                "sku": null,
+                "basePriceAmount": 19990.00,
+                "totalPriceAmount": 19990.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 4,
         "barcode": null,
         "title": "Torta de Lúcuma",
         "description": "Biscocho Blanco, crema vegetal con  Pulpa de lúcuma natural, puede ser con nuez o durazno. Sin lactosa y con Stevia. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 19990.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 19990.00,
+        "currentTotalPrice": 19990.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773456,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 3,
             "name": "Más Vendidos",
-            "created": 1599580773247,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -226,7 +472,7 @@
                 "idImage": 77,
                 "alt": "torta_lucuma_01",
                 "src": "assets/dulcelia-demo/products/torta_lucuma_01.jpg",
-                "created": 1599580773229,
+                "created": "17/11/2020 21:07:29",
                 "modified": null
             }
         ],
@@ -234,82 +480,166 @@
             {
                 "idCategory": 1,
                 "name": "Tortas Tradicionáles",
-                "created": 1599580771425,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 2,
-                "name": "Sin lactosa",
-                "created": 1599580773049,
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 5,
-                "name": "Con stevia",
-                "created": 1599580773057,
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 2,
+                "optionName": "Sin Lactosa"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 16,
+                "sku": null,
+                "basePriceAmount": 54500.00,
+                "totalPriceAmount": 54500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 19,
+                "sku": null,
+                "basePriceAmount": 19990.00,
+                "totalPriceAmount": 19990.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 17,
+                "sku": null,
+                "basePriceAmount": 24500.00,
+                "totalPriceAmount": 24500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 20,
+                "sku": null,
+                "basePriceAmount": 43500.00,
+                "totalPriceAmount": 43500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 18,
+                "sku": null,
+                "basePriceAmount": 34500.00,
+                "totalPriceAmount": 34500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 5,
         "barcode": null,
         "title": "Torta de Chocolate",
         "description": "Biscocho negro, crema vegetal, cobertura de chocolate con o sin azúcar 70% cacao. Puede ser sin lactosa, con sucralosa. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 19990.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 19990.00,
+        "currentTotalPrice": 19990.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773460,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 3,
             "name": "Más Vendidos",
-            "created": 1599580773247,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
             {
-                "idImage": 52,
-                "alt": "torta_chocolate_04",
-                "src": "assets/dulcelia-demo/products/torta_chocolate_04.jpg",
-                "created": 1599580773178,
+                "idImage": 49,
+                "alt": "torta_chocolate_01",
+                "src": "assets/dulcelia-demo/products/torta_chocolate_01.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 51,
                 "alt": "torta_chocolate_03",
                 "src": "assets/dulcelia-demo/products/torta_chocolate_03.jpg",
-                "created": 1599580773176,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idImage": 50,
-                "alt": "torta_chocolate_02",
-                "src": "assets/dulcelia-demo/products/torta_chocolate_02.jpg",
-                "created": 1599580773174,
-                "modified": null
-            },
-            {
-                "idImage": 49,
-                "alt": "torta_chocolate_01",
-                "src": "assets/dulcelia-demo/products/torta_chocolate_01.jpg",
-                "created": 1599580773172,
+                "idImage": 52,
+                "alt": "torta_chocolate_04",
+                "src": "assets/dulcelia-demo/products/torta_chocolate_04.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 53,
                 "alt": "torta_chocolate_05",
                 "src": "assets/dulcelia-demo/products/torta_chocolate_05.jpg",
-                "created": 1599580773180,
+                "created": "17/11/2020 21:07:28",
+                "modified": null
+            },
+            {
+                "idImage": 50,
+                "alt": "torta_chocolate_02",
+                "src": "assets/dulcelia-demo/products/torta_chocolate_02.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -317,61 +647,145 @@
             {
                 "idCategory": 1,
                 "name": "Tortas Tradicionáles",
-                "created": 1599580771425,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
                 "idTag": 6,
                 "name": "Con sucralosa",
-                "created": 1599580773059,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idTag": 2,
                 "name": "Sin lactosa",
-                "created": 1599580773049,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 5,
+                "optionName": "Sin Sucralosa"
+            },
+            {
+                "idOption": 2,
+                "optionName": "Sin Lactosa"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 21,
+                "sku": null,
+                "basePriceAmount": 34500.00,
+                "totalPriceAmount": 34500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 22,
+                "sku": null,
+                "basePriceAmount": 24500.00,
+                "totalPriceAmount": 24500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 24,
+                "sku": null,
+                "basePriceAmount": 43500.00,
+                "totalPriceAmount": 43500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 25,
+                "sku": null,
+                "basePriceAmount": 19990.00,
+                "totalPriceAmount": 19990.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 23,
+                "sku": null,
+                "basePriceAmount": 54500.00,
+                "totalPriceAmount": 54500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 6,
         "barcode": null,
         "title": "Torta de Fruta",
         "description": "Biscocho Blanco, crema vegetal, Piña, Mango o Fruta de la temporada. Sin lactosa, con o sin Stevia. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 19990.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 19990.00,
+        "currentTotalPrice": 19990.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773468,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 3,
             "name": "Más Vendidos",
-            "created": 1599580773247,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
             {
-                "idImage": 24,
-                "alt": "fruta_02",
-                "src": "assets/dulcelia-demo/products/fruta_02.jpg",
-                "created": 1599580773122,
-                "modified": null
-            },
-            {
                 "idImage": 23,
                 "alt": "fruta_01",
                 "src": "assets/dulcelia-demo/products/fruta_01.jpg",
-                "created": 1599580773119,
+                "created": "17/11/2020 21:07:28",
+                "modified": null
+            },
+            {
+                "idImage": 24,
+                "alt": "fruta_02",
+                "src": "assets/dulcelia-demo/products/fruta_02.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -379,46 +793,130 @@
             {
                 "idCategory": 1,
                 "name": "Tortas Tradicionáles",
-                "created": 1599580771425,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 2,
-                "name": "Sin lactosa",
-                "created": 1599580773049,
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 5,
-                "name": "Con stevia",
-                "created": 1599580773057,
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 2,
+                "optionName": "Sin Lactosa"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 27,
+                "sku": null,
+                "basePriceAmount": 34500.00,
+                "totalPriceAmount": 34500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 30,
+                "sku": null,
+                "basePriceAmount": 43500.00,
+                "totalPriceAmount": 43500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 26,
+                "sku": null,
+                "basePriceAmount": 19990.00,
+                "totalPriceAmount": 19990.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 29,
+                "sku": null,
+                "basePriceAmount": 54500.00,
+                "totalPriceAmount": 54500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 28,
+                "sku": null,
+                "basePriceAmount": 24500.00,
+                "totalPriceAmount": 24500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 7,
         "barcode": null,
         "title": "Torta de Moka",
         "description": "Biscocho negro, crema vegetal, cobertura de chocolate con o sin azúcar 70% cacao. Puede ser sin lactosa, con sucralosa. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 19990.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 19990.00,
+        "currentTotalPrice": 19990.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773473,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 3,
             "name": "Más Vendidos",
-            "created": 1599580773247,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -426,14 +924,14 @@
                 "idImage": 60,
                 "alt": "torta_moka_02",
                 "src": "assets/dulcelia-demo/products/torta_moka_02.jpg",
-                "created": 1599580773194,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 59,
                 "alt": "torta_moka_01",
                 "src": "assets/dulcelia-demo/products/torta_moka_01.jpg",
-                "created": 1599580773192,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -441,46 +939,130 @@
             {
                 "idCategory": 1,
                 "name": "Tortas Tradicionáles",
-                "created": 1599580771425,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 2,
-                "name": "Sin lactosa",
-                "created": 1599580773049,
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 5,
-                "name": "Con stevia",
-                "created": 1599580773057,
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 2,
+                "optionName": "Sin Lactosa"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 35,
+                "sku": null,
+                "basePriceAmount": 54500.00,
+                "totalPriceAmount": 54500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 31,
+                "sku": null,
+                "basePriceAmount": 19990.00,
+                "totalPriceAmount": 19990.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 34,
+                "sku": null,
+                "basePriceAmount": 43500.00,
+                "totalPriceAmount": 43500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 33,
+                "sku": null,
+                "basePriceAmount": 24500.00,
+                "totalPriceAmount": 24500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 32,
+                "sku": null,
+                "basePriceAmount": 34500.00,
+                "totalPriceAmount": 34500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 8,
         "barcode": null,
         "title": "Torta Mousse de Frutas",
         "description": "Biscocho Blanco, crema vegetal, yogurt, Frutilla. Puede ser Sin lactosa, con o sin Stevia. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 19990.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 19990.00,
+        "currentTotalPrice": 19990.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773478,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 2,
             "name": "Populares",
-            "created": 1599580773245,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -488,7 +1070,7 @@
                 "idImage": 30,
                 "alt": "mousse_frutilla_01",
                 "src": "assets/dulcelia-demo/products/mousse_frutilla_01.jpg",
-                "created": 1599580773135,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -496,46 +1078,130 @@
             {
                 "idCategory": 1,
                 "name": "Tortas Tradicionáles",
-                "created": 1599580771425,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 2,
-                "name": "Sin lactosa",
-                "created": 1599580773049,
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 5,
-                "name": "Con stevia",
-                "created": 1599580773057,
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 2,
+                "optionName": "Sin Lactosa"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 39,
+                "sku": null,
+                "basePriceAmount": 19990.00,
+                "totalPriceAmount": 19990.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 38,
+                "sku": null,
+                "basePriceAmount": 34500.00,
+                "totalPriceAmount": 34500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 36,
+                "sku": null,
+                "basePriceAmount": 54500.00,
+                "totalPriceAmount": 54500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 37,
+                "sku": null,
+                "basePriceAmount": 24500.00,
+                "totalPriceAmount": 24500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 40,
+                "sku": null,
+                "basePriceAmount": 43500.00,
+                "totalPriceAmount": 43500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 9,
         "barcode": null,
         "title": "Torta de Naranja",
         "description": "Biscocho negro, crema de chocolate, mermelada de frambueza y damasco, bañado en chocolate. Puede ser sin azúcar o sin leche. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 21500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 21500.00,
+        "currentTotalPrice": 21500.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773483,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 1,
             "name": "Destacados",
-            "created": 1599580773240,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -543,7 +1209,7 @@
                 "idImage": 62,
                 "alt": "torta_naranja_01",
                 "src": "assets/dulcelia-demo/products/torta_naranja_01.jpg",
-                "created": 1599580773197,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -551,61 +1217,145 @@
             {
                 "idCategory": 2,
                 "name": "Tortas de Vanguardia",
-                "created": 1599580773029,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 4,
-                "name": "Sin leche",
-                "created": 1599580773055,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 42,
+                "sku": null,
+                "basePriceAmount": 21500.00,
+                "totalPriceAmount": 21500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 45,
+                "sku": null,
+                "basePriceAmount": 55500.00,
+                "totalPriceAmount": 55500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 43,
+                "sku": null,
+                "basePriceAmount": 44900.00,
+                "totalPriceAmount": 44900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 44,
+                "sku": null,
+                "basePriceAmount": 35900.00,
+                "totalPriceAmount": 35900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 41,
+                "sku": null,
+                "basePriceAmount": 26500.00,
+                "totalPriceAmount": 26500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 10,
         "barcode": null,
         "title": "Torta Frutos del Bosque",
         "description": "Biscocho negro, crema vegetal, crema de chocolate, mermelada de berries, berries naturales. Puede ser sin azúcar o sin leche. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 21500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 21500.00,
+        "currentTotalPrice": 21500.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773487,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 1,
             "name": "Destacados",
-            "created": 1599580773240,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
             {
-                "idImage": 25,
-                "alt": "frutos_del_bosque_01",
-                "src": "assets/dulcelia-demo/products/frutos_del_bosque_01.jpg",
-                "created": 1599580773124,
-                "modified": null
-            },
-            {
                 "idImage": 26,
                 "alt": "frutos_del_bosque_02",
                 "src": "assets/dulcelia-demo/products/frutos_del_bosque_02.jpg",
-                "created": 1599580773126,
+                "created": "17/11/2020 21:07:28",
+                "modified": null
+            },
+            {
+                "idImage": 25,
+                "alt": "frutos_del_bosque_01",
+                "src": "assets/dulcelia-demo/products/frutos_del_bosque_01.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -613,46 +1363,130 @@
             {
                 "idCategory": 2,
                 "name": "Tortas de Vanguardia",
-                "created": 1599580773029,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 4,
-                "name": "Sin leche",
-                "created": 1599580773055,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 50,
+                "sku": null,
+                "basePriceAmount": 55500.00,
+                "totalPriceAmount": 55500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 48,
+                "sku": null,
+                "basePriceAmount": 21500.00,
+                "totalPriceAmount": 21500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 46,
+                "sku": null,
+                "basePriceAmount": 35900.00,
+                "totalPriceAmount": 35900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 49,
+                "sku": null,
+                "basePriceAmount": 44900.00,
+                "totalPriceAmount": 44900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 47,
+                "sku": null,
+                "basePriceAmount": 26500.00,
+                "totalPriceAmount": 26500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 11,
         "barcode": null,
         "title": "Torta Oriente",
         "description": "Biscocho blanco, crema vegetal, mousse de pistacho y almendras. Puede ser sin azúcar o sin leche. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 22500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 22500.00,
+        "currentTotalPrice": 22500.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773492,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 1,
             "name": "Destacados",
-            "created": 1599580773240,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -660,14 +1494,14 @@
                 "idImage": 63,
                 "alt": "torta_oriente_01",
                 "src": "assets/dulcelia-demo/products/torta_oriente_01.jpg",
-                "created": 1599580773200,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 64,
                 "alt": "torta_oriente_02",
                 "src": "assets/dulcelia-demo/products/torta_oriente_02.jpg",
-                "created": 1599580773202,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -675,46 +1509,130 @@
             {
                 "idCategory": 2,
                 "name": "Tortas de Vanguardia",
-                "created": 1599580773029,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 4,
-                "name": "Sin leche",
-                "created": 1599580773055,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 54,
+                "sku": null,
+                "basePriceAmount": 44900.00,
+                "totalPriceAmount": 44900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 53,
+                "sku": null,
+                "basePriceAmount": 22500.00,
+                "totalPriceAmount": 22500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 55,
+                "sku": null,
+                "basePriceAmount": 55500.00,
+                "totalPriceAmount": 55500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 52,
+                "sku": null,
+                "basePriceAmount": 35900.00,
+                "totalPriceAmount": 35900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 51,
+                "sku": null,
+                "basePriceAmount": 26500.00,
+                "totalPriceAmount": 26500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 12,
         "barcode": null,
         "title": "Torta Tres Leches",
         "description": "Biscocho blanco, crema vegetal, leche condensada, leche evaporada, merengue de huevo natural. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 21500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 21500.00,
+        "currentTotalPrice": 21500.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773497,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 1,
             "name": "Destacados",
-            "created": 1599580773240,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -722,14 +1640,14 @@
                 "idImage": 70,
                 "alt": "torta_tres_leches_01",
                 "src": "assets/dulcelia-demo/products/torta_tres_leches_01.jpg",
-                "created": 1599580773214,
+                "created": "17/11/2020 21:07:29",
                 "modified": null
             },
             {
                 "idImage": 71,
                 "alt": "torta_tres_leches_02",
                 "src": "assets/dulcelia-demo/products/torta_tres_leches_02.jpg",
-                "created": 1599580773216,
+                "created": "17/11/2020 21:07:29",
                 "modified": null
             }
         ],
@@ -737,46 +1655,130 @@
             {
                 "idCategory": 2,
                 "name": "Tortas de Vanguardia",
-                "created": 1599580773029,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 3,
-                "name": "Sin gluten",
-                "created": 1599580773053,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 3,
+                "optionName": "Sin Gluten"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 59,
+                "sku": null,
+                "basePriceAmount": 55500.00,
+                "totalPriceAmount": 55500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 56,
+                "sku": null,
+                "basePriceAmount": 44900.00,
+                "totalPriceAmount": 44900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 57,
+                "sku": null,
+                "basePriceAmount": 21500.00,
+                "totalPriceAmount": 21500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 58,
+                "sku": null,
+                "basePriceAmount": 35900.00,
+                "totalPriceAmount": 35900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 60,
+                "sku": null,
+                "basePriceAmount": 26500.00,
+                "totalPriceAmount": 26500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 13,
         "barcode": null,
         "title": "Torta Sachertorte",
         "description": "Biscocho negro, crema de chocolate, mermelada de frambueza y damasco, bañado en chocolate. Puede ser sin azúcar o sin leche. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 21500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 21500.00,
+        "currentTotalPrice": 21500.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773502,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 1,
             "name": "Destacados",
-            "created": 1599580773240,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -784,7 +1786,7 @@
                 "idImage": 36,
                 "alt": "sachertorte_01",
                 "src": "assets/dulcelia-demo/products/sachertorte_01.jpg",
-                "created": 1599580773146,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -792,46 +1794,130 @@
             {
                 "idCategory": 2,
                 "name": "Tortas de Vanguardia",
-                "created": 1599580773029,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 4,
-                "name": "Sin leche",
-                "created": 1599580773055,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 65,
+                "sku": null,
+                "basePriceAmount": 35900.00,
+                "totalPriceAmount": 35900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 62,
+                "sku": null,
+                "basePriceAmount": 44900.00,
+                "totalPriceAmount": 44900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 64,
+                "sku": null,
+                "basePriceAmount": 55500.00,
+                "totalPriceAmount": 55500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 63,
+                "sku": null,
+                "basePriceAmount": 21500.00,
+                "totalPriceAmount": 21500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 61,
+                "sku": null,
+                "basePriceAmount": 26500.00,
+                "totalPriceAmount": 26500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 14,
         "barcode": null,
         "title": "Torta Hojarasca Manjar",
         "description": "Hojarasca, manjar con crema vegetal. Puede ser sin azúcar o sin leche. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 21500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 21500.00,
+        "currentTotalPrice": 21500.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773506,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 1,
             "name": "Destacados",
-            "created": 1599580773240,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -839,7 +1925,7 @@
                 "idImage": 54,
                 "alt": "torta_hojarasca_manjar_01",
                 "src": "assets/dulcelia-demo/products/torta_hojarasca_manjar_01.jpg",
-                "created": 1599580773182,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -847,46 +1933,130 @@
             {
                 "idCategory": 2,
                 "name": "Tortas de Vanguardia",
-                "created": 1599580773029,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 4,
-                "name": "Sin leche",
-                "created": 1599580773055,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 67,
+                "sku": null,
+                "basePriceAmount": 44900.00,
+                "totalPriceAmount": 44900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 70,
+                "sku": null,
+                "basePriceAmount": 21500.00,
+                "totalPriceAmount": 21500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 69,
+                "sku": null,
+                "basePriceAmount": 35900.00,
+                "totalPriceAmount": 35900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 66,
+                "sku": null,
+                "basePriceAmount": 55500.00,
+                "totalPriceAmount": 55500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 68,
+                "sku": null,
+                "basePriceAmount": 26500.00,
+                "totalPriceAmount": 26500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 15,
         "barcode": null,
         "title": "Torta de Manjar Chocolate",
         "description": "Torta de mankar y chocolate. Puede ser sin azúcar o sin leche. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 21500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 21500.00,
+        "currentTotalPrice": 21500.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773510,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 1,
             "name": "Destacados",
-            "created": 1599580773240,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -894,7 +2064,7 @@
                 "idImage": 78,
                 "alt": "torta_manjar_01",
                 "src": "assets/dulcelia-demo/products/torta_manjar_01.jpg",
-                "created": 1599580773231,
+                "created": "17/11/2020 21:07:29",
                 "modified": null
             }
         ],
@@ -902,46 +2072,130 @@
             {
                 "idCategory": 2,
                 "name": "Tortas de Vanguardia",
-                "created": 1599580773029,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 4,
-                "name": "Sin leche",
-                "created": 1599580773055,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 72,
+                "sku": null,
+                "basePriceAmount": 26500.00,
+                "totalPriceAmount": 26500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 75,
+                "sku": null,
+                "basePriceAmount": 44900.00,
+                "totalPriceAmount": 44900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 73,
+                "sku": null,
+                "basePriceAmount": 55500.00,
+                "totalPriceAmount": 55500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 74,
+                "sku": null,
+                "basePriceAmount": 21500.00,
+                "totalPriceAmount": 21500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 71,
+                "sku": null,
+                "basePriceAmount": 35900.00,
+                "totalPriceAmount": 35900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 16,
         "barcode": null,
         "title": "Torta Matcha",
         "description": "Torta insignia de Dulcelia. Sin gluten y puede ser sin azúcar o sin leche. Torta para 15 personas.",
-        "isNew": true,
-        "rating": 0,
-        "price": 22500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 22500.00,
+        "currentTotalPrice": 22500.00,
         "stock": null,
+        "isCapacityQty": true,
         "isActive": true,
-        "created": 1599580773514,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 1,
             "name": "Destacados",
-            "created": 1599580773240,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -949,21 +2203,21 @@
                 "idImage": 57,
                 "alt": "torta_matcha_02",
                 "src": "assets/dulcelia-demo/products/torta_matcha_02.jpg",
-                "created": 1599580773188,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 58,
                 "alt": "torta_matcha_03",
                 "src": "assets/dulcelia-demo/products/torta_matcha_03.jpg",
-                "created": 1599580773190,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 56,
                 "alt": "torta_matcha_01",
                 "src": "assets/dulcelia-demo/products/torta_matcha_01.jpg",
-                "created": 1599580773186,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -971,68 +2225,152 @@
             {
                 "idCategory": 2,
                 "name": "Tortas de Vanguardia",
-                "created": 1599580773029,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 4,
-                "name": "Sin leche",
-                "created": 1599580773055,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 79,
+                "sku": null,
+                "basePriceAmount": 55500.00,
+                "totalPriceAmount": 55500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 50,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 77,
+                "sku": null,
+                "basePriceAmount": 35900.00,
+                "totalPriceAmount": 35900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 30,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 76,
+                "sku": null,
+                "basePriceAmount": 22500.00,
+                "totalPriceAmount": 22500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 78,
+                "sku": null,
+                "basePriceAmount": 44900.00,
+                "totalPriceAmount": 44900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 40,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            },
+            {
+                "idVariant": 80,
+                "sku": null,
+                "basePriceAmount": 26500.00,
+                "totalPriceAmount": 26500.00,
+                "unitQuantity": null,
+                "clientsCapacity": 20,
+                "isSelected": false,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 17,
         "barcode": null,
         "title": "Cupcakes Tradicionáles",
         "description": "Los cupcakes tradicionáles que conoces. Pueden ser con mousse de chocolate o manjar. Sin gluten y sin lactosa. El precio es por cada unidad.",
-        "isNew": true,
-        "rating": 0,
-        "price": 1500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 1500.00,
+        "currentTotalPrice": 1500.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773519,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 2,
             "name": "Populares",
-            "created": 1599580773245,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
             {
-                "idImage": 19,
-                "alt": "cupcake_tradicional_03",
-                "src": "assets/dulcelia-demo/products/cupcake_tradicional_03.jpg",
-                "created": 1599580773109,
+                "idImage": 18,
+                "alt": "cupcake_tradicional_02",
+                "src": "assets/dulcelia-demo/products/cupcake_tradicional_02.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 17,
                 "alt": "cupcake_tradicional_01",
                 "src": "assets/dulcelia-demo/products/cupcake_tradicional_01.jpg",
-                "created": 1599580773104,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idImage": 18,
-                "alt": "cupcake_tradicional_02",
-                "src": "assets/dulcelia-demo/products/cupcake_tradicional_02.jpg",
-                "created": 1599580773107,
+                "idImage": 19,
+                "alt": "cupcake_tradicional_03",
+                "src": "assets/dulcelia-demo/products/cupcake_tradicional_03.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -1040,95 +2378,121 @@
             {
                 "idCategory": 3,
                 "name": "Coctel",
-                "created": 1599580773032,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 3,
-                "name": "Sin gluten",
-                "created": 1599580773053,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idTag": 4,
                 "name": "Sin leche",
-                "created": 1599580773055,
-                "modified": null
-            },
-            {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 81,
+                "sku": null,
+                "basePriceAmount": 1500.00,
+                "totalPriceAmount": 1500.00,
+                "unitQuantity": 1,
+                "clientsCapacity": null,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:29",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 18,
         "barcode": null,
         "title": "Cupcakes con Diseño",
         "description": "Cupcakes con diferentes diseños, colores y adornos. Pueden ser con mousse de chocolate o manjar. Sin gluten y sin lactosa. El precio es por cada unidad.",
-        "isNew": true,
-        "rating": 0,
-        "price": 1800.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 1800.00,
+        "currentTotalPrice": 1800.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773525,
+        "created": "17/11/2020 21:07:29",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 2,
             "name": "Populares",
-            "created": 1599580773245,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
             {
-                "idImage": 12,
-                "alt": "cupcake_diseno_02",
-                "src": "assets/dulcelia-demo/products/cupcake_diseno_02.jpg",
-                "created": 1599580773092,
-                "modified": null
-            },
-            {
-                "idImage": 14,
-                "alt": "cupcake_diseno_04",
-                "src": "assets/dulcelia-demo/products/cupcake_diseno_04.jpg",
-                "created": 1599580773097,
+                "idImage": 11,
+                "alt": "cupcake_diseno_01",
+                "src": "assets/dulcelia-demo/products/cupcake_diseno_01.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 15,
                 "alt": "cupcake_diseno_05",
                 "src": "assets/dulcelia-demo/products/cupcake_diseno_05.jpg",
-                "created": 1599580773099,
+                "created": "17/11/2020 21:07:28",
+                "modified": null
+            },
+            {
+                "idImage": 12,
+                "alt": "cupcake_diseno_02",
+                "src": "assets/dulcelia-demo/products/cupcake_diseno_02.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 13,
                 "alt": "cupcake_diseno_03",
                 "src": "assets/dulcelia-demo/products/cupcake_diseno_03.jpg",
-                "created": 1599580773094,
-                "modified": null
-            },
-            {
-                "idImage": 11,
-                "alt": "cupcake_diseno_01",
-                "src": "assets/dulcelia-demo/products/cupcake_diseno_01.jpg",
-                "created": 1599580773090,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 16,
                 "alt": "cupcake_diseno_06",
                 "src": "assets/dulcelia-demo/products/cupcake_diseno_06.jpg",
-                "created": 1599580773102,
+                "created": "17/11/2020 21:07:28",
+                "modified": null
+            },
+            {
+                "idImage": 14,
+                "alt": "cupcake_diseno_04",
+                "src": "assets/dulcelia-demo/products/cupcake_diseno_04.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -1136,81 +2500,117 @@
             {
                 "idCategory": 3,
                 "name": "Coctel",
-                "created": 1599580773032,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 3,
-                "name": "Sin gluten",
-                "created": 1599580773053,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idTag": 4,
                 "name": "Sin leche",
-                "created": 1599580773055,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 3,
+                "optionName": "Sin Gluten"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 82,
+                "sku": null,
+                "basePriceAmount": 1800.00,
+                "totalPriceAmount": 1800.00,
+                "unitQuantity": 1,
+                "clientsCapacity": null,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 19,
         "barcode": null,
         "title": "Pastelitos Surtidos",
         "description": "100 Unidades.",
-        "isNew": true,
-        "rating": 0,
-        "price": 35500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 35500.00,
+        "currentTotalPrice": 35500.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773530,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 2,
             "name": "Populares",
-            "created": 1599580773245,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
             {
-                "idImage": 34,
-                "alt": "pastelitos_surtidos_04",
-                "src": "assets/dulcelia-demo/products/pastelitos_surtidos_04.jpg",
-                "created": 1599580773142,
-                "modified": null
-            },
-            {
-                "idImage": 31,
-                "alt": "pastelitos_surtidos_01",
-                "src": "assets/dulcelia-demo/products/pastelitos_surtidos_01.jpg",
-                "created": 1599580773137,
+                "idImage": 33,
+                "alt": "pastelitos_surtidos_03",
+                "src": "assets/dulcelia-demo/products/pastelitos_surtidos_03.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 32,
                 "alt": "pastelitos_surtidos_02",
                 "src": "assets/dulcelia-demo/products/pastelitos_surtidos_02.jpg",
-                "created": 1599580773139,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idImage": 33,
-                "alt": "pastelitos_surtidos_03",
-                "src": "assets/dulcelia-demo/products/pastelitos_surtidos_03.jpg",
-                "created": 1599580773141,
+                "idImage": 31,
+                "alt": "pastelitos_surtidos_01",
+                "src": "assets/dulcelia-demo/products/pastelitos_surtidos_01.jpg",
+                "created": "17/11/2020 21:07:28",
+                "modified": null
+            },
+            {
+                "idImage": 34,
+                "alt": "pastelitos_surtidos_04",
+                "src": "assets/dulcelia-demo/products/pastelitos_surtidos_04.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -1218,52 +2618,88 @@
             {
                 "idCategory": 3,
                 "name": "Coctel",
-                "created": 1599580773032,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 3,
-                "name": "Sin gluten",
-                "created": 1599580773053,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idTag": 4,
                 "name": "Sin leche",
-                "created": 1599580773055,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 3,
+                "optionName": "Sin Gluten"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 83,
+                "sku": null,
+                "basePriceAmount": 35500.00,
+                "totalPriceAmount": 35500.00,
+                "unitQuantity": 100,
+                "clientsCapacity": null,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 20,
         "barcode": null,
         "title": "Empanaditas Surtidas",
         "description": "Empanadas de pino, champiñón queso, verduras, camarones queso. Sin gluten, sin azucar y sin leche. 100 Unidades.",
-        "isNew": true,
-        "rating": 0,
-        "price": 35500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 35500.00,
+        "currentTotalPrice": 35500.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773537,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 2,
             "name": "Populares",
-            "created": 1599580773245,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -1271,7 +2707,7 @@
                 "idImage": 20,
                 "alt": "empanadas_01",
                 "src": "assets/dulcelia-demo/products/empanadas_01.jpg",
-                "created": 1599580773111,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -1279,52 +2715,88 @@
             {
                 "idCategory": 3,
                 "name": "Coctel",
-                "created": 1599580773032,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 3,
-                "name": "Sin gluten",
-                "created": 1599580773053,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idTag": 4,
                 "name": "Sin leche",
-                "created": 1599580773055,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 3,
+                "optionName": "Sin Gluten"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 84,
+                "sku": null,
+                "basePriceAmount": 35500.00,
+                "totalPriceAmount": 35500.00,
+                "unitQuantity": 100,
+                "clientsCapacity": null,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 21,
         "barcode": null,
         "title": "Canapes Surtidos",
         "description": "100 Unidades. ",
-        "isNew": true,
-        "rating": 0,
-        "price": 34900.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 34900.00,
+        "currentTotalPrice": 34900.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773541,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
-            "idCollection": 4,
-            "name": "Fechas Importantes",
-            "created": 1599580773250,
+            "idCollection": 2,
+            "name": "Populares",
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -1332,14 +2804,14 @@
                 "idImage": 72,
                 "alt": "canapes_01",
                 "src": "assets/dulcelia-demo/products/canapes_01.jpg",
-                "created": 1599580773218,
+                "created": "17/11/2020 21:07:29",
                 "modified": null
             },
             {
                 "idImage": 73,
                 "alt": "canapes_02",
                 "src": "assets/dulcelia-demo/products/canapes_02.jpg",
-                "created": 1599580773220,
+                "created": "17/11/2020 21:07:29",
                 "modified": null
             }
         ],
@@ -1347,67 +2819,103 @@
             {
                 "idCategory": 3,
                 "name": "Coctel",
-                "created": 1599580773032,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 3,
-                "name": "Sin gluten",
-                "created": 1599580773053,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idTag": 4,
                 "name": "Sin leche",
-                "created": 1599580773055,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 3,
+                "optionName": "Sin Gluten"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 85,
+                "sku": null,
+                "basePriceAmount": 34900.00,
+                "totalPriceAmount": 34900.00,
+                "unitQuantity": 100,
+                "clientsCapacity": null,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 22,
         "barcode": null,
         "title": "Tapaditos",
         "description": "100 Unidades. ",
-        "isNew": true,
-        "rating": 0,
-        "price": 34500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 34500.00,
+        "currentTotalPrice": 34500.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773546,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 3,
             "name": "Más Vendidos",
-            "created": 1599580773247,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
             {
-                "idImage": 79,
-                "alt": "tapaditos_01",
-                "src": "assets/dulcelia-demo/products/tapaditos_01.jpg",
-                "created": 1599580773234,
-                "modified": null
-            },
-            {
                 "idImage": 80,
                 "alt": "tapaditos_02",
                 "src": "assets/dulcelia-demo/products/tapaditos_02.jpg",
-                "created": 1599580773236,
+                "created": "17/11/2020 21:07:29",
+                "modified": null
+            },
+            {
+                "idImage": 79,
+                "alt": "tapaditos_01",
+                "src": "assets/dulcelia-demo/products/tapaditos_01.jpg",
+                "created": "17/11/2020 21:07:29",
                 "modified": null
             }
         ],
@@ -1415,67 +2923,103 @@
             {
                 "idCategory": 3,
                 "name": "Coctel",
-                "created": 1599580773032,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 3,
-                "name": "Sin gluten",
-                "created": 1599580773053,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idTag": 4,
                 "name": "Sin leche",
-                "created": 1599580773055,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 3,
+                "optionName": "Sin Gluten"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 86,
+                "sku": null,
+                "basePriceAmount": 34500.00,
+                "totalPriceAmount": 34500.00,
+                "unitQuantity": 100,
+                "clientsCapacity": null,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 23,
         "barcode": null,
         "title": "Tacitas de Chocolate",
         "description": "100 Unidades. Crema de diferentes sabores.",
-        "isNew": true,
-        "rating": 0,
-        "price": 35500.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 35500.00,
+        "currentTotalPrice": 35500.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773551,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 4,
             "name": "Fechas Importantes",
-            "created": 1599580773250,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
             {
-                "idImage": 48,
-                "alt": "tasitas_chocolate_02",
-                "src": "assets/dulcelia-demo/products/tasitas_chocolate_02.jpg",
-                "created": 1599580773170,
-                "modified": null
-            },
-            {
                 "idImage": 47,
                 "alt": "tasitas_chocolate_01",
                 "src": "assets/dulcelia-demo/products/tasitas_chocolate_01.jpg",
-                "created": 1599580773169,
+                "created": "17/11/2020 21:07:28",
+                "modified": null
+            },
+            {
+                "idImage": 48,
+                "alt": "tasitas_chocolate_02",
+                "src": "assets/dulcelia-demo/products/tasitas_chocolate_02.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -1483,52 +3027,88 @@
             {
                 "idCategory": 3,
                 "name": "Coctel",
-                "created": 1599580773032,
-                "modified": null
+                "created": "17/11/2020 21:07:27",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 3,
-                "name": "Sin gluten",
-                "created": 1599580773053,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idTag": 4,
                 "name": "Sin leche",
-                "created": 1599580773055,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 3,
+                "optionName": "Sin Gluten"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 87,
+                "sku": null,
+                "basePriceAmount": 35500.00,
+                "totalPriceAmount": 35500.00,
+                "unitQuantity": 100,
+                "clientsCapacity": null,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 24,
         "barcode": null,
         "title": "Alfajores",
         "description": "Caja de 12 unidades.Sin Gluten, Sin Lactosa con Stevia. Sin Azucar añadida.",
-        "isNew": true,
-        "rating": 0,
-        "price": 9800.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 9800.00,
+        "currentTotalPrice": 9800.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773555,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 3,
             "name": "Más Vendidos",
-            "created": 1599580773247,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -1536,14 +3116,14 @@
                 "idImage": 10,
                 "alt": "alfajores_02",
                 "src": "assets/dulcelia-demo/products/alfajores_02.jpg",
-                "created": 1599580773088,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 9,
                 "alt": "alfajores_01",
                 "src": "assets/dulcelia-demo/products/alfajores_01.jpg",
-                "created": 1599580773085,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -1551,67 +3131,103 @@
             {
                 "idCategory": 5,
                 "name": "Dulces",
-                "created": 1599580773037,
-                "modified": null
+                "created": "17/11/2020 21:07:28",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
+                "modified": null
+            },
+            {
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": "17/11/2020 21:07:28",
+                "modified": null
+            },
+            {
                 "idTag": 3,
                 "name": "Sin gluten",
-                "created": 1599580773053,
-                "modified": null
-            },
-            {
-                "idTag": 2,
-                "name": "Sin lactosa",
-                "created": 1599580773049,
-                "modified": null
-            },
-            {
-                "idTag": 5,
-                "name": "Con stevia",
-                "created": 1599580773057,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 3,
+                "optionName": "Sin Gluten"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 88,
+                "sku": null,
+                "basePriceAmount": 9800.00,
+                "totalPriceAmount": 9800.00,
+                "unitQuantity": 12,
+                "clientsCapacity": null,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 25,
         "barcode": null,
         "title": "Kuchen de Frutas",
         "description": "Kuchenes de diferentes frutas a elección. Puede ser sin lactosa, con sucralosa.",
-        "isNew": true,
-        "rating": 0,
-        "price": 17900.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 17900.00,
+        "currentTotalPrice": 17900.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773560,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 2,
             "name": "Populares",
-            "created": 1599580773245,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
             {
-                "idImage": 29,
-                "alt": "kuchen_manzana_01",
-                "src": "assets/dulcelia-demo/products/kuchen_manzana_01.jpg",
-                "created": 1599580773132,
-                "modified": null
-            },
-            {
                 "idImage": 28,
                 "alt": "kuchen_arandano_01",
                 "src": "assets/dulcelia-demo/products/kuchen_arandano_01.jpg",
-                "created": 1599580773130,
+                "created": "17/11/2020 21:07:28",
+                "modified": null
+            },
+            {
+                "idImage": 29,
+                "alt": "kuchen_manzana_01",
+                "src": "assets/dulcelia-demo/products/kuchen_manzana_01.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -1619,46 +3235,78 @@
             {
                 "idCategory": 5,
                 "name": "Dulces",
-                "created": 1599580773037,
-                "modified": null
+                "created": "17/11/2020 21:07:28",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 2,
-                "name": "Sin lactosa",
-                "created": 1599580773049,
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 5,
-                "name": "Con stevia",
-                "created": 1599580773057,
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 2,
+                "optionName": "Sin Lactosa"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 89,
+                "sku": null,
+                "basePriceAmount": 17900.00,
+                "totalPriceAmount": 17900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 26,
         "barcode": null,
         "title": "Tartaletas de Frutas de Temporada",
         "description": "Tartaletas de frutas de estación, a su elección. Puede ser sin lactosa, con sucralosa.",
-        "isNew": true,
-        "rating": 0,
-        "price": 17900.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 17900.00,
+        "currentTotalPrice": 17900.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773564,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 1,
             "name": "Destacados",
-            "created": 1599580773240,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -1666,42 +3314,42 @@
                 "idImage": 46,
                 "alt": "tartaleta_06",
                 "src": "assets/dulcelia-demo/products/tartaleta_06.jpg",
-                "created": 1599580773167,
-                "modified": null
-            },
-            {
-                "idImage": 44,
-                "alt": "tartaleta_04",
-                "src": "assets/dulcelia-demo/products/tartaleta_04.jpg",
-                "created": 1599580773162,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 43,
                 "alt": "tartaleta_03",
                 "src": "assets/dulcelia-demo/products/tartaleta_03.jpg",
-                "created": 1599580773160,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idImage": 45,
-                "alt": "tartaleta_05",
-                "src": "assets/dulcelia-demo/products/tartaleta_05.jpg",
-                "created": 1599580773164,
-                "modified": null
-            },
-            {
-                "idImage": 42,
-                "alt": "tartaleta_02",
-                "src": "assets/dulcelia-demo/products/tartaleta_02.jpg",
-                "created": 1599580773158,
+                "idImage": 44,
+                "alt": "tartaleta_04",
+                "src": "assets/dulcelia-demo/products/tartaleta_04.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 41,
                 "alt": "tartaleta_01",
                 "src": "assets/dulcelia-demo/products/tartaleta_01.jpg",
-                "created": 1599580773156,
+                "created": "17/11/2020 21:07:28",
+                "modified": null
+            },
+            {
+                "idImage": 42,
+                "alt": "tartaleta_02",
+                "src": "assets/dulcelia-demo/products/tartaleta_02.jpg",
+                "created": "17/11/2020 21:07:28",
+                "modified": null
+            },
+            {
+                "idImage": 45,
+                "alt": "tartaleta_05",
+                "src": "assets/dulcelia-demo/products/tartaleta_05.jpg",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -1709,46 +3357,78 @@
             {
                 "idCategory": 5,
                 "name": "Dulces",
-                "created": 1599580773037,
-                "modified": null
+                "created": "17/11/2020 21:07:28",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 4,
-                "name": "Sin leche",
-                "created": 1599580773055,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 4,
+                "name": "Sin leche",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 90,
+                "sku": null,
+                "basePriceAmount": 17900.00,
+                "totalPriceAmount": 17900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 27,
         "barcode": null,
         "title": "Pie de Limon",
         "description": "Pie de Limón sin gluten. Puede ser sin lactosa, con sucralosa.",
-        "isNew": true,
-        "rating": 0,
-        "price": 17900.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 17900.00,
+        "currentTotalPrice": 17900.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773571,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 2,
             "name": "Populares",
-            "created": 1599580773245,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -1756,7 +3436,7 @@
                 "idImage": 35,
                 "alt": "pie_limon_01",
                 "src": "assets/dulcelia-demo/products/pie_limon_01.jpg",
-                "created": 1599580773144,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -1764,61 +3444,93 @@
             {
                 "idCategory": 5,
                 "name": "Dulces",
-                "created": 1599580773037,
-                "modified": null
+                "created": "17/11/2020 21:07:28",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 2,
-                "name": "Sin lactosa",
-                "created": 1599580773049,
+                "idTag": 5,
+                "name": "Con stevia",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 5,
-                "name": "Con stevia",
-                "created": 1599580773057,
+                "idTag": 2,
+                "name": "Sin lactosa",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 2,
+                "optionName": "Sin Lactosa"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 91,
+                "sku": null,
+                "basePriceAmount": 17900.00,
+                "totalPriceAmount": 17900.00,
+                "unitQuantity": null,
+                "clientsCapacity": 16,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 28,
         "barcode": null,
         "title": "Pan de Molde",
         "description": "Sin gluten, Sin leche, Sin azúcar",
-        "isNew": true,
-        "rating": 0,
-        "price": 3300.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 3300.00,
+        "currentTotalPrice": 3300.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773575,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 3,
             "name": "Más Vendidos",
-            "created": 1599580773247,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
             {
-                "idImage": 75,
-                "alt": "pan_molde_02",
-                "src": "assets/dulcelia-demo/products/pan_molde_02.jpg",
-                "created": 1599580773225,
-                "modified": null
-            },
-            {
                 "idImage": 74,
                 "alt": "pan_molde_01",
                 "src": "assets/dulcelia-demo/products/pan_molde_01.jpg",
-                "created": 1599580773222,
+                "created": "17/11/2020 21:07:29",
+                "modified": null
+            },
+            {
+                "idImage": 75,
+                "alt": "pan_molde_02",
+                "src": "assets/dulcelia-demo/products/pan_molde_02.jpg",
+                "created": "17/11/2020 21:07:29",
                 "modified": null
             }
         ],
@@ -1826,52 +3538,88 @@
             {
                 "idCategory": 6,
                 "name": "Pan",
-                "created": 1599580773040,
-                "modified": null
+                "created": "17/11/2020 21:07:28",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 3,
-                "name": "Sin gluten",
-                "created": 1599580773053,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idTag": 4,
                 "name": "Sin leche",
-                "created": 1599580773055,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 3,
+                "optionName": "Sin Gluten"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 92,
+                "sku": null,
+                "basePriceAmount": 3300.00,
+                "totalPriceAmount": 3300.00,
+                "unitQuantity": 1,
+                "clientsCapacity": null,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 29,
         "barcode": null,
         "title": "Pan de Molde de Linaza",
         "description": "Sin gluten, Sin leche, Sin azúcar",
-        "isNew": true,
-        "rating": 0,
-        "price": 3800.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 3800.00,
+        "currentTotalPrice": 3800.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773579,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 3,
             "name": "Más Vendidos",
-            "created": 1599580773247,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -1879,7 +3627,7 @@
                 "idImage": 81,
                 "alt": "pan_linaza_01",
                 "src": "assets/dulcelia-demo/products/pan_linaza_01.jpg",
-                "created": 1599580773238,
+                "created": "17/11/2020 21:07:29",
                 "modified": null
             }
         ],
@@ -1887,52 +3635,88 @@
             {
                 "idCategory": 6,
                 "name": "Pan",
-                "created": 1599580773040,
-                "modified": null
+                "created": "17/11/2020 21:07:28",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 3,
-                "name": "Sin gluten",
-                "created": 1599580773053,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idTag": 4,
                 "name": "Sin leche",
-                "created": 1599580773055,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 3,
+                "optionName": "Sin Gluten"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 93,
+                "sku": null,
+                "basePriceAmount": 3800.00,
+                "totalPriceAmount": 3800.00,
+                "unitQuantity": 1,
+                "clientsCapacity": null,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 30,
         "barcode": null,
         "title": "Pan de Molde de Almendra",
         "description": "Sin gluten, Sin leche, Sin azúcar",
-        "isNew": true,
-        "rating": 0,
-        "price": 1800.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 1800.00,
+        "currentTotalPrice": 1800.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773584,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 3,
             "name": "Más Vendidos",
-            "created": 1599580773247,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -1940,7 +3724,7 @@
                 "idImage": 76,
                 "alt": "pan_almendra_01",
                 "src": "assets/dulcelia-demo/products/pan_almendra_01.jpg",
-                "created": 1599580773227,
+                "created": "17/11/2020 21:07:29",
                 "modified": null
             }
         ],
@@ -1948,52 +3732,88 @@
             {
                 "idCategory": 6,
                 "name": "Pan",
-                "created": 1599580773040,
-                "modified": null
+                "created": "17/11/2020 21:07:28",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 3,
-                "name": "Sin gluten",
-                "created": 1599580773053,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idTag": 4,
                 "name": "Sin leche",
-                "created": 1599580773055,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 3,
+                "optionName": "Sin Gluten"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 94,
+                "sku": null,
+                "basePriceAmount": 1800.00,
+                "totalPriceAmount": 1800.00,
+                "unitQuantity": 1,
+                "clientsCapacity": null,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     },
     {
         "idProduct": 31,
         "barcode": null,
         "title": "Empanadas",
         "description": "Sin gluten, sin azucar y sin leche.",
-        "isNew": true,
-        "rating": 0,
-        "price": 2300.00,
+        "isNew": false,
+        "rating": 3,
         "isSale": false,
         "discountPercentage": null,
-        "priceDiscount": null,
+        "currentBasePrice": 2300.00,
+        "currentTotalPrice": 2300.00,
         "stock": null,
+        "isCapacityQty": false,
         "isActive": true,
-        "created": 1599580773588,
+        "created": "17/11/2020 21:07:30",
         "modified": null,
         "brand": null,
         "collection": {
             "idCollection": 3,
             "name": "Más Vendidos",
-            "created": 1599580773247,
+            "created": "17/11/2020 21:07:29",
             "modified": null
         },
         "images": [
@@ -2001,21 +3821,21 @@
                 "idImage": 20,
                 "alt": "empanadas_01",
                 "src": "assets/dulcelia-demo/products/empanadas_01.jpg",
-                "created": 1599580773111,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 21,
                 "alt": "empanadas_02",
                 "src": "assets/dulcelia-demo/products/empanadas_02.jpg",
-                "created": 1599580773114,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idImage": 22,
                 "alt": "empanadas_03",
                 "src": "assets/dulcelia-demo/products/empanadas_03.jpg",
-                "created": 1599580773117,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
@@ -2023,30 +3843,65 @@
             {
                 "idCategory": 4,
                 "name": "Masas",
-                "created": 1599580773035,
-                "modified": null
+                "created": "17/11/2020 21:07:28",
+                "modified": null,
+                "catalogue": {
+                    "idCatalogue": 1,
+                    "catalogueName": "Dulcelia Tortas",
+                    "created": "17/11/2020 21:07:27",
+                    "modified": null
+                }
             }
         ],
         "tags": [
             {
-                "idTag": 3,
-                "name": "Sin gluten",
-                "created": 1599580773053,
+                "idTag": 1,
+                "name": "Sin azúcar",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
                 "idTag": 4,
                 "name": "Sin leche",
-                "created": 1599580773055,
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             },
             {
-                "idTag": 1,
-                "name": "Sin azúcar",
-                "created": 1599580773044,
+                "idTag": 3,
+                "name": "Sin gluten",
+                "created": "17/11/2020 21:07:28",
                 "modified": null
             }
         ],
-        "materials": []
+        "productMaterials": null,
+        "options": [
+            {
+                "idOption": 1,
+                "optionName": "Sin Azúcar"
+            },
+            {
+                "idOption": 3,
+                "optionName": "Sin Gluten"
+            },
+            {
+                "idOption": 4,
+                "optionName": "Sin Leche"
+            }
+        ],
+        "variants": [
+            {
+                "idVariant": 95,
+                "sku": null,
+                "basePriceAmount": 2300.00,
+                "totalPriceAmount": 2300.00,
+                "unitQuantity": 1,
+                "clientsCapacity": null,
+                "isSelected": true,
+                "created": "17/11/2020 21:07:30",
+                "modified": null,
+                "options": [],
+                "idProduct": null
+            }
+        ]
     }
 ]

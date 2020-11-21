@@ -74,12 +74,20 @@ const routes: Routes = [
   //     data: Resolver
   //   }
   // },
+  // {
+  //   path: 'catalogo', //'collection/left/sidebar',
+  //   component: CollectionLeftSidebarComponent
+  // },
+  // {
+  //   path: 'catalogo/:idCategory', //'collection/left/sidebar',
+  //   component: CollectionLeftSidebarComponent
+  // },
   {
-    path: 'catalogo', //'collection/left/sidebar',
+    path: 'catalogo/:catalogue', //'collection/left/sidebar',
     component: CollectionLeftSidebarComponent
   },
   {
-    path: 'catalogo/:idCategory', //'collection/left/sidebar',
+    path: 'catalogo/:catalogue/:idCategory', //'collection/left/sidebar',
     component: CollectionLeftSidebarComponent
   },
   // {

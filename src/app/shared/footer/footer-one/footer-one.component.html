@@ -62,7 +62,8 @@
 				<div class="col offset-xl-1">
 					<div class="sub-title">
 						<div class="footer-title">
-                            <h4>{{ 'footer.categories' | translate }}</h4>
+							<!-- <h4>{{ 'footer.categories' | translate }}</h4> -->
+							<h4>{{ 'footer.sitemap' | translate }}</h4>
                         </div>
                         <div class="footer-contant">
                             <!-- <ul>
@@ -72,12 +73,18 @@
                                 <li><a href="javascript:void(0)">Featured</a></li>
 							</ul> -->
 							<ul>
-								<li>
+								<li> <a [routerLink]="['/inicio/dulcelia']">{{ 'breadcrumb.home' | translate }}</a> </li>
+								<li> <a [routerLink]="['/tienda/catalogo/tortas']">{{ 'breadcrumb.collection' | translate }}</a> </li>
+								<li> <a [routerLink]="['/pagina/sobremi']">{{ 'breadcrumb.about_us' | translate }}</a> </li>
+								<li> <a [routerLink]="['/pagina/contacto']">{{ 'breadcrumb.contact' | translate }}</a> </li>
+								<li> <a [routerLink]="['/pagina/blog']">{{ 'breadcrumb.blog' | translate }}</a> </li>
+
+								<!-- <li>
 									<a [routerLink]="['/tienda/catalogo']">{{ 'product.all' | translate }}</a>
 								</li>
                                 <li *ngFor="let category of categories">
 									<a [routerLink]="['/tienda/catalogo/', category.idCategory]">{{ category.name }}</a>
-								</li>
+								</li> -->
                             </ul>
                         </div>
 					</div>

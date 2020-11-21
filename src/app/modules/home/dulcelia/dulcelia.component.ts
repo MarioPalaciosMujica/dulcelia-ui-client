@@ -69,8 +69,10 @@ export class DulceliaComponent implements OnInit, OnDestroy {
     public getCollectionProducts(collection: Collection): Product[]{
         let productList: Product[] = [];
         for(let product of this.products){
-            if(product.collection.idCollection == collection.idCollection){
-                productList.push(product);
+            if(product.collection != null && product.collection != undefined){
+                if(product.collection.idCollection == collection.idCollection){
+                    productList.push(product);
+                }
             }
         }
         return productList;

@@ -34,7 +34,14 @@ export class NavService {
 
 	MENUITEMS: Menu[] = [
 		{ title: 'inicio', type: 'link', active: false, path: '/inicio/dulcelia' },
-		{ title: 'catalogo', type: 'link', active: false, path: '/tienda/catalogo' },
+		// { title: 'catalogo', type: 'link', active: false, path: '/tienda/catalogo' },
+		{ title: 'catálogos', type: 'sub', active: false, children: 
+			[
+				{ path: '/tienda/catalogo/tortas', title: 'tortas', type: 'link' },
+				{ path: '/tienda/catalogo/emporio', title: 'emporio', type: 'link' },
+				{ path: '/tienda/catalogo/chocolateria', title: 'chocolateria', type: 'link' },
+			] 
+		},
 		{ title: 'sobre mí', type: 'link', active: false, path: '/pagina/sobremi' },
 		{ title: 'contacto', type: 'link', active: false, path: '/pagina/contacto' },
 		{ title: 'blog', type: 'link', active: false, path: '/pagina/blog' }

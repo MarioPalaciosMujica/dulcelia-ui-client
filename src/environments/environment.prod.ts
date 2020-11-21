@@ -6,6 +6,7 @@ export const environment = {
 
   fileTermsAndConditions: 'assets/files/terminos_condiciones_20201020.pdf',
 
+  // PROD
   apiProductBrand: 'http://54.94.70.82:8080/Brand',
   apiProductCatalogue: 'http://54.94.70.82:8080/Catalogue',
   apiProductCategory: 'http://54.94.70.82:8080/Category',

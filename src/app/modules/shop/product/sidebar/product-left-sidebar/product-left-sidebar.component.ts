@@ -7,6 +7,7 @@ import { ProductService } from './../../../../../core/services/product.service';
 import { SizeModalComponent } from "./../../../../../shared/components/modal/size-modal/size-modal.component";
 import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
+import { subscribeOn } from 'rxjs/operators';
 
 @Component({
   selector: 'app-product-left-sidebar',
@@ -51,12 +52,21 @@ export class ProductLeftSidebarComponent implements OnInit {
 
   private getProduct(){
     this.route.paramMap.subscribe(paramMap => {
-      
+
       this.productService.findById(Number(paramMap.get('idProduct'))).subscribe(data => {
         this.product = data as Product;
         this.product.quantity = 1;
         this.isProductLoaded = true;
       });
+
+      // MOCK
+      // let id = Number(paramMap.get('idProduct'));
+      // this.productService.findAllActives().subscribe(data => {
+      //   let productList: Product[] = data as Product[];
+      //   this.product = productList.find(el => el.idProduct = id);
+      //   this.product.quantity = 1;
+      //   this.isProductLoaded = true;
+      // });
     });
   }
 
